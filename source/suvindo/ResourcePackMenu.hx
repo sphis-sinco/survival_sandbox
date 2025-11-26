@@ -92,7 +92,7 @@ class ResourcePackMenu extends FlxState
 				ResourcePacks.ENABLED_RESOURCE_PACKS.remove(pack_list[cur_selected]);
 			else
 				ResourcePacks.ENABLED_RESOURCE_PACKS.insert(cur_selected, pack_list[cur_selected]);
-			trace('Enabled resource packs: ' + ResourcePacks.ENABLED_RESOURCE_PACKS);
+			saveEnabledRP();
 		}
 
 		if (FlxG.keys.justReleased.ESCAPE)
@@ -118,6 +118,11 @@ class ResourcePackMenu extends FlxState
 		pack_list.insert(pack_index + amount, pack_string);
 		literal_pack_list.insert(pack_index + amount, pack_json);
 
+		saveEnabledRP();
+	}
+
+	public function saveEnabledRP()
+	{
 		#if sys
 		ResourcePacks.ENABLED_RESOURCE_PACKS.sort((s1, s2) ->
 		{
@@ -135,5 +140,6 @@ class ResourcePackMenu extends FlxState
 		}
 		File.saveContent('resources/resource-list.txt', enabled_resource_list);
 		#end
+		trace('Enabled resource packs: ' + ResourcePacks.ENABLED_RESOURCE_PACKS);
 	}
 }
