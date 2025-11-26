@@ -10,8 +10,13 @@ class Block extends FlxSprite
 	{
 		super(X, Y);
 
-		loadGraphic('assets/images/blocks/' + block_id + '.png');
+		switchBlock(block_id);
+	}
 
-        this.block_id = block_id;
+	public function switchBlock(new_block:String)
+	{
+		loadGraphic('assets/images/blocks/' + new_block + '.png');
+
+		this.block_id = new_block;
 	}
 }
