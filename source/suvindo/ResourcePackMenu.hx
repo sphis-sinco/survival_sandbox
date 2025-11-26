@@ -1,0 +1,58 @@
+package suvindo;
+
+import flixel.util.FlxColor;
+#if sys
+import sys.io.File;
+#end
+import haxe.Json;
+import suvindo.ResourcePacks.ResourcePack;
+import flixel.text.FlxText;
+import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.FlxState;
+
+class ResourcePackMenu extends FlxState
+{
+	public var pack_list:Array<String> = [];
+	public var literal_pack_list:Array<ResourcePack> = [];
+
+	public var cur_selected:Int = 0;
+
+	public var pack_texts:FlxTypedGroup<FlxText>;
+
+	override function create()
+	{
+		super.create();
+		pack_list = ResourcePacks.ENABLED_RESOURCE_PACKS.copy();
+		literal_pack_list = [];
+
+		pack_texts = new FlxTypedGroup<FlxText>();
+		add(pack_texts);
+
+		var i = 0;
+		for (pack_id in pack_list)
+		{
+			var pack_txt:FlxText = new FlxText(2, 2, 0, pack_id, 16);
+			pack_txt.y += 20 * i;
+			pack_texts.add(pack_txt);
+            pack_txt.ID = i;
+
+			#if sys
+			var pack_file:ResourcePack = Json.parse(File.getContent('resources/' + pack_id + '/pack.json'));
+			
+            pack_txt.text = pack_file.name;
+            #end
+
+			i++;
+		}
+	}
+
+	override function update(elapsed:Float)
+	{
+		super.update(elapsed);
+
+        for (pack_text in pack_texts)
+        {
+            pack_text.color = (pack_text.ID == cur_selected) ? FlxColor.YELLOW : FlxColor.WHITE;
+        }
+	}
+}

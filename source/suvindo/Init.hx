@@ -13,6 +13,10 @@ class Init extends FlxState
 
 		ReloadPlugin.reload_function();
 
+		#if RESOURCE_PACK_MENU
+        FlxG.switchState(() -> new ResourcePackMenu());
+		#else
         FlxG.switchState(() -> new PlayState());
+		#end
 	}
 }
