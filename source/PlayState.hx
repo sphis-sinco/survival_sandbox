@@ -20,7 +20,7 @@ class PlayState extends FlxState
 
 		cursor_block = new Block('plank');
 		add(cursor_block);
-		cursor_block.hsv_shader.value = 2;
+		cursor_block.hsv_shader.saturation = 2;
 		cursor_block.x = 16 * ((FlxG.width / 16) / 2);
 		cursor_block.y = 16 * ((FlxG.height / 16) / 2);
 		cursor_block.alpha = .5;
