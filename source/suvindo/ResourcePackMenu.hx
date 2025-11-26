@@ -1,5 +1,6 @@
 package suvindo;
 
+import flixel.FlxG;
 import flixel.util.FlxColor;
 #if sys
 import sys.io.File;
@@ -37,22 +38,39 @@ class ResourcePackMenu extends FlxState
 
 			#if sys
 			var pack_file:ResourcePack = Json.parse(File.getContent('resources/' + pack_id + '/pack.json'));
-            literal_pack_list.push(pack_file);
-            #end
+			literal_pack_list.push(pack_file);
+			#end
 
 			i++;
 		}
+
+        ReloadPlugin.reload.add(() -> {
+            FlxG.resetState();
+        });
 	}
 
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
-        for (pack_text in pack_texts)
-        {
-            pack_text.ID = pack_list.indexOf(pack_text.text);
-            pack_text.color = (pack_text.ID == cur_selected) ? FlxColor.YELLOW : FlxColor.WHITE;
-            pack_text.alpha = (ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack_text.text)) ? 1 : 0.5;
-        }
+		for (pack_text in pack_texts)
+		{
+			pack_text.ID = pack_list.indexOf(pack_text.text);
+			pack_text.color = (pack_text.ID == cur_selected) ? FlxColor.YELLOW : FlxColor.WHITE;
+			pack_text.alpha = (ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack_text.text)) ? 1 : 0.5;
+		}
+
+		if (FlxG.keys.anyJustReleased([W, UP]))
+		{
+			cur_selected--;
+			if (cur_selected < 0)
+				cur_selected++;
+		}
+		if (FlxG.keys.anyJustReleased([S, DOWN]))
+		{
+			cur_selected++;
+			if (cur_selected > pack_texts.length)
+				cur_selected--;
+		}
 	}
 }
