@@ -1,5 +1,6 @@
 package;
 
+import suvindo.ResourcePackMenu;
 import suvindo.ResourcePacks;
 import suvindo.ReloadPlugin;
 import flixel.text.FlxText;
@@ -92,6 +93,11 @@ class PlayState extends FlxState
 					watermark.text += "\n* " + pack + ((ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack) ? ' (enabled)' : ' (disabled)'));
 			else
 				watermark.text += "\nNone";
+		}
+
+		if (FlxG.keys.justReleased.P)
+		{
+			FlxG.switchState(() -> new ResourcePackMenu());
 		}
 
 		if (FlxG.keys.anyJustReleased([W, A, S, D, UP, LEFT, DOWN, RIGHT, ENTER, TAB]))
