@@ -21,7 +21,7 @@ class BlockList
         for (image in ResourcePacks.readDirectory('images/blocks/'))
         {
             if (image.endsWith('.png') && !FileSystem.isDirectory(image))
-                BLOCK_LIST.push(Path.withoutExtension(image));
+                BLOCK_LIST.push(Path.withoutExtension(Path.withoutDirectory(image)));
         }
         #else
         BLOCK_LIST = Assets.getText(ResourcePacks.getPath('data/blocks-list.txt')).split('\n');
