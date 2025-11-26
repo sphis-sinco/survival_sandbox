@@ -33,7 +33,6 @@ class ResourcePackMenu extends FlxState
 		for (pack_id in pack_list)
 		{
 			var pack_txt:FlxText = new FlxText(2, 2, 0, pack_id, 16);
-			pack_txt.y += 20 * i;
 			pack_texts.add(pack_txt);
 
 			#if sys
@@ -57,6 +56,7 @@ class ResourcePackMenu extends FlxState
 		for (pack_text in pack_texts)
 		{
 			pack_text.ID = pack_list.indexOf(pack_text.text);
+			pack_text.y = 2 + (20 * pack_text.ID);
 			pack_text.color = (pack_text.ID == cur_selected) ? FlxColor.YELLOW : FlxColor.WHITE;
 			pack_text.alpha = (ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack_text.text)) ? 1 : 0.5;
 		}
@@ -72,20 +72,18 @@ class ResourcePackMenu extends FlxState
 				movePack(cur_selected, 1);
 			}
 		}
-		else
+
+		if (FlxG.keys.anyJustReleased([W, UP]))
 		{
-			if (FlxG.keys.anyJustReleased([W, UP]))
-			{
-				cur_selected--;
-				if (cur_selected < 0)
-					cur_selected++;
-			}
-			if (FlxG.keys.anyJustReleased([S, DOWN]))
-			{
+			cur_selected--;
+			if (cur_selected < 0)
 				cur_selected++;
-				if (cur_selected > pack_texts.length - 1)
-					cur_selected--;
-			}
+		}
+		if (FlxG.keys.anyJustReleased([S, DOWN]))
+		{
+			cur_selected++;
+			if (cur_selected > pack_texts.length - 1)
+				cur_selected--;
 		}
 
 		if (FlxG.keys.justReleased.ENTER)
@@ -102,14 +100,44 @@ class ResourcePackMenu extends FlxState
 		}
 	}
 
-	public function movePack(pack_index:Int, amount:Int) {
-        var pack_string:String = pack_list[pack_index];
-        var pack_json:ResourcePack = literal_pack_list[pack_index];
+	public function movePack(pack_index:Int, amount:Int)
+	{
+		var pack_string:String = pack_list[pack_index];
+		var pack_json:ResourcePack = literal_pack_list[pack_index];
 
-        pack_list.remove(pack_string);
-        literal_pack_list.remove(pack_json);
+		if (pack_index + amount < 0)
+		{
+			pack_index = 0;
+			amount = 0;
+		}
 
-        pack_list.insert(pack_index + amount, pack_string);
-        literal_pack_list.insert(pack_index + amount, pack_json);
-    }
+		pack_list.remove(pack_string);
+		literal_pack_list.remove(pack_json);
+
+		pack_list.insert(pack_index + amount, pack_string);
+		literal_pack_list.insert(pack_index + amount, pack_json);
+
+		#if sys
+		ResourcePacks.RESOURCE_PACKS = pack_list.copy();
+		ResourcePacks.ENABLED_RESOURCE_PACKS = [];
+		var enabled_resource_list = '';
+		var i = 1;
+		for (pack in pack_list)
+		{
+			for (pack_text in pack_texts.members)
+			{
+				if (pack_text.text == pack_string && pack_text.alpha == 1)
+				{
+					if (i > 1)
+						enabled_resource_list += '\n';
+					enabled_resource_list += pack;
+					ResourcePacks.ENABLED_RESOURCE_PACKS.push(pack);
+
+					i++;
+				}
+			}
+		}
+		File.saveContent('resources/resource-list.txt', enabled_resource_list);
+		#end
+	}
 }

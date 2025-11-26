@@ -101,8 +101,8 @@ class ResourcePacks
 			if (i < ENABLED_RESOURCE_PACKS.length)
 				enabled_resource_list += '\n';
 			i++;
-			File.saveContent('resources/resource-list.txt', enabled_resource_list);
 		}
+		File.saveContent('resources/resource-list.txt', enabled_resource_list);
 		#end
 
 		trace('Resource packs: ' + RESOURCE_PACKS);
