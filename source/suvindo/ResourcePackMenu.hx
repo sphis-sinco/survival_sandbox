@@ -44,9 +44,10 @@ class ResourcePackMenu extends FlxState
 			i++;
 		}
 
-        ReloadPlugin.reload.add(() -> {
-            FlxG.resetState();
-        });
+		ReloadPlugin.reload.add(() ->
+		{
+			FlxG.resetState();
+		});
 	}
 
 	override function update(elapsed:Float)
@@ -73,12 +74,17 @@ class ResourcePackMenu extends FlxState
 				cur_selected--;
 		}
 
-        if (FlxG.keys.justReleased.ENTER)
-        {
-            if (ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack_list[cur_selected]))
-                ResourcePacks.ENABLED_RESOURCE_PACKS.remove(pack_list[cur_selected]);
-            else
-                ResourcePacks.ENABLED_RESOURCE_PACKS.insert(cur_selected, pack_list[cur_selected]);
-        }
+		if (FlxG.keys.justReleased.ENTER)
+		{
+			if (ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack_list[cur_selected]))
+				ResourcePacks.ENABLED_RESOURCE_PACKS.remove(pack_list[cur_selected]);
+			else
+				ResourcePacks.ENABLED_RESOURCE_PACKS.insert(cur_selected, pack_list[cur_selected]);
+		}
+
+		if (FlxG.keys.justReleased.ESCAPE)
+		{
+			FlxG.switchState(() -> new PlayState());
+		}
 	}
 }
