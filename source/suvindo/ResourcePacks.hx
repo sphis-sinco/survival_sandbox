@@ -115,7 +115,10 @@ class ResourcePacks
 		for (pack in ENABLED_RESOURCE_PACKS)
 		{
 			if (FileSystem.exists('resources/' + pack + '/' + path))
+			{
 				return 'resources/' + pack + '/' + path;
+				break;
+			}
 		}
 		#end
 

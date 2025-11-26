@@ -97,6 +97,7 @@ class ResourcePackMenu extends FlxState
 
 		if (FlxG.keys.justReleased.ESCAPE)
 		{
+			saveEnabledRP();
 			FlxG.switchState(() -> new PlayState());
 		}
 	}
@@ -123,11 +124,23 @@ class ResourcePackMenu extends FlxState
 
 	public function saveEnabledRP()
 	{
-		#if sys
 		ResourcePacks.ENABLED_RESOURCE_PACKS.sort((s1, s2) ->
 		{
-			return (pack_list.indexOf(s1) < pack_list.indexOf(s2)) ? 1 : -1;
+			if (pack_list.indexOf(s1) == pack_list.indexOf(s2))
+				return 0;
+
+			return (pack_list.indexOf(s1) < pack_list.indexOf(s2)) ? -1 : 1;
 		});
+		ResourcePacks.RESOURCE_PACKS.sort((s1, s2) ->
+		{
+			if (pack_list.indexOf(s1) == pack_list.indexOf(s2))
+				return 0;
+
+			return (pack_list.indexOf(s1) < pack_list.indexOf(s2)) ? -1 : 1;
+		});
+		trace('Resource packs: ' + ResourcePacks.RESOURCE_PACKS);
+		trace('Enabled resource packs: ' + ResourcePacks.ENABLED_RESOURCE_PACKS);
+
 		var enabled_resource_list = '';
 		var i = 1;
 		for (pack in ResourcePacks.ENABLED_RESOURCE_PACKS)
@@ -138,8 +151,8 @@ class ResourcePackMenu extends FlxState
 				enabled_resource_list += '\n';
 			i++;
 		}
+		#if sys
 		File.saveContent('resources/resource-list.txt', enabled_resource_list);
 		#end
-		trace('Enabled resource packs: ' + ResourcePacks.ENABLED_RESOURCE_PACKS);
 	}
 }
