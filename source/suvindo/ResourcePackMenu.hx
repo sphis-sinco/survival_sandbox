@@ -1,5 +1,6 @@
 package suvindo;
 
+import flixel.FlxObject;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 #if sys
@@ -20,6 +21,8 @@ class ResourcePackMenu extends FlxState
 
 	public var pack_texts:FlxTypedGroup<FlxText>;
 
+	public var camFollow:FlxObject;
+
 	override function create()
 	{
 		super.create();
@@ -32,7 +35,7 @@ class ResourcePackMenu extends FlxState
 		var i = 0;
 		for (pack_id in pack_list)
 		{
-			var pack_txt:FlxText = new FlxText(2, 2, 0, pack_id, 16);
+			var pack_txt:FlxText = new FlxText(2, 2, 0, pack_id, 32);
 			pack_texts.add(pack_txt);
 
 			#if sys
@@ -47,6 +50,11 @@ class ResourcePackMenu extends FlxState
 		{
 			FlxG.resetState();
 		});
+
+		camFollow = new FlxObject(FlxG.width / 2);
+		add(camFollow);
+
+		FlxG.camera.follow(camFollow, LOCKON, .1);
 	}
 
 	override function update(elapsed:Float)
@@ -56,9 +64,12 @@ class ResourcePackMenu extends FlxState
 		for (pack_text in pack_texts)
 		{
 			pack_text.ID = pack_list.indexOf(pack_text.text);
-			pack_text.y = 2 + (20 * pack_text.ID);
+			pack_text.y = 2 + ((pack_text.size * 4) * pack_text.ID);
 			pack_text.color = (pack_text.ID == cur_selected) ? FlxColor.YELLOW : FlxColor.WHITE;
 			pack_text.alpha = (ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack_text.text)) ? 1 : 0.5;
+
+			if (pack_text.ID == cur_selected)
+				camFollow.y = pack_text.y;
 		}
 
 		if (FlxG.keys.pressed.SHIFT)
@@ -98,6 +109,11 @@ class ResourcePackMenu extends FlxState
 		if (FlxG.keys.justReleased.ESCAPE)
 		{
 			saveEnabledRP();
+
+			trace('Left resource pack menu');
+			trace('Resource packs: ' + ResourcePacks.RESOURCE_PACKS);
+			trace('Enabled resource packs: ' + ResourcePacks.ENABLED_RESOURCE_PACKS);
+
 			FlxG.switchState(() -> new PlayState());
 		}
 	}
@@ -138,8 +154,6 @@ class ResourcePackMenu extends FlxState
 
 			return (pack_list.indexOf(s1) < pack_list.indexOf(s2)) ? -1 : 1;
 		});
-		trace('Resource packs: ' + ResourcePacks.RESOURCE_PACKS);
-		trace('Enabled resource packs: ' + ResourcePacks.ENABLED_RESOURCE_PACKS);
 
 		var enabled_resource_list = '';
 		var i = 1;
