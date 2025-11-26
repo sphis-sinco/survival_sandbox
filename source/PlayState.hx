@@ -104,7 +104,7 @@ class PlayState extends FlxState
 				watermark.text += "\nNone";
 		}
 
-		if (FlxG.keys.justReleased.P)
+		if (FlxG.keys.justReleased.P && ResourcePacks.RESOURCE_PACKS.length > 0)
 		{
 			saveWorldInfo();
 			FlxG.switchState(() -> new ResourcePackMenu());
