@@ -68,6 +68,7 @@ class PlayState extends FlxState
 		}
 		world_info.blocks = blocks.members;
 
+		trace('RELOAD!');
 		FlxG.resetState();
 	}
 
