@@ -1,5 +1,6 @@
 package suvindo;
 
+import lime.utils.Assets;
 import haxe.Json;
 #if sys
 import sys.io.File;
@@ -71,14 +72,22 @@ class ResourcePacks
 			File.saveContent('resources/resource-list.txt', enabled_resource_list);
 		}
 		else
-			enabled_resource_list = File.getContent('resources/resource-list.txt');
+		#end
+		#if sys
+		enabled_resource_list = File.getContent('resources/resource-list.txt');
+		#else
+		enabled_resource_list = Assets.getText('resources/resource-list.txt');
 		#end
 
 		for (enabled_pack in enabled_resource_list.split('\n'))
 		{
 			if (enabled_pack.length > 0 && enabled_pack != null && enabled_pack != '')
 			{
+				#if sys
 				var pack_file:ResourcePack = Json.parse(File.getContent('resources/' + enabled_pack + '/pack.json'));
+				#else
+				var pack_file:ResourcePack = Json.parse(Assets.getText('resources/' + enabled_pack + '/pack.json'));
+				#end
 				if (pack_file.name == null)
 					continue;
 				if (pack_file.pack_version == null)
@@ -91,7 +100,6 @@ class ResourcePacks
 			}
 		}
 
-		#if sys
 		enabled_resource_list = '';
 		var i = 1;
 		for (pack in ENABLED_RESOURCE_PACKS)
@@ -102,7 +110,10 @@ class ResourcePacks
 				enabled_resource_list += '\n';
 			i++;
 		}
+		#if sys
 		File.saveContent('resources/resource-list.txt', enabled_resource_list);
+		#else
+		trace('Enabled resource list:\n' + enabled_resource_list);
 		#end
 
 		trace('Resource packs: ' + RESOURCE_PACKS);
@@ -111,16 +122,18 @@ class ResourcePacks
 
 	public static function getPath(path:String):String
 	{
-		#if sys
 		for (pack in ENABLED_RESOURCE_PACKS)
 		{
+			#if sys
 			if (FileSystem.exists('resources/' + pack + '/' + path))
+			#else
+			if (Assets.exists('resources/' + pack + '/' + path))
+			#end
 			{
 				return 'resources/' + pack + '/' + path;
 				break;
 			}
 		}
-		#end
 
 		return 'assets/' + path;
 	}
