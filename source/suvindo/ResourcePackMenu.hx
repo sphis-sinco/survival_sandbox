@@ -61,17 +61,31 @@ class ResourcePackMenu extends FlxState
 			pack_text.alpha = (ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack_text.text)) ? 1 : 0.5;
 		}
 
-		if (FlxG.keys.anyJustReleased([W, UP]))
+		if (FlxG.keys.pressed.SHIFT)
 		{
-			cur_selected--;
-			if (cur_selected < 0)
-				cur_selected++;
+			if (FlxG.keys.anyJustReleased([W, UP]))
+			{
+				movePack(cur_selected, -1);
+			}
+			if (FlxG.keys.anyJustReleased([S, DOWN]))
+			{
+				movePack(cur_selected, 1);
+			}
 		}
-		if (FlxG.keys.anyJustReleased([S, DOWN]))
+		else
 		{
-			cur_selected++;
-			if (cur_selected > pack_texts.length - 1)
+			if (FlxG.keys.anyJustReleased([W, UP]))
+			{
 				cur_selected--;
+				if (cur_selected < 0)
+					cur_selected++;
+			}
+			if (FlxG.keys.anyJustReleased([S, DOWN]))
+			{
+				cur_selected++;
+				if (cur_selected > pack_texts.length - 1)
+					cur_selected--;
+			}
 		}
 
 		if (FlxG.keys.justReleased.ENTER)
@@ -87,4 +101,15 @@ class ResourcePackMenu extends FlxState
 			FlxG.switchState(() -> new PlayState());
 		}
 	}
+
+	public function movePack(pack_index:Int, amount:Int) {
+        var pack_string:String = pack_list[pack_index];
+        var pack_json:ResourcePack = literal_pack_list[pack_index];
+
+        pack_list.remove(pack_string);
+        literal_pack_list.remove(pack_json);
+
+        pack_list.insert(pack_index + amount, pack_string);
+        literal_pack_list.insert(pack_index + amount, pack_json);
+    }
 }
