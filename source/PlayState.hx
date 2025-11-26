@@ -1,5 +1,6 @@
 package;
 
+import suvindo.ResourcePacks;
 import suvindo.ReloadPlugin;
 import flixel.text.FlxText;
 import suvindo.BlockList;
@@ -34,7 +35,7 @@ class PlayState extends FlxState
 		cursor_block.y = 16 * ((FlxG.height / 16) / 2);
 		cursor_block.alpha = .5;
 
-		watermark = new FlxText(2, 2, 0, "Suvindo " + lime.app.Application.current.meta.get('version'), 16);
+		watermark = new FlxText(2, 2, 0, "version", 8);
 		add(watermark);
 
 		if (world_info != null)
@@ -81,6 +82,17 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
+		watermark.text = "Suvindo " + lime.app.Application.current.meta.get('version');
+		if (FlxG.keys.pressed.F3)
+		{
+			watermark.text += "\nResource packs: ";
+			if (ResourcePacks.RESOURCE_PACKS.length > 0)
+				for (pack in ResourcePacks.RESOURCE_PACKS)
+					watermark.text += "\n" + pack;
+			else
+				watermark.text += "\nNone";
+		}
 
 		if (FlxG.keys.anyJustReleased([W, A, S, D, UP, LEFT, DOWN, RIGHT, ENTER, TAB]))
 		{
