@@ -1,5 +1,6 @@
 package suvindo;
 
+import haxe.Json;
 #if sys
 import sys.io.File;
 import sys.FileSystem;
@@ -9,6 +10,9 @@ class ResourcePacks
 {
 	public static var RESOURCE_PACKS:Array<String> = [];
 	public static var ENABLED_RESOURCE_PACKS:Array<String> = [];
+
+	public static var PACK_VERSION:Int = 1;
+	public static var MIN_PACK_VERSION:Int = 1;
 
 	public static function reload()
 	{
@@ -20,7 +24,19 @@ class ResourcePacks
 		for (pack in FileSystem.readDirectory('resources/'))
 		{
 			if (FileSystem.isDirectory('resources/' + pack))
-				RESOURCE_PACKS.push(pack);
+			{
+				try
+				{
+					var pack_file:ResourcePack = Json.parse(File.getContent('resources/' + pack + '/pack.json'));
+					if (pack_file.name == null) continue;
+					if (pack_file.pack_version == null) continue;
+					if (pack_file.pack_version < MIN_PACK_VERSION) continue;
+					if (pack_file.pack_version > PACK_VERSION) continue;
+
+					RESOURCE_PACKS.push(pack);
+				}
+				catch (e) {}
+			}
 		}
 
 		if (!FileSystem.exists('resources/resource-list.txt'))
@@ -78,4 +94,12 @@ class ResourcePacks
 
 		return read_directory;
 	}
+}
+
+typedef ResourcePack =
+{
+	var name:String;
+	var ?description:String;
+
+	var pack_version:Int;
 }
