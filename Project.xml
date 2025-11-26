@@ -33,7 +33,12 @@
 	<set name="BUILD_DIR" value="export/release" unless="debug"/>
 
 	<source path="source" />
-	<assets path="assets" />
+
+	<assets path="assets/base" rename="assets"/>
+	<assets path="assets/embed" rename="assets" embed="true"/>
+	
+	<assets path="assets/sys" rename="assets" if="sys"/>
+	<assets path="assets/not_sys" rename="assets" unless="sys"/>
 
 	<!-- _______________________________ Libraries ______________________________ -->
 

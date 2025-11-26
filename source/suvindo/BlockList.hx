@@ -1,5 +1,6 @@
 package suvindo;
 
+import lime.utils.Assets;
 import haxe.io.Path;
 #if sys
 import sys.FileSystem;
@@ -23,7 +24,7 @@ class BlockList
                 BLOCK_LIST.push(Path.withoutExtension(image));
         }
         #else
-        BLOCK_LIST = ['plank'];
+        BLOCK_LIST = Assets.getText('assets/data/blocks-list.txt').split('\n');
         #end
 
         trace('block list: ' + BLOCK_LIST);
