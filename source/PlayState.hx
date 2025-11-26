@@ -11,10 +11,14 @@ import flixel.FlxState;
 class PlayState extends FlxState
 {
 	public var blocks:FlxTypedGroup<Block>;
-
 	public var cursor_block:Block;
-
 	public var watermark:FlxText;
+
+	public static var world_info:
+		{
+			?cursor_block:{x:Float, y:Float},
+			?blocks:Array<Block>
+		};
 
 	override public function create()
 	{
@@ -33,12 +37,38 @@ class PlayState extends FlxState
 		watermark = new FlxText(2, 2, 0, "Suvindo " + lime.app.Application.current.meta.get('version'), 16);
 		add(watermark);
 
+		if (world_info != null)
+		{
+			if (world_info.blocks != null)
+			{
+				for (block in world_info.blocks)
+				{
+					var old_block:Block = new Block(block.block_id, block.x, block.y);
+					blocks.add(old_block);
+				}
+			}
+
+			if (world_info.cursor_block != null)
+			{
+				cursor_block.setPosition(world_info.cursor_block.x, world_info.cursor_block.y);
+			}
+
+			world_info = null;
+		}
+
 		ReloadPlugin.reload.add(reloadFunction);
 	}
 
 	public function reloadFunction()
 	{
-		cursor_block.switchBlock(BlockList.BLOCK_LIST[0]);
+		world_info = {};
+		world_info.cursor_block = {
+			x: cursor_block.x,
+			y: cursor_block.y,
+		}
+		world_info.blocks = blocks.members;
+
+		FlxG.resetState();
 	}
 
 	override public function update(elapsed:Float)
