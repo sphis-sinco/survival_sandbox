@@ -29,7 +29,7 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 
-		if (FlxG.keys.anyJustReleased([W, A, S, D, UP, LEFT, DOWN, RIGHT]))
+		if (FlxG.keys.anyJustReleased([W, A, S, D, UP, LEFT, DOWN, RIGHT, ENTER, DELETE]))
 		{
 			if (FlxG.keys.anyJustReleased([W, UP]))
 				cursor_block.y -= cursor_block.height;
@@ -49,6 +49,28 @@ class PlayState extends FlxState
 				cursor_block.y = 0;
 			if (cursor_block.y > FlxG.height - cursor_block.height)
 				cursor_block.y = FlxG.height - cursor_block.height;
+
+			var touching_kids:Bool = false; // thank god
+
+			for (minor in blocks.members)
+				if (cursor_block.overlaps(minor))
+					touching_kids = true; // NOOOOOOOOOOOOOOOOOOO
+
+			if (FlxG.keys.justReleased.ENTER && !touching_kids)
+			{
+				var new_block = new Block(cursor_block.block_id, cursor_block.x, cursor_block.y);
+				blocks.add(new_block);
+			}
+
+			if (FlxG.keys.justReleased.DELETE && touching_kids)
+			{
+				for (minor in blocks.members)
+					if (cursor_block.overlaps(minor))
+					{
+						blocks.members.remove(minor);
+						minor.destroy();
+					}
+			}
 		}
 	}
 }
