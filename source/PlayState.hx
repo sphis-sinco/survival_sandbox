@@ -86,7 +86,7 @@ class PlayState extends FlxState
 		watermark.text = "Suvindo " + lime.app.Application.current.meta.get('version');
 		if (FlxG.keys.pressed.F3)
 		{
-			watermark.text += "\n\nResource packs: \n";
+			watermark.text += "\n\nResource packs:";
 			if (ResourcePacks.RESOURCE_PACKS.length > 0)
 				for (pack in ResourcePacks.RESOURCE_PACKS)
 					watermark.text += "\n* " + pack;
