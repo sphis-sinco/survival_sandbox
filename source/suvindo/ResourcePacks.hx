@@ -28,10 +28,27 @@ class ResourcePacks
 				try
 				{
 					var pack_file:ResourcePack = Json.parse(File.getContent('resources/' + pack + '/pack.json'));
-					if (pack_file.name == null) continue;
-					if (pack_file.pack_version == null) continue;
-					if (pack_file.pack_version < MIN_PACK_VERSION) continue;
-					if (pack_file.pack_version > PACK_VERSION) continue;
+					if (pack_file.name == null)
+						continue;
+					if (pack_file.pack_version == null)
+						continue;
+					if (pack_file.pack_version < MIN_PACK_VERSION)
+					{
+						trace('"' + pack_file.name + '" is below the minimum supported version number (' + MIN_PACK_VERSION + ' > ' + pack_file.pack_version
+							+ ')');
+						continue;
+					}
+					if (pack_file.pack_version > PACK_VERSION)
+					{
+						trace('"'
+							+ pack_file.name
+							+ '" is above the max supported version number ('
+							+ PACK_VERSION
+							+ ' < '
+							+ pack_file.pack_version
+							+ ')');
+						continue;
+					}
 
 					RESOURCE_PACKS.push(pack);
 				}
@@ -60,8 +77,33 @@ class ResourcePacks
 		for (enabled_pack in enabled_resource_list.split('\n'))
 		{
 			if (enabled_pack.length > 0 && enabled_pack != null && enabled_pack != '')
+			{
+				var pack_file:ResourcePack = Json.parse(File.getContent('resources/' + enabled_pack + '/pack.json'));
+				if (pack_file.name == null)
+					continue;
+				if (pack_file.pack_version == null)
+					continue;
+				if (pack_file.pack_version < MIN_PACK_VERSION)
+					continue;
+				if (pack_file.pack_version > PACK_VERSION)
+					continue;
 				ENABLED_RESOURCE_PACKS.push(enabled_pack);
+			}
 		}
+
+		#if sys
+		enabled_resource_list = '';
+		var i = 1;
+		for (pack in ENABLED_RESOURCE_PACKS)
+		{
+			enabled_resource_list += pack;
+
+			if (i < ENABLED_RESOURCE_PACKS.length)
+				enabled_resource_list += '\n';
+			i++;
+			File.saveContent('resources/resource-list.txt', enabled_resource_list);
+		}
+		#end
 
 		trace('Resource packs: ' + RESOURCE_PACKS);
 		trace('Enabled resource packs: ' + ENABLED_RESOURCE_PACKS);
