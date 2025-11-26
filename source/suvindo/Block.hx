@@ -1,4 +1,4 @@
-package survival_sandbox;
+package suvindo;
 
 import flixel.FlxSprite;
 
