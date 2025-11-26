@@ -11,5 +11,7 @@ class Block extends FlxSprite
 		super(X, Y);
 
 		loadGraphic('assets/images/blocks/' + block_id + '.png');
+
+        this.block_id = block_id;
 	}
 }
