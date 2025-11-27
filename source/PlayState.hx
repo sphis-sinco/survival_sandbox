@@ -132,7 +132,7 @@ class PlayState extends FlxState
 			has_animated_blocks: false,
 			animated_block_universal_frames: {},
 			random_id: (world_info?.random_id ?? null) ?? Sha256.encode('' + FlxG.random.int(0, 255)),
-			game_version: Application.current.meta.get('version'),
+			game_version: Application.current.meta.get('version') + #if debug ' [PROTOTYPE]' #else '' #end,
 			world_name: ((world_info?.world_name ?? null) ?? WORLD_NAME) ?? null
 		};
 		if (cursor_block != null)
