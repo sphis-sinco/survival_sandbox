@@ -1,13 +1,14 @@
 package;
 
+import suvindo.WorldInfo;
 import suvindo.DebugWorldSelection;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import lime.utils.Assets;
 import haxe.Json;
 import haxe.crypto.Sha256;
-import sys.io.File;
 #if sys
+import sys.io.File;
 import sys.FileSystem;
 #end
 import suvindo.ResourcePackMenu;
@@ -26,16 +27,7 @@ class PlayState extends FlxState
 	public var cursor_block:Block;
 	public var watermark:FlxText;
 
-	public static var world_info:
-		{
-			?cursor_block:{x:Float, y:Float, block_id:String},
-			?blocks:Array<Dynamic>,
-			?has_animated_blocks:Bool,
-			?animated_block_universal_frames:Dynamic,
-			random_id:String,
-			?world_name:String,
-			game_version:String,
-		};
+	public static var world_info:WorldInfo;
 
 	public var WORLD_NAME:String;
 

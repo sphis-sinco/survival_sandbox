@@ -1,5 +1,6 @@
 package suvindo;
 
+import suvindo.WorldInfo.WorldInfoClass;
 import flixel.text.FlxInputText;
 import haxe.io.Path;
 import flixel.FlxObject;
@@ -85,7 +86,14 @@ class DebugWorldSelection extends FlxState
 		{
 			FlxG.resetState();
 		});
+
+		worldInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, '', 32);
+		add(worldInfo);
+		worldInfo.alignment = RIGHT;
+		worldInfo.scrollFactor.set();
 	}
+
+	public var worldInfo:FlxText;
 
 	override function update(elapsed:Float)
 	{
@@ -93,14 +101,29 @@ class DebugWorldSelection extends FlxState
 
 		ReloadPlugin.canReload = !world_name.hasFocus;
 
+		worldInfo.text = 'N/A';
 		for (world_text in world_texts)
 		{
 			world_text.y = 2 + ((world_text.size * 4) * world_text.ID);
 			world_text.color = (world_text.ID == cur_selected) ? FlxColor.YELLOW : FlxColor.WHITE;
 
 			if (world_text.ID == cur_selected)
+			{
 				camFollow.y = world_text.y;
+
+				var cur_world:WorldInfo = Json.parse(File.getContent('assets/saves/' + world_list[cur_selected]));
+
+				worldInfo.text = 'Name: '
+					+ cur_world.world_name
+					+ '\nRID: '
+					+ cur_world.random_id
+					+ '\n\nGame Version: '
+					+ cur_world.game_version
+					+ '\n\nGame Version Warning(s):\n'
+					+ WorldInfoClass.getGameVersionWarnings(cur_world.game_version);
+			}
 		}
+
 		if (ReloadPlugin.canReload)
 		{
 			if (FlxG.keys.anyJustReleased([W, UP]))
