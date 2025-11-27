@@ -8,3 +8,7 @@ In `data/requests/` you can name the json whatever you want just as long as it's
 
 - `request` : "remove"
 - `blocks` : The list of block ID's you'd like to remove
+
+## Examples
+
+- [Remove Leaves](/.dev/debug-resources/base/block_removing/data/requests/remove-leaves.json)
