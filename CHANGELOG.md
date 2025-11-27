@@ -8,7 +8,6 @@
     - Version `1` is still supported
 
 ## General
-- If an asset path does not exist in resource packs or in the assets folder then `null` is returned by Resource Pack's getPath function
 - Several issues with the Resource Pack readDirectory function were fixed
     - Fixed resource pack paths not including the directory
     - Fixed crashes when trying to read non-existant resource pack directories

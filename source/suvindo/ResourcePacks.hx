@@ -138,14 +138,7 @@ class ResourcePacks
 			}
 		}
 
-		#if sys
-		if (FileSystem.exists('assets/' + path))
-		#else
-		if (Assets.exists('assets/' + path))
-		#end
 		return 'assets/' + path;
-
-		return null;
 	}
 
 	public static function readDirectory(directory:String):Array<String>
