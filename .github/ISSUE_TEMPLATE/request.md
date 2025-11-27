@@ -2,7 +2,7 @@
 name: Request
 about: Suggest an idea for this project
 title: "[REQUEST] "
-labels: enhancement
+labels: request
 assignees: ''
 
 ---
