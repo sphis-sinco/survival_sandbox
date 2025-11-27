@@ -1,5 +1,6 @@
 package;
 
+import suvindo.DebugWorldSelection;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import lime.utils.Assets;
@@ -200,6 +201,12 @@ class PlayState extends FlxState
 		{
 			saveWorldInfo();
 			FlxG.switchState(() -> new ResourcePackMenu());
+		}
+
+		if (FlxG.keys.justReleased.P)
+		{
+			saveWorldInfo();
+			FlxG.switchState(() -> new DebugWorldSelection());
 		}
 
 		if (FlxG.keys.anyJustReleased([W, A, S, D, UP, LEFT, DOWN, RIGHT, ENTER, TAB, L]))
