@@ -1,5 +1,5 @@
 # Suvindo
-A project originally intended to be a survival sandbox game similar to minecraft, now turened into a simple game where you build whatever you want with a limited palette of blocks. Unless you have some Resources Packs that add more, but that's for later.
+A project originally intended to be a survival sandbox game similar to minecraft, now turned into a simple game where you build whatever you want with a limited palette of blocks. Unless you have some Resources Packs that add more, but that's for later.
 
 ## Credits
 
