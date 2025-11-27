@@ -37,11 +37,11 @@
 	<assets path="assets/base" rename="assets"/>
 	<assets path="assets/embed" rename="assets" embed="true"/>
 	
-	<assets path="assets/sys" rename="assets" if="sys || hl"/>
-	<assets path="assets/not_sys" rename="assets" unless="sys || hl"/>
+	<assets path="assets/sys" rename="assets" unless="html5"/>
+	<assets path="assets/not_sys" rename="assets" if="html5"/>
 
 	<assets path="resources/base" rename="resources"/>
-	<assets path="resources/non_sys" rename="resources" unless="sys || hl"/>
+	<assets path="resources/non_sys" rename="resources" if="html5"/>
 
 	<assets path=".dev/debug-resources/base" rename="resources" if="debug"/>
 
