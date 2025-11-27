@@ -159,7 +159,7 @@ class ResourcePacks
 			try
 			{
 				for (path in FileSystem.readDirectory('resources/' + pack + '/' + directory))
-					read_directory.push('resources/' + pack + '/' + path);
+					read_directory.push('resources/' + pack + '/' + directory + '/' + path);
 			}
 			catch (e)
 			{

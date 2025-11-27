@@ -8,6 +8,9 @@
     - Version `1` is still supported
 
 ## General
+- Several issues with the Resource Pack readDirectory were fixed
+    - Fixed resource pack paths not including the directory
+    - Fixed crashes when trying to read non-existant resource pack directories
 - You can now wrap around in the Resource Pack Menu
 - Fixed mouse being visible when it shouldn't be
 - Added autosaving (every minute)
@@ -15,7 +18,6 @@
 - Added support for Saving worlds (auto-done when reloading or leaving gameplay)
 - `DEBUG` : Added Custom Debug Application icon
 - Added World Selection State
-- Fixed crashes when trying to read non-existant resource pack directories
 - Added Current Block Variation to the watermark
 - "Current Block (id)" is now "Current Block ID" on the watermark
 - Changed company from "Sphis" to "SuvindoCrew"
