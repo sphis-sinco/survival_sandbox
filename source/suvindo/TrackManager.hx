@@ -1,5 +1,7 @@
 package suvindo;
 
+import flixel.util.FlxTimer;
+import flixel.FlxG;
 import haxe.io.Path;
 #if sys
 import sys.FileSystem;
@@ -44,4 +46,36 @@ class TrackManager
 
 		trace('tracks list: ' + TRACKS_LIST);
 	}
+
+	public static var MUSIC_RATE:MusicRate = DEFAULT;
+
+	public static function playTrack()
+	{
+		if (FlxG.sound.music.playing)
+			return;
+
+		if (MUSIC_RATE == OFF)
+			return;
+
+		FlxG.sound.music.loadStream(ResourcePacks.getPath(TRACKS_LIST[FlxG.random.int(0, TRACKS_LIST.length - 1)]), false, false, () ->
+		{
+			FlxTimer.wait(FlxG.random.float(60, 60 * switch (MUSIC_RATE)
+			{
+				case OFF: Math.POSITIVE_INFINITY;
+				case CONSTANT: 0.5;
+				case FREQUENT: 5;
+				case DEFAULT: FlxG.random.int(10, 20);
+				case VARIABLE: ((FlxG.state is DebugWorldSelection) ? FlxG.random.int(0.5, 15) : FlxG.random.int(0.5, 120));
+			}), playTrack);
+		});
+	}
+}
+
+enum MusicRate
+{
+	OFF;
+	CONSTANT;
+	DEFAULT;
+	FREQUENT;
+	VARIABLE;
 }

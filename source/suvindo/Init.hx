@@ -21,6 +21,8 @@ class Init extends FlxState
 		}
 		FlxG.plugins.addPlugin(new ReloadPlugin());
 
+		TrackManager.playTrack();
+
 		#if RESOURCE_PACK_MENU
 		FlxG.switchState(() -> new ResourcePackMenu());
 		#else
