@@ -1,5 +1,6 @@
 package;
 
+import flixel.util.FlxTimer;
 import lime.app.Application;
 import lime.utils.Assets;
 import haxe.Json;
@@ -35,6 +36,8 @@ class PlayState extends FlxState
 			game_version:String,
 		};
 
+	public var autosave_timer:FlxTimer;
+
 	override public function new(?world:String = null)
 	{
 		super();
@@ -58,6 +61,11 @@ class PlayState extends FlxState
 			saveWorldInfo(true);
 		}
 		}
+
+		autosave_timer = new FlxTimer().start(60 * 1, t ->
+		{
+			saveWorldInfo(true);
+		}, 0);
 	}
 
 	override public function create()
@@ -110,6 +118,8 @@ class PlayState extends FlxState
 		}
 
 		ReloadPlugin.reload.add(onReload);
+
+		FlxG.mouse.visible = false;
 	}
 
 	public function saveWorldInfo(save_file:Bool = true)
@@ -183,6 +193,7 @@ class PlayState extends FlxState
 					watermark.text += '\n* ' + pack + ((ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack) ? ' (enabled)' : ' (disabled)'));
 			else
 				watermark.text += '\nNone';
+			watermark.text += '\n\nTime until autosave (seconds): ' + autosave_timer.timeLeft;
 		}
 
 		if (FlxG.keys.justReleased.P && ResourcePacks.RESOURCE_PACKS.length > 0)

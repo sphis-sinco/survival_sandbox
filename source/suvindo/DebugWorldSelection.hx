@@ -73,6 +73,7 @@ class DebugWorldSelection extends FlxState
 		add(world_name);
 
 		FlxG.camera.follow(camFollow, LOCKON, .1);
+		FlxG.mouse.visible = true;
 	}
 
 	override function update(elapsed:Float)
@@ -89,27 +90,29 @@ class DebugWorldSelection extends FlxState
 			if (world_text.ID == cur_selected)
 				camFollow.y = world_text.y;
 		}
-
-		if (FlxG.keys.anyJustReleased([W, UP]))
+		if (ReloadPlugin.canReload)
 		{
-			cur_selected--;
-			if (cur_selected < 0)
-				cur_selected++;
-		}
-		if (FlxG.keys.anyJustReleased([S, DOWN]))
-		{
-			cur_selected++;
-			if (cur_selected > world_texts.length - 1)
+			if (FlxG.keys.anyJustReleased([W, UP]))
+			{
 				cur_selected--;
-		}
+				if (cur_selected < 0)
+					cur_selected++;
+			}
+			if (FlxG.keys.anyJustReleased([S, DOWN]))
+			{
+				cur_selected++;
+				if (cur_selected > world_texts.length - 1)
+					cur_selected--;
+			}
 
-		if (FlxG.keys.justReleased.ENTER)
-		{
-			#if sys
-			while (FileSystem.exists('assets/saves/' + world_name.text + '.json'))
-				world_name.text += '๑_';
-			#end
-			FlxG.switchState(() -> new PlayState(world_list[cur_selected] ?? world_name.text));
+			if (FlxG.keys.justReleased.ENTER)
+			{
+				#if sys
+				while (FileSystem.exists('assets/saves/' + world_name.text + '.json'))
+					world_name.text += '๑_';
+				#end
+				FlxG.switchState(() -> new PlayState(world_list[cur_selected] ?? world_name.text));
+			}
 		}
 	}
 }

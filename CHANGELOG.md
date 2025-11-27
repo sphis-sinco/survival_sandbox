@@ -1,5 +1,7 @@
 # 0.2.0 - 11/??/2025
 ## General
+- Fixed mouse being visible when it shouldn't be
+- Added autosaving (every minute)
 - Added support for Loading worlds (Debug world selection state does this)
 - Added support for Saving worlds (auto-done when reloading or leaving gameplay)
 - [DEBUG] Added Custom Debug Application icon

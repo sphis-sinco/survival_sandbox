@@ -60,6 +60,7 @@ class ResourcePackMenu extends FlxState
 		packInfo.scrollFactor.set();
 
 		FlxG.camera.follow(camFollow, LOCKON, .1);
+		FlxG.mouse.visible = false;
 	}
 
 	public var packInfo:FlxText;
