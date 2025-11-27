@@ -22,6 +22,8 @@ import suvindo.Block;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.FlxState;
 
+using StringTools;
+
 class PlayState extends FlxState
 {
 	public var blocks:FlxTypedGroup<Block>;
@@ -137,7 +139,8 @@ class PlayState extends FlxState
 			animated_block_universal_frames: {},
 			random_id: (world_info?.random_id ?? null) ?? Sha256.encode('' + FlxG.random.int(0, 255)),
 			game_version: Application.current.meta.get('version') + #if debug ' [PROTOTYPE]' #else '' #end,
-			world_name: WORLD_NAME ?? ((world_info?.world_name ?? null) ?? null)
+			world_name: WORLD_NAME ?? ((world_info?.world_name ?? null) ?? null),
+			resource_packs: []
 		};
 		if (cursor_block != null)
 			world_info.cursor_block = {
@@ -162,6 +165,9 @@ class PlayState extends FlxState
 						((FlxG.random.bool((block.animation.frameIndex / block.animation.numFrames) * 100)) ? ((block.animation.frameIndex / block.animation.numFrames == 1) ? block.animation.curAnim.frames[0]
 							- block.animation.frameIndex : 1) : 0));
 				}
+
+				if (block.graphic.assetsKey.contains('resources/'))
+					world_info.resource_packs.push(block.graphic.assetsKey.split('/')[2]);
 			}
 
 		#if sys

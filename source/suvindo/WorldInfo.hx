@@ -43,7 +43,7 @@ class WorldInfoClass
 			add_warning('Prototype version!');
 
 		var missing_resource_packs:Array<String> = [];
-		for (pack in world_info.resource_packs)
+		for (pack in world_info?.resource_packs ?? [])
 		{
 			if (!ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack))
 				missing_resource_packs.push(pack);
