@@ -84,7 +84,7 @@ class ResourcePackMenu extends FlxState
 			var cur_pack = literal_pack_list[cur_selected];
 
 			packInfo.text = "Name: " + cur_pack.name + "\nDescription: " + cur_pack.description + "\n\nPack Version: " + cur_pack.pack_version
-				+ "\n\nPack Version Warning(s):" + ResourcePacks.getPackVersionWarning(cur_pack.pack_version);
+				+ "\n\nPack Version Warning(s):\n" + ResourcePacks.getPackVersionWarning(cur_pack.pack_version);
 		}
 		else
 		{
