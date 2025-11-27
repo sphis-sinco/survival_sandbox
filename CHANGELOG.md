@@ -1,4 +1,4 @@
-# 0.2.0 - 11/??/2025
+# 0.2.0 - 11/27/2025
 ## Requests
 - [New system: Requests](/.dev/docs/resourcepacks/requests/overview.md) : A series of .JSON files that will give the game instructions
 
@@ -18,7 +18,7 @@ Changes connected to [the new Requests system](#requests) and the new tracks sys
     - Fixed crashes when trying to read non-existant resource pack directories
 - You can now wrap around in the Resource Pack Menu
 - Fixed mouse being visible when it shouldn't be
-- Added world autosaving (every minute)
+- Added worldautosaving (every minute)
 - Added support for Loading worlds (World Selection State does this)
 - Added support for Saving worlds (auto-done when reloading or leaving gameplay)
 - `DEBUG` : Added Custom Debug Application icon
