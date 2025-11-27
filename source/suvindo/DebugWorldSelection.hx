@@ -139,13 +139,13 @@ class DebugWorldSelection extends FlxState
 			{
 				cur_selected--;
 				if (cur_selected < 0)
-					cur_selected++;
+					cur_selected = world_texts.length - 1;
 			}
 			if (FlxG.keys.anyJustReleased([S, DOWN]))
 			{
 				cur_selected++;
 				if (cur_selected > world_texts.length - 1)
-					cur_selected--;
+					cur_selected = 0;
 			}
 
 			if (FlxG.keys.justReleased.ENTER)

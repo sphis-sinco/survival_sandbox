@@ -1,5 +1,6 @@
 # 0.2.0 - 11/??/2025
 ## General
+- You can now wrap around in the Resource Pack Menu
 - Fixed mouse being visible when it shouldn't be
 - Added autosaving (every minute)
 - Added support for Loading worlds (World Selection State does this)
