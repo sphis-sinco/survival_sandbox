@@ -19,6 +19,8 @@ class TrackManager
 	public static function reload()
 	{
 		TRACKS_LIST = [];
+		if (MUSIC != null)
+			MUSIC.destroy();
 		#if sys
 		var tracksDir:Array<String> = ResourcePacks.readDirectory('music/');
 		for (track in RequestsManager.ADD.tracks)

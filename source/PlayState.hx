@@ -111,8 +111,8 @@ class PlayState extends FlxState
 					{
 						if (block?.frameIndex != null)
 						{
+							old_block.animation.play(old_block.animation.name, false, false, block.frameIndex);
 							old_block.animation.frameIndex = block.frameIndex;
-							old_block.animation.play(old_block.animation.name);
 						}
 					}
 					blocks.add(old_block);
