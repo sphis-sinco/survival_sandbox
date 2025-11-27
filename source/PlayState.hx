@@ -99,7 +99,7 @@ class PlayState extends FlxState
 			blocks: [],
 			has_animated_blocks: false,
 			animated_block_universal_frames: {},
-			random_id: world_info.random_id ?? Sha256.encode('' + FlxG.random.int(0, 255)),
+			random_id: (world_info?.random_id ?? null) ?? Sha256.encode('' + FlxG.random.int(0, 255)),
 			// world_name: world_info.world_name ?? null
 		};
 		world_info.cursor_block = {
