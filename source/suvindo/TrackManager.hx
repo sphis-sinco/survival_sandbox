@@ -53,9 +53,11 @@ class TrackManager
 
 	public static var MUSIC_TIMER:FlxTimer;
 
+	public static var MUSIC:FlxSound;
+
 	public static function playTrack()
 	{
-		if (FlxG.sound.music?.playing)
+		if (MUSIC?.playing)
 			return;
 
 		if (MUSIC_TIMER?.active)
@@ -72,8 +74,8 @@ class TrackManager
 
 		var track = ResourcePacks.getPath('music/' + TRACKS_LIST[FlxG.random.int(0, TRACKS_LIST.length - 1)] + '.wav');
 
-		if (FlxG.sound.music == null)
-			FlxG.sound.music = new FlxSound();
+		if (MUSIC == null)
+			MUSIC = new FlxSound();
 
 		final max_wait_secs:Float = 60 * switch (MUSIC_RATE)
 		{
@@ -92,7 +94,7 @@ class TrackManager
 
 		trace('Going to wait ' + FlxMath.roundDecimal(time_to_wait / 60, 2) + " minutes to play next track");
 
-		FlxG.sound.music.loadStream(track, false, false, () ->
+		MUSIC.loadStream(track, false, false, () ->
 		{
 			trace('Waiting ' + FlxMath.roundDecimal(time_to_wait / 60, 2) + " minutes to play next track");
 			MUSIC_TIMER.start(time_to_wait, t -> playTrack);
@@ -100,7 +102,7 @@ class TrackManager
 			{
 				trace('playing ' + track);
 			});
-		FlxG.sound.music.play();
+		MUSIC.play();
 	}
 }
 
