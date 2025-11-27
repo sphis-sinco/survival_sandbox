@@ -129,10 +129,9 @@ class ResourcePackMenu extends FlxState
 		if (FlxG.keys.justReleased.ESCAPE)
 		{
 			saveEnabledRP();
-
-			trace('Left resource pack menu');
-			trace('Resource packs: ' + ResourcePacks.RESOURCE_PACKS);
-			trace('Enabled resource packs: ' + ResourcePacks.ENABLED_RESOURCE_PACKS);
+			ReloadPlugin.reload.removeAll();
+			ReloadPlugin.onReloadInit();
+			ReloadPlugin.reload.dispatch();
 
 			FlxG.switchState(() -> new PlayState());
 		}
