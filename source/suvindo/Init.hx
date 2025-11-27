@@ -17,6 +17,7 @@ class Init extends FlxState
 			ReloadPlugin.reload.add(ResourcePacks.reload);
 			ReloadPlugin.reload.add(RequestsManager.reload);
 			ReloadPlugin.reload.add(BlockList.reload);
+			ReloadPlugin.reload.add(TrackManager.reload);
 		}
 		FlxG.plugins.addPlugin(new ReloadPlugin());
 
