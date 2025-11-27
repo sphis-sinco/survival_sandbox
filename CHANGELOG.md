@@ -1,13 +1,6 @@
 # 0.2.0 - 11/??/2025
 ## Requests
-- Added new system: Requests
-    - A series of .JSON files that will give the game instructions
-- Requests JSON
-    - Asset Path: `data/requests/`
-        - You cannot do requests without this being the path
-    - `request` : The request type
-        - `remove` : will remove the specified objects
-    - `blocks` (optional) : List of Block ID's
+- [New system: Requests](/.dev/docs/resourcepacks/requests/overview.md)
 
 ## Resource Packs
 [Changes connected to the new Requests system](#requests)
