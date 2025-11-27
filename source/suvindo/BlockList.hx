@@ -24,7 +24,7 @@ class BlockList
 				if (!BLOCK_LIST.contains(Path.withoutExtension(Path.withoutDirectory(image))))
 					BLOCK_LIST.push(Path.withoutExtension(Path.withoutDirectory(image)));
 
-			if (image.endsWith('.json'))
+			if (image.endsWith('.json') && !FileSystem.isDirectory(image))
 			{
 				var block_json:BlockJSON = cast File.getContent(image);
 				if (block_json != null)

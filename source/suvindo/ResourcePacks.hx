@@ -144,7 +144,7 @@ class ResourcePacks
 
 		#if sys
 		for (path in FileSystem.readDirectory('assets/' + directory))
-			read_directory.push('assets/' + path);
+			read_directory.push('assets/' + directory + '/' + path);
 		for (pack in ENABLED_RESOURCE_PACKS)
 			for (path in FileSystem.readDirectory('resources/' + pack + '/' + directory))
 				read_directory.push('resources/' + pack + '/' + path);

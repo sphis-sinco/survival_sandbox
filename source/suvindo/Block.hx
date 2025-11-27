@@ -1,6 +1,7 @@
 package suvindo;
 
 #if sys
+import sys.FileSystem;
 import sys.io.File;
 #end
 import lime.utils.Assets;
@@ -12,6 +13,9 @@ import flixel.FlxSprite;
 class Block extends FlxSprite
 {
 	public var block_id:String;
+	public var block_json:BlockJSON;
+
+	public var variation_index:Int = 0;
 
 	public var hsv_shader:HSVShader;
 
@@ -32,15 +36,20 @@ class Block extends FlxSprite
 		#else
 		loadGraphic(ResourcePacks.getPath('images/blocks/' + new_block + '.png'));
 		#end
+		variation_index = 0;
 
-		#if sys
-		var block_json:BlockJSON = cast File.getContent(ResourcePacks.getPath('images/blocks/' + new_block + '.json'));
-		#else
-		var block_json:BlockJSON = cast Assets.getText(ResourcePacks.getPath('images/blocks/' + new_block + '.json'));
-		#end
-		if (block_json != null)
+		block_json = null;
+		if (#if !sys Assets.exists #else FileSystem.exists #end (ResourcePacks.getPath('images/blocks/' + new_block + '.json')))
 		{
-			if (block_json.type != null) {}
+			#if sys
+			block_json = cast File.getContent(ResourcePacks.getPath('images/blocks/' + new_block + '.json'));
+			#else
+			block_json = cast Assets.getText(ResourcePacks.getPath('images/blocks/' + new_block + '.json'));
+			#end
+			if (block_json != null)
+			{
+				if (block_json.type != null) {}
+			}
 		}
 
 		if (this.graphic != null)
