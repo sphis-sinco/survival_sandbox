@@ -4,7 +4,7 @@ typedef BlockJSON =
 {
 	> VariationsEntry,
 
-	var ?type:String;
+	var ?types:Array<String>;
 }
 
 typedef VariationsEntry =

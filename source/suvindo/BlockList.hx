@@ -31,7 +31,7 @@ class BlockList
 			{
 				var block_json:BlockJSON = cast Json.parse(File.getContent(image));
 				if (block_json != null)
-					if (block_json.type != null)
+					if (block_json.types != null)
 						if (!BLOCK_LIST.contains(list_entry))
 							BLOCK_LIST.push(list_entry);
 			}
