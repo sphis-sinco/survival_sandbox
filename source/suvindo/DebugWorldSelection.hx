@@ -1,5 +1,6 @@
 package suvindo;
 
+import sys.FileSystem;
 import flixel.text.FlxInputText;
 import haxe.io.Path;
 import flixel.FlxObject;
@@ -104,6 +105,10 @@ class DebugWorldSelection extends FlxState
 
 		if (FlxG.keys.justReleased.ENTER)
 		{
+			#if sys
+			while (!FileSystem.exists('assets/saves/' + world_name.text + '.json'))
+				world_name.text += '๑_';
+			#end
 			FlxG.switchState(() -> new PlayState(world_list[cur_selected] ?? world_name.text));
 		}
 	}
