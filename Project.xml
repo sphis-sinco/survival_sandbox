@@ -104,7 +104,9 @@
 	<!--Place custom nodes like icons here-->
 	<icon path="assets/icons/16x.png"/>
 	<icon path="assets/icons/16x.png" size="16"/>
+	<icon path="assets/icons/24x.png" size="24"/>
 	<icon path="assets/icons/32x.png" size="32"/>
+	<icon path="assets/icons/40x.png" size="40"/>
 	<icon path="assets/icons/48x.png" size="48"/>
 	<icon path="assets/icons/64x.png" size="64"/>
 </project>
