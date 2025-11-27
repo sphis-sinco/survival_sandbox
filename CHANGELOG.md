@@ -1,3 +1,7 @@
+# 0.2.1 - 11/27/2025
+## General
+- Fixed block variations not being saved in worlds
+
 # 0.2.0 - 11/27/2025
 ## Requests
 - [New system: Requests](/.dev/docs/resourcepacks/requests/overview.md) : A series of .JSON files that will give the game instructions

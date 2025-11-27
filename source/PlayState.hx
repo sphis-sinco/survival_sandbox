@@ -115,6 +115,11 @@ class PlayState extends FlxState
 							old_block.animation.frameIndex = block.frameIndex;
 						}
 					}
+					if (block?.variation_index != null)
+					{
+						old_block.variation_index = block.variation_index;
+						old_block.changeVariationIndex(0);
+					}
 					blocks.add(old_block);
 				}
 			}
@@ -164,6 +169,8 @@ class PlayState extends FlxState
 					world_info.has_animated_blocks = true;
 					block_data.frameIndex = block.animation.frameIndex;
 				}
+				if (block.block_json?.type == 'variations')
+					block_data.variation_index = block.variation_index;
 
 				world_info.blocks.push(block_data);
 
