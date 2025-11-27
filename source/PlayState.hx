@@ -1,5 +1,6 @@
 package;
 
+import suvindo.Requests.RequestsManager;
 import suvindo.WorldInfo;
 import suvindo.DebugWorldSelection;
 import flixel.util.FlxTimer;
@@ -97,6 +98,8 @@ class PlayState extends FlxState
 					if (block?.x == null)
 						continue;
 					if (block?.y == null)
+						continue;
+					if (RequestsManager.REMOVE.blocks.contains(block?.block_id))
 						continue;
 
 					var old_block = new Block(block?.block_id, block?.x, block?.y);
