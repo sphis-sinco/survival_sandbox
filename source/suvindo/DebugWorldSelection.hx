@@ -74,18 +74,22 @@ class DebugWorldSelection extends FlxState
 		world_texts = new FlxTypedGroup<FlxText>();
 		add(world_texts);
 
+		camFollow = new FlxObject(FlxG.width / 2);
+		add(camFollow);
+
 		var i = 0;
 		for (world_id in world_list)
 		{
 			var world_txt:FlxText = new FlxText(2, 2, FlxG.width / 2, world_id ?? "New world", 32);
 			world_texts.add(world_txt);
 			world_txt.ID = i;
+			if (world_txt.ID == cur_selected)
+				camFollow.y = world_txt.y;
 
 			i++;
 		}
 
-		camFollow = new FlxObject(FlxG.width / 2);
-		add(camFollow);
+		FlxG.camera.y = camFollow.y;
 
 		world_name = FlxInputTextUtil.createInputText(null, "World Name");
 		world_name.scrollFactor.set();
