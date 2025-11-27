@@ -11,6 +11,8 @@ class Init extends FlxState
 
 		FlxG.plugins.addPlugin(new ReloadPlugin());
 
+		FlxG.mouse.visible = false;
+
 		ReloadPlugin.reload_function();
 
 		#if RESOURCE_PACK_MENU
