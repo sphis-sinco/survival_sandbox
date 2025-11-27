@@ -93,7 +93,8 @@ class PlayState extends FlxState
 
 		watermark.text = 'Suvindo ' + lime.app.Application.current.meta.get('version') + #if debug ' [PROTOTYPE]' #else '' #end;
 		watermark.text += '\n\nCurrent Block ID: ' + cursor_block.block_id;
-		watermark.text += '\nCurrent Block Variation: ' + cursor_block.variation_graphics[cursor_block.variation_index].id ?? 'default';
+		watermark.text += '\nCurrent Block Variation: '
+			+ ((cursor_block.variation_graphics.length > 0) ? cursor_block.variation_graphics[cursor_block.variation_index]?.id : 'default');
 
 		if (FlxG.keys.pressed.F3)
 		{
