@@ -1,7 +1,7 @@
 # Resource Packs : Variation Blocks
 [Back](../Intro.md)
 
-A block with a different states
+Allows a block to change its texture without switching to (or having to create) a new block
 
 ## JSON
 - `type` : "variations"

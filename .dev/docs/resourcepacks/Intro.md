@@ -9,6 +9,6 @@ As of writing this (0.2.0 indev) the system is still bare-bones.
 
 - [Regular Blocks](./blocks/types/regular.md)
 - [Animated Blocks](./blocks/types/animated.md)
-- [Variation Blocks](./blocks/types/variation.md)
+- [Variation Blocks](./blocks/types/variations.md)
 
 - [Removing Blocks](./blocks/actions/removing.md)

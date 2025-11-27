@@ -7,7 +7,7 @@
         - You cannot do requests without this being the path
     - `request` : The request type
         - `remove` : will remove the specified objects
-    - `blocks` : List of Block ID's
+    - `blocks` (optional) : List of Block ID's
 
 ## Resource Packs
 [Changes connected to the new Requests system](#requests)
@@ -32,22 +32,10 @@
 
 ## Blocks
 - Added Debug "Block" - A texture used when a block's texture can't be found. Embeded texture
-- Added Block JSON support with the following fields and availible values:
-    - Types:
-        - "variations" - Allows the block to change its texture without switching to (or having to create) a new block
-        - "animated" - Allows blocks to be animated
-        - "regular" - Default block functions, just allows you to change the texture location
-    - `TYPE: variations` : variations - An array of variations the block has with the following fields for each variation
-        - "id" - Name of the variation, used in the watermark
-        - "texture" - Path of the texture you'd like to use relative to the images folder, so if your texture is in `assets/images/mycoolblockstates/coolstate5.png`, then you'd put `mycoolblockstates/coolstate5`
-    - `TYPE: animated` : animated - Data related to animated blocks
-        - "block_width" - The width of your block image without the animation frames
-        - "block_height" - The height of your block image without the animation frames
-        - "texture" - Path of the texture you'd like to use relative to the images folder, so if your texture is in `assets/images/myanimatedblock/animatedblock.png`, then you'd put `myanimatedblock/animatedblock`
-        - "frames" - The frame order your animation has, starting from 0 it can be [0,2,1,2,0], [0,1,2,1,0], and it will change the frame order so in the first one its a loop of frame 1, 3, 2, 3, then 1, and in the second 1,2,3,1,0.
-        - "fps" - How many frames are played in a second
-    - `TYPE: regular` regular - Data related to regular blocks
-        - "texture" - Custom path of the texture you'd like to use relative to the images folder, so if your texture is in `assets/images/blocks/myblocks/block.png`, then you'd put `blocks/myblocks/block`
+- Added Block JSON support with the following types:
+    - [variations](/.dev/docs/resourcepacks/blocks/types/variations.md)
+    - [animated](/.dev/docs/resourcepacks/blocks/types/animated.md)
+    - [regular](/.dev/docs/resourcepacks/blocks/types/regular.md)
 - Added Water Block
     - Type: "animated"
 - Added Wool Block
