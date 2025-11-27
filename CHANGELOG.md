@@ -1,6 +1,6 @@
 # 0.2.0 - 11/??/2025
 ## Requests
-- [New system: Requests](/.dev/docs/resourcepacks/requests/overview.md)
+- [New system: Requests](/.dev/docs/resourcepacks/requests/overview.md) : A series of .JSON files that will give the game instructions
 
 ## Resource Packs
 [Changes connected to the new Requests system](#requests)
