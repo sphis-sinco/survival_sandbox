@@ -9,7 +9,7 @@ A block with a looping animation
 - `animated` :
     - `block_width` : Width of your block
     - `block_height` : Height of your block
-    - `texture` (optional) : Path to your block relative to the image folder. (I.e `blocks/liquids/lava` would redirect to `assets/images/blocks/liquids/lava.png` in-game)
+    - `texture` (optional) : Path to your block relative to the image folder. (I.e `blocks/liquids/lava` would redirect to `assets/images/blocks/liquids/lava.png` in-game along with the resource pack versions)
     - `frames` (optional) : A list of integer values to control how your animation runs
         - Frames have to be specified like this: [0, 1, 2, 3, ...] : The first frame is 0.
         - Default: If you don't specify a frame order then the game will do it for you by just proceeding through the frames in order.

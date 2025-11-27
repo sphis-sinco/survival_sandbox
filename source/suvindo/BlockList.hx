@@ -20,7 +20,8 @@ class BlockList
 		BLOCK_LIST = [];
 
 		#if sys
-		for (image in ResourcePacks.readDirectory('images/blocks/'))
+		var blocksDir:Array<String> = ResourcePacks.readDirectory('images/blocks/');
+		for (image in blocksDir)
 		{
 			var list_entry:String = Path.withoutExtension(Path.withoutDirectory(image));
 			var accept_entry = () ->
@@ -53,7 +54,7 @@ class BlockList
 								}
 								else
 									all_variations_valid = false;
-								
+
 								if (all_variations_valid)
 									accept_entry();
 							case 'animated':

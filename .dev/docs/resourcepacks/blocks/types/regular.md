@@ -7,7 +7,7 @@ A regular block, no animation, no variations. A simple image.
 
 - `type` : "regular"
 - `regular` :
-    - `texture` (optional) : Path to your block relative to the image folder. (I.e `blocks/stone` would redirect to `assets/images/blocks/stone.png` in-game)
+    - `texture` (optional) : Path to your block relative to the image folder. (I.e `blocks/stone` would redirect to `assets/images/blocks/stone.png` in-game along with the resource pack versions)
 
 ## Notes
 
