@@ -3,7 +3,7 @@ A project originally intended to be a survival sandbox game similar to minecraft
 
 ## Credits
 
-You do or did know there's a person making this or made this right? Not some robot prompted to do every single part of it. Especally the pixel art. (At the time of writing this.) They're not good at that.
+You do or did know there's people making this or made this right? Not some robot prompted to do every single part of it. Especally the pixel art. (At the time of writing this.) They're not good at that.
 
 ### Sphis
 
@@ -11,6 +11,10 @@ Yo! I'm the one writing this actually so that's cool :D
 I did just about all of the code for this project. And so-far all of the art, so yeah.
 
 To quickly get over the social list just go to [my Carrd page](https://sphis-sinco.carrd.co). It's got all my socials. And some extra stuff.
+
+### Xavier
+
+The Musician of the project, they've got an [instagram](https://www.instagram.com/thegreat_avirex?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr) you can go check out so ye.
 
 ### Friday Night Funkin'
 
