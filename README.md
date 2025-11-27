@@ -24,41 +24,41 @@ Surely you're not just here to check out the code right?
 
 ### Controls
 
-[ANYWHERE] R - Reload Resource Packs and the Block list
+`ANYWHERE` R - Reload Resource Packs and the Block list
 
-[GAMEPLAY] WASD / Arrow Keys - Move the cursor block
+`GAMEPLAY` WASD / Arrow Keys - Move the cursor block
 
-[GAMEPLAY] TAB - Switch to the next block
+`GAMEPLAY` TAB - Switch to the next block
 
-[GAMEPLAY] TAB + SHIFT - Switch to the previous block
+`GAMEPLAY` TAB + SHIFT - Switch to the previous block
 
-[GAMEPLAY] L - Switch to the next variation
+`GAMEPLAY` L - Switch to the next variation
 
-[GAMEPLAY] L + SHIFT - Switch to the previous variation
+`GAMEPLAY` L + SHIFT - Switch to the previous variation
 
-[GAMEPLAY] F3 - Display extra info on the watermark
+`GAMEPLAY` F3 - Display extra info on the watermark
 
-[GAMEPLAY] ENTER - Place / Break blocks (depending on if you're touching a block)
+`GAMEPLAY` ENTER - Place / Break blocks (depending on if you're touching a block)
 
-[GAMEPLAY] ESCAPE - Leave to World Selection
+`GAMEPLAY` ESCAPE - Leave to World Selection
 
-[RESOURCE PACK MENU] W / Up Arrow Key - Move up
+`RESOURCE PACK MENU` W / Up Arrow Key - Move up
 
-[RESOURCE PACK MENU] W / Up Arrow Key + Shift - Move up and move the resource pack up in priority
+`RESOURCE PACK MENU` W / Up Arrow Key + Shift - Move up and move the resource pack up in priority
 
-[RESOURCE PACK MENU] S / Down Arrow Key - Move down
+`RESOURCE PACK MENU` S / Down Arrow Key - Move down
 
-[RESOURCE PACK MENU] S / Down Arrow Key + Shift - Move down and move the resource pack down in priority
+`RESOURCE PACK MENU` S / Down Arrow Key + Shift - Move down and move the resource pack down in priority
 
-[RESOURCE PACK MENU] ENTER - Disable / Enable the currently selected Resource Pack
+`RESOURCE PACK MENU` ENTER - Disable / Enable the currently selected Resource Pack
 
-[RESOURCE PACK MENU] ESCAPE - Leave to PlayState / The Main Game
+`RESOURCE PACK MENU` ESCAPE - Leave to PlayState / The Main Game
 
-[WORLD SELECTION MENU] W / Up Arrow Key - Move up
+`WORLD SELECTION MENU` W / Up Arrow Key - Move up
 
-[WORLD SELECTION MENU] S / Down Arrow Key - Move down
+`WORLD SELECTION MENU` S / Down Arrow Key - Move down
 
-[WORLD SELECTION MENU] ENTER - Select the current world (or make a new world)
+`WORLD SELECTION MENU` ENTER - Select the current world (or make a new world)
 
 ### Resource Packs
 
