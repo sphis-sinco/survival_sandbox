@@ -125,7 +125,7 @@ class PlayState extends FlxState
 			animated_block_universal_frames: {},
 			random_id: (world_info?.random_id ?? null) ?? Sha256.encode('' + FlxG.random.int(0, 255)),
 			game_version: Application.current.meta.get('version') + #if debug ' [PROTOTYPE]' #else '' #end,
-			world_name: ((world_info?.world_name ?? null) ?? WORLD_NAME) ?? null
+			world_name: WORLD_NAME ?? ((world_info?.world_name ?? null) ?? null)
 		};
 		if (cursor_block != null)
 			world_info.cursor_block = {
@@ -240,11 +240,6 @@ class PlayState extends FlxState
 					{
 						new_block.variation_index = cursor_block.variation_index;
 						new_block.changeVariationIndex(0);
-					}
-
-					if (new_block?.block_json?.type == 'animated')
-					{
-						FlxTimer.wait(1 / 1000, () -> onReload);
 					}
 				}
 				else
