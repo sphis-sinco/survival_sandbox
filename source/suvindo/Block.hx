@@ -47,13 +47,6 @@ class Block extends FlxSprite
 			if (Path.withoutDirectory(block_path) == block)
 				path = ResourcePacks.getPath('images/' + block_path + '.' + ext);
 
-		#if if
-		(!FileSystem.exists(path))
-		#else
-		if (!Assets.exists(path))
-		#end
-		path = 'images/debug.' + ext;
-
 		graphic_path = path;
 		return path;
 	}
@@ -65,6 +58,9 @@ class Block extends FlxSprite
 		#else
 		loadGraphic(getGraphicPath(new_block));
 		#end
+
+		if (this.graphic == null)
+			loadGraphic('assets/images/debug.png');
 	}
 
 	public function changeVariationIndex(amount:Int)
@@ -144,6 +140,9 @@ class Block extends FlxSprite
 		}
 		else
 			defaultLoadGraphic(new_block);
+
+		if (this.graphic.bitmap == null)
+			loadGraphic('assets/images/debug.png');
 
 		this.scale.set(1, 1);
 		if (this.graphic != null)
