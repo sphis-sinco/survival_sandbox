@@ -6,26 +6,11 @@ A project originally intended to be a survival sandbox game similar to minecraft
 You do or did know there's people making this or made this right? Not some robot prompted to do every single part of it. Especally the pixel art. (At the time of writing this.) They're not good at that.
 
 ### Suvindo Crew
+The crew behind the game!
 
-Welcome to the crew behind Suvindo! Small group of people in "Synth Studio", just a cool lil indie studio we've got!
-(⑅ •͈ᴗ•͈ )
-
-#### Sphis
-
-Yo! I'm the one writing this actually so that's cool :D
-I did just about all of the code for this project. And so-far all of the art, so yeah.
-
-To quickly get over the social list just go to [my Carrd page](https://sphis-sinco.carrd.co). It's got all my socials. And some extra stuff.
-
-#### Xavier
-
-The Musician of the project, they've got an [instagram](https://www.instagram.com/thegreat_avirex?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr) you can go check out so ye.
-
-#### ZSolarDev
-
-Assistant Programmer and Owner of the Synth Studio... studio! Pretty chill friend, he's the reason a main menu came so soon! Heheh.
-
-He has decided that you guys shall have his [Github](https://github.com/ZSolarDev) be the link you see!
+- [Sphis](https://sphis-sinco.carrd.co) : Director, Lead Programmer, and Artist
+- [Xavier](https://www.instagram.com/thegreat_avirex?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr) : Musician and Sound designer
+- [ZSolarDev](https://github.com/ZSolarDev) - Programmer
 
 ### Friday Night Funkin'
 
@@ -39,70 +24,45 @@ Surely you're not just here to check out the code right?
 
 ### Controls
 
-Every game has controls! What're this game's controls?
+[ANYWHERE] R - Reload Resource Packs and the Block list
 
-#### Anywhere
+[GAMEPLAY] WASD / Arrow Keys - Move the cursor block
 
-R - Reload Resource Packs and the Block list
+[GAMEPLAY] TAB - Switch to the next block
 
-#### PlayState / The Main Game
+[GAMEPLAY] TAB + SHIFT - Switch to the previous block
 
-WASD / Arrow Keys - Move the cursor block
+[GAMEPLAY] L - Switch to the next variation
 
-TAB - Switch to the next block
-TAB + SHIFT - Switch to the previous block
+[GAMEPLAY] L + SHIFT - Switch to the previous variation
 
-L - Switch to the next variation
-L + SHIFT - Switch to the previous variation
+[GAMEPLAY] F3 - Display extra info on the watermark
 
-F3 - Display extra info on the watermark
+[GAMEPLAY] ENTER - Place / Break blocks (depending on if you're touching a block)
 
-ENTER - Place / Break blocks (depending on if you're touching a block)
-ESCAPE - Leave to World Selection
+[GAMEPLAY] ESCAPE - Leave to World Selection
 
-#### Resource Pack Menu
+[RESOURCE PACK MENU] W / Up Arrow Key - Move up
 
-W / Up Arrow Key - Move up
-W / Up Arrow Key + Shift - Move up and move the resource pack up in priority
+[RESOURCE PACK MENU] W / Up Arrow Key + Shift - Move up and move the resource pack up in priority
 
-S / Down Arrow Key - Move down
-S / Down Arrow Key + Shift - Move down and move the resource pack down in priority
+[RESOURCE PACK MENU] S / Down Arrow Key - Move down
 
-ENTER - Disable / Enable the currently selected Resource Pack
+[RESOURCE PACK MENU] S / Down Arrow Key + Shift - Move down and move the resource pack down in priority
 
-ESCAPE - Leave to PlayState / The Main Game
+[RESOURCE PACK MENU] ENTER - Disable / Enable the currently selected Resource Pack
 
-#### World Selection Menu
+[RESOURCE PACK MENU] ESCAPE - Leave to PlayState / The Main Game
 
-W / Up Arrow Key - Move up
-S / Down Arrow Key - Move down
+[WORLD SELECTION MENU] W / Up Arrow Key - Move up
 
-ENTER - Select the current world (or make a new world)
+[WORLD SELECTION MENU] S / Down Arrow Key - Move down
+
+[WORLD SELECTION MENU] ENTER - Select the current world (or make a new world)
 
 ### Resource Packs
 
-Alright NOW we can talk about the Resource Packs.
-
-So the resource packs in this game are a system where you can:
-- Add / Replace blocks
-( And that's about it for now but this game isn't in it's 1.0+ stage so gimme some time ight? (¬⤙¬ ) )
-
-#### Little Note
-
-I don't think this system really works on web / HTML5 unless you export / compile it with resource packs so uh, do what that what you will. (Mainly directed to the people going to the Source Code section so yeah.)
-
-#### Adding (or replacing) new blocks
-
-This is actually very easy to do!
-Here are the steps:
-
-1. Create an image (1 to 1 ratio to avoid stretching textures because it'll scale to 16x16, so 4x4, 8x8, 16x16, 32x32, all are good.)
-
-2. Add it to the "images/blocks/" folder of the base game (why would you do that) or your resource pack as a .PNG
-
-3. Go back to the game window and press "R" (or you can close and reopen the game but that's annoying to do each time.)
-
-And you're done!
+Being reworked, not the system, the documentation.
 
 ## Source code
 
