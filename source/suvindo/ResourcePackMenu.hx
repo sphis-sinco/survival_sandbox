@@ -63,7 +63,7 @@ class ResourcePackMenu extends FlxState
 		camFollow = new FlxObject(FlxG.width / 2);
 		add(camFollow);
 
-		packInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, '', 32);
+		packInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, '', 16);
 		add(packInfo);
 		packInfo.alignment = RIGHT;
 		packInfo.scrollFactor.set();

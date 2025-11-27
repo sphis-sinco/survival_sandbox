@@ -103,7 +103,7 @@ class DebugWorldSelection extends FlxState
 			FlxG.resetState();
 		});
 
-		worldInfo = new FlxText(FlxG.width / 2, 2 + world_name.height + world_name.y, FlxG.width / 2, '', 32);
+		worldInfo = new FlxText(FlxG.width / 2, 2 + world_name.height + world_name.y, FlxG.width / 2, '', 16);
 		add(worldInfo);
 		worldInfo.alignment = RIGHT;
 		worldInfo.scrollFactor.set();

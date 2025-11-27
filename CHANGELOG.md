@@ -8,6 +8,7 @@
     - Version `1` is still supported
 
 ## General
+- Changed Resource Pack Menu Pack Info text size from 32 to 16
 - Fixed Resource Pack Menu warnings not displaying
 - Several issues with the Resource Pack readDirectory function were fixed
     - Fixed resource pack paths not including the directory
