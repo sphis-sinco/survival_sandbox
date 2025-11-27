@@ -30,6 +30,8 @@ Surely you're not just here to check out the code right?
 
 `ANYWHERE` : R - Reload Resource Packs and the Block list
 
+`ANYWHERE` : P - Leave to Resource Pack Menu (if you have resource packs)
+
 `GAMEPLAY` : WASD / Arrow Keys - Move the cursor block
 
 `GAMEPLAY` : TAB - Switch to the next block

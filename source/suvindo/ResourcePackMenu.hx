@@ -23,6 +23,15 @@ class ResourcePackMenu extends FlxState
 
 	public var camFollow:FlxObject;
 
+	public var world_selection:Bool = false;
+
+	override public function new(world_selection:Bool = false)
+	{
+		super();
+
+		this.world_selection = world_selection;
+	}
+
 	override function create()
 	{
 		super.create();
@@ -133,7 +142,10 @@ class ResourcePackMenu extends FlxState
 			ReloadPlugin.onReloadInit();
 			ReloadPlugin.reload.dispatch();
 
-			FlxG.switchState(() -> new PlayState());
+			if (world_selection)
+				FlxG.switchState(() -> new DebugWorldSelection());
+			else
+				FlxG.switchState(() -> new PlayState());
 		}
 	}
 

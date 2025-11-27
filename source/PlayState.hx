@@ -166,8 +166,8 @@ class PlayState extends FlxState
 							- block.animation.frameIndex : 1) : 0));
 				}
 
-				if (block.graphic.assetsKey.contains('resources/'))
-					world_info.resource_packs.push(block.graphic.assetsKey.split('/')[2]);
+				if (block.graphic.key.contains('resources/'))
+					world_info.resource_packs.push(block.graphic.key.split('/')[2]);
 			}
 
 		#if sys

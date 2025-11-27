@@ -132,14 +132,8 @@ class DebugWorldSelection extends FlxState
 					{
 						var cur_world:WorldInfo = Json.parse(File.getContent('assets/saves/' + world_list[cur_selected] + '.json'));
 
-						worldInfo.text = 'Name: '
-							+ cur_world.world_name
-							+ '\nRID: '
-							+ cur_world.random_id
-							+ '\n\nGame Version: '
-							+ cur_world.game_version
-							+ '\n\nWorld warning(s):\n'
-							+ WorldInfoClass.getWorldWarnings(cur_world);
+						worldInfo.text = 'Name: ' + cur_world.world_name + '\nRID: ' + cur_world.random_id + '\n\nGame Version: ' + cur_world.game_version
+							+ '\n\nWorld warning(s):\n' + WorldInfoClass.getWorldWarnings(cur_world);
 					}
 					catch (e)
 					{
@@ -151,6 +145,12 @@ class DebugWorldSelection extends FlxState
 
 		if (ReloadPlugin.canReload)
 		{
+			if (FlxG.keys.justReleased.P && ResourcePacks.RESOURCE_PACKS.length > 0)
+			{
+				saved_selected = cur_selected;
+				FlxG.switchState(() -> new ResourcePackMenu());
+			}
+
 			if (FlxG.keys.anyJustReleased([W, UP]))
 			{
 				cur_selected--;
