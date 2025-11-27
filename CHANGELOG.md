@@ -1,5 +1,6 @@
 # 0.2.0 - 11/??/2025
 ## General
+- [CODE] Added fixed for crashes when trying to read non-existant resource pack directories
 - Added Current Block Variation to the watermark
 - "Current Block (id)" is now "Current Block ID" on the watermark
 - Changed company from "Sphis" to "SuvindoCrew"

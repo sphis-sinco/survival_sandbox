@@ -143,11 +143,19 @@ class ResourcePacks
 		var read_directory:Array<String> = [];
 
 		#if sys
-		for (path in FileSystem.readDirectory('assets/' + directory))
-			read_directory.push('assets/' + directory + path);
+		try
+		{
+			for (path in FileSystem.readDirectory('assets/' + directory))
+				read_directory.push('assets/' + directory + path);
+		}
+		catch (e) {}
 		for (pack in ENABLED_RESOURCE_PACKS)
-			for (path in FileSystem.readDirectory('resources/' + pack + '/' + directory))
-				read_directory.push('resources/' + pack + '/' + path);
+			try
+			{
+				for (path in FileSystem.readDirectory('resources/' + pack + '/' + directory))
+					read_directory.push('resources/' + pack + '/' + path);
+			}
+			catch (e) {}
 		#end
 
 		return read_directory;
