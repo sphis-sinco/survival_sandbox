@@ -37,13 +37,13 @@ class Block extends FlxSprite
 		this.shader = hsv_shader;
 	}
 
-	public function getGraphicPath(block:String, blocks_folder:Bool = true):String
+	public function getGraphicPath(block:String, blocks_folder:Bool = true, ext:String = 'png'):String
 	{
-		var path:String = ResourcePacks.getPath('images/' + (blocks_folder ? 'blocks/' : '') + block + '.png');
+		var path:String = ResourcePacks.getPath('images/' + (blocks_folder ? 'blocks/' : '') + block + '.' + ext);
 
 		for (block_path in RequestsManager.ADD.blocks)
 			if (Path.withoutDirectory(block_path) == block)
-				path = ResourcePacks.getPath('images/' + block_path + '.png');
+				path = ResourcePacks.getPath('images/' + block_path + '.' + ext);
 
 		return path;
 	}
@@ -67,10 +67,13 @@ class Block extends FlxSprite
 			variation_index = 0;
 
 		#if sys
-		loadGraphic(FlxGraphic.fromBitmapData(BitmapData.fromFile(getGraphicPath(variations[variation_index].texture, true))));
+		loadGraphic(FlxGraphic.fromBitmapData(BitmapData.fromFile(getGraphicPath(variations[variation_index].texture, false))));
 		#else
-		loadGraphic(getGraphicPath(variations[variation_index].texture, true));
+		loadGraphic(getGraphicPath(variations[variation_index].texture, false));
 		#end
+		
+		if (this.graphic == null)
+			trace(getGraphicPath(variations[variation_index].texture, false));
 
 		if (this.graphic == null)
 			loadGraphic('assets/images/debug.png');
@@ -82,12 +85,12 @@ class Block extends FlxSprite
 		variations = [];
 
 		block_json = null;
-		if (#if !sys Assets.exists #else FileSystem.exists #end (getGraphicPath(new_block).replace('.png', '.json')))
+		if (#if !sys Assets.exists #else FileSystem.exists #end (getGraphicPath(new_block, true, 'json')))
 		{
 			#if sys
-			block_json = cast Json.parse(File.getContent(getGraphicPath(new_block).replace('.png', '.json')));
+			block_json = cast Json.parse(File.getContent(getGraphicPath(new_block, true, 'json')));
 			#else
-			block_json = cast Json.parse(Assets.getText(getGraphicPath(new_block).replace('.png', '.json')));
+			block_json = cast Json.parse(Assets.getText(getGraphicPath(new_block, true, 'json', true, 'json')));
 			#end
 			if (block_json != null && block_json.type != null)
 			{
