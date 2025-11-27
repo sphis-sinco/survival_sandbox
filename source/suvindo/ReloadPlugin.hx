@@ -7,28 +7,31 @@ import flixel.FlxBasic;
 class ReloadPlugin extends FlxBasic
 {
 	public static var reload:FlxSignal;
-    public static var onReloadInit:()->Void = () -> {};
+	public static var onReloadInit:() -> Void = () -> {};
+
+	public static var canReload:Bool = true;
 
 	override public function new()
 	{
 		super();
 
 		reload = new FlxSignal();
-        FlxG.signals.preStateSwitch.add(() ->
+		FlxG.signals.preStateSwitch.add(() ->
 		{
 			reload.removeAll();
-            onReloadInit();
+			onReloadInit();
+			canReload = true;
 		});
-        
-        onReloadInit();
-        reload.dispatch();
+
+		onReloadInit();
+		reload.dispatch();
 	}
 
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
-		if (FlxG.keys.justReleased.R)
-            reload.dispatch();
+		if (FlxG.keys.justReleased.R && canReload)
+			reload.dispatch();
 	}
 }

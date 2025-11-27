@@ -64,11 +64,6 @@ class DebugWorldSelection extends FlxState
 			i++;
 		}
 
-		ReloadPlugin.reload.add(() ->
-		{
-			FlxG.resetState();
-		});
-
 		camFollow = new FlxObject(FlxG.width / 2);
 		add(camFollow);
 
@@ -82,6 +77,8 @@ class DebugWorldSelection extends FlxState
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
+		ReloadPlugin.canReload = !world_name.hasFocus;
 
 		for (world_text in world_texts)
 		{
