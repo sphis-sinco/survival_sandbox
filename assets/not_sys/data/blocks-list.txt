@@ -5,3 +5,4 @@ plank
 sand
 stone
 tree_trunk
+wool

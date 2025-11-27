@@ -1,0 +1,48 @@
+{
+    "variations": [
+        {
+            "id": "red",
+            "texture": "blocks/wool/red"
+        },
+        {
+            "id": "orange",
+            "texture": "blocks/wool/orange"
+        },
+        {
+            "id": "yellow",
+            "texture": "blocks/wool/yellow"
+        },
+        {
+            "id": "green",
+            "texture": "blocks/wool/green"
+        },
+        {
+            "id": "blue",
+            "texture": "blocks/wool/blue"
+        },
+        {
+            "id": "purple",
+            "texture": "blocks/wool/purple"
+        },
+        {
+            "id": "pink",
+            "texture": "blocks/wool/pink"
+        },
+        {
+            "id": "brown",
+            "texture": "blocks/wool/brown"
+        },
+        {
+            "id": "gray",
+            "texture": "blocks/wool/gray"
+        },
+        {
+            "id": "white",
+            "texture": "blocks/wool/white"
+        },
+        {
+            "id": "black",
+            "texture": "blocks/wool/black"
+        }
+    ]
+}
