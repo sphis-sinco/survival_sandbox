@@ -179,8 +179,12 @@ class DebugWorldSelection extends FlxState
 			{
 				if (world_list[cur_selected] != null)
 				{
-					saved_selected = cur_selected - 1;
-					#if sys FileSystem.deleteFile('assets/saves/' + world_list[cur_selected] + '.json'); #end
+					saved_selected = cur_selected;
+					#if sys
+					saved_selected -= 1;
+					FileSystem.deleteFile('assets/saves/' + world_list[cur_selected] + '.json');
+					#end
+					FlxG.resetState();
 				}
 			}
 		}
