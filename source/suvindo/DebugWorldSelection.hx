@@ -74,6 +74,11 @@ class DebugWorldSelection extends FlxState
 
 		FlxG.camera.follow(camFollow, LOCKON, .1);
 		FlxG.mouse.visible = true;
+
+		ReloadPlugin.reload.add(() ->
+		{
+			FlxG.resetState();
+		});
 	}
 
 	override function update(elapsed:Float)
