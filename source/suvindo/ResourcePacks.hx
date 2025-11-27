@@ -147,25 +147,29 @@ class ResourcePacks
 		var read_directory:Array<String> = [];
 
 		#if sys
-		try
-		{
-			for (path in FileSystem.readDirectory('assets/' + directory))
-				read_directory.push('assets/' + directory + path);
-		}
-		catch (e)
-		{
-			trace(e);
-		}
-		for (pack in ENABLED_RESOURCE_PACKS)
+		if (FileSystem.exists('assets/' + directory))
 			try
 			{
-				for (path in FileSystem.readDirectory('resources/' + pack + '/' + directory))
-					read_directory.push('resources/' + pack + '/' + directory + '/' + path);
+				for (path in FileSystem.readDirectory('assets/' + directory))
+					read_directory.push('assets/' + directory + path);
 			}
 			catch (e)
 			{
 				trace(e);
 			}
+		for (pack in ENABLED_RESOURCE_PACKS)
+		{
+			if (FileSystem.exists('resources/' + pack + '/' + directory))
+				try
+				{
+					for (path in FileSystem.readDirectory('resources/' + pack + '/' + directory))
+						read_directory.push('resources/' + pack + '/' + directory + '/' + path);
+				}
+				catch (e)
+				{
+					trace(e);
+				}
+		}
 		#end
 
 		return read_directory;
