@@ -34,6 +34,8 @@ class DebugWorldSelection extends FlxState
 		super.create();
 		world_list = [null];
 
+		TrackManager.playTrack();
+
 		cur_selected = saved_selected;
 
 		#if sys
