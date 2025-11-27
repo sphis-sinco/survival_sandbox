@@ -4,7 +4,8 @@
 
 ## Resource Packs
 [Changes connected to the new Requests system](#requests)
-- The resource `pack_version` is now `2`
+- The resource `pack_version` is now `3`
+    - Version `2` is supported
     - Version `1` is still supported
 
 ## General

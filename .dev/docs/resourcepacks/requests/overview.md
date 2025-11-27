@@ -13,6 +13,9 @@ Asset Path: `data/requests/`
 - `blocks` (optional)
     - `type: remove` : List of Block ID's
     - `type: add` : List of Block Paths relative to the images folder (I.e `myresourcepack/blocks/jujin` would redirect to `assets/images/myresourcepack/blocks/jujin.png` in-game along with the resource pack versions)
+- `tracks` (optional)
+    - `type: remove` : List of Track File names's
+    - `type: add` : List of Track Paths relative to the music folder (I.e `c418/calm1.wav` would redirect to `assets/music/c418/calm1.wav` in-game along with the resource pack versions)
 
 ## Examples
 

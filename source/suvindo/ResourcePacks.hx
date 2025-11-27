@@ -12,7 +12,7 @@ class ResourcePacks
 	public static var RESOURCE_PACKS:Array<String> = [];
 	public static var ENABLED_RESOURCE_PACKS:Array<String> = [];
 
-	public static var PACK_VERSION:Int = 2;
+	public static var PACK_VERSION:Int = 3;
 	public static var MIN_PACK_VERSION:Int = 1;
 
 	public static function reload()
