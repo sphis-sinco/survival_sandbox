@@ -115,7 +115,7 @@ class Block extends FlxSprite
 
 		this.scale.set(1, 1);
 		if (this.graphic != null)
-			if (block_json.type == "animated")
+			if (block_json?.type == "animated")
 				this.scale.set(1 * (16 / this.block_json.animated.block_width), 1 * (16 / this.block_json.animated.block_height));
 			else
 				this.scale.set(1 * (16 / this.graphic.width), 1 * (16 / this.graphic.height));
