@@ -19,7 +19,9 @@ class PlayState extends FlxState
 	public static var world_info:
 		{
 			?cursor_block:{x:Float, y:Float, block_id:String},
-			?blocks:Array<Block>
+			?blocks:Array<Block>,
+			?has_animated_blocks:Bool,
+			?animated_block_universal_frames:Dynamic
 		};
 
 	override public function create()
@@ -45,7 +47,13 @@ class PlayState extends FlxState
 			{
 				for (block in world_info.blocks)
 				{
-					blocks.add(new Block(block.block_id, block.x, block.y));
+					var old_block = new Block(block.block_id, block.x, block.y);
+					if (world_info.has_animated_blocks)
+					{
+						if (Reflect.fields(world_info.animated_block_universal_frames).contains(old_block.block_id))
+							old_block.animation.frameIndex = Reflect.field(world_info.animated_block_universal_frames, old_block.block_id);
+					}
+					blocks.add(old_block);
 				}
 			}
 
@@ -65,7 +73,9 @@ class PlayState extends FlxState
 	{
 		world_info = {
 			cursor_block: null,
-			blocks: []
+			blocks: [],
+			has_animated_blocks: false,
+			animated_block_universal_frames: {}
 		};
 		world_info.cursor_block = {
 			x: cursor_block.x,
@@ -76,6 +86,14 @@ class PlayState extends FlxState
 			for (block in blocks.members)
 			{
 				world_info.blocks.push(block);
+
+				if (block.block_json?.type == "animated" && !Reflect.hasField(world_info.animated_block_universal_frames, block.block_id))
+				{
+					world_info.has_animated_blocks = true;
+					Reflect.setField(world_info.animated_block_universal_frames, block.block_id,
+						block.animation.frameIndex + ((FlxG.random.bool((block.animation.frameIndex / block.animation.numFrames) * 100)
+							&& block.animation.frameIndex / block.animation.numFrames != 1) ? 1 : 0));
+				}
 			}
 	}
 
