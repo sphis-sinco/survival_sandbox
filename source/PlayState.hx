@@ -36,7 +36,7 @@ class PlayState extends FlxState
 		cursor_block.y = 16 * ((FlxG.height / 16) / 2);
 		cursor_block.alpha = .5;
 
-		watermark = new FlxText(2, 2, 0, "version", 8);
+		watermark = new FlxText(2, 2, 0, 'version', 8);
 		add(watermark);
 
 		if (world_info != null)
@@ -58,7 +58,7 @@ class PlayState extends FlxState
 			world_info = null;
 		}
 
-		ReloadPlugin.reload.add(reloadFunction);
+		ReloadPlugin.reload.add(onReload);
 	}
 
 	public function saveWorldInfo()
@@ -79,7 +79,7 @@ class PlayState extends FlxState
 			}
 	}
 
-	public function reloadFunction()
+	public function onReload()
 	{
 		saveWorldInfo();
 
@@ -91,17 +91,17 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 
-		watermark.text = "Suvindo " + lime.app.Application.current.meta.get('version');
-		watermark.text += "\n\nCurrent Block (id): " + cursor_block.block_id;
+		watermark.text = 'Suvindo ' + lime.app.Application.current.meta.get('version');
+		watermark.text += '\n\nCurrent Block (id): ' + cursor_block.block_id;
 
 		if (FlxG.keys.pressed.F3)
 		{
-			watermark.text += "\nResource packs:";
+			watermark.text += '\nResource packs:';
 			if (ResourcePacks.RESOURCE_PACKS.length > 0)
 				for (pack in ResourcePacks.RESOURCE_PACKS)
-					watermark.text += "\n* " + pack + ((ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack) ? ' (enabled)' : ' (disabled)'));
+					watermark.text += '\n* ' + pack + ((ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack) ? ' (enabled)' : ' (disabled)'));
 			else
-				watermark.text += "\nNone";
+				watermark.text += '\nNone';
 		}
 
 		if (FlxG.keys.justReleased.P && ResourcePacks.RESOURCE_PACKS.length > 0)

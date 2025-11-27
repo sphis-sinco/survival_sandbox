@@ -9,11 +9,13 @@ class Init extends FlxState
 	{
 		super.create();
 
+        FlxG.mouse.visible = false;
+        ReloadPlugin.onReloadInit = () -> {
+            ReloadPlugin.reload.add(ResourcePacks.reload);
+            ReloadPlugin.reload.add(BlockList.reload);
+        }
 		FlxG.plugins.addPlugin(new ReloadPlugin());
-
-		FlxG.mouse.visible = false;
-
-		ReloadPlugin.reload_function();
+		
 
 		#if RESOURCE_PACK_MENU
 		FlxG.switchState(() -> new ResourcePackMenu());
