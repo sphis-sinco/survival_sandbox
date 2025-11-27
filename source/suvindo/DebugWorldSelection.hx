@@ -34,7 +34,7 @@ class DebugWorldSelection extends FlxState
 		#if sys
 		if (FileSystem.exists('assets/saves'))
 		{
-			trace(FileSystem.readDirectory('assets/saves'));
+			// trace(FileSystem.readDirectory('assets/saves'));
 			for (save in FileSystem.readDirectory('assets/saves'))
 			{
 				var world_json:Dynamic = null;

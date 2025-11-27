@@ -37,6 +37,8 @@ class PlayState extends FlxState
 			game_version:String,
 		};
 
+	public var WORLD_NAME:String;
+
 	public var autosave_timer:FlxTimer;
 
 	override public function new(?world:String = null)
@@ -57,7 +59,8 @@ class PlayState extends FlxState
 			#end
 		else
 		{
-			saveWorldInfo(false);
+			WORLD_NAME = world;
+			saveWorldInfo();
 		}
 		}
 
@@ -65,9 +68,6 @@ class PlayState extends FlxState
 		{
 			saveWorldInfo(true);
 		}, 0);
-
-		world_info.world_name = world;
-		saveWorldInfo(true);
 	}
 
 	override public function create()
@@ -132,7 +132,8 @@ class PlayState extends FlxState
 			has_animated_blocks: false,
 			animated_block_universal_frames: {},
 			random_id: (world_info?.random_id ?? null) ?? Sha256.encode('' + FlxG.random.int(0, 255)),
-			game_version: Application.current.meta.get('version')
+			game_version: Application.current.meta.get('version'),
+			world_name: ((world_info?.world_name ?? null) ?? WORLD_NAME) ?? null
 		};
 		if (cursor_block != null)
 			world_info.cursor_block = {
