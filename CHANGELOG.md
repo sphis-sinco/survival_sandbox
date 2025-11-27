@@ -1,5 +1,7 @@
 # 0.2.2 - 11/27/2025
 ## General
+- Fixed Track timer not resetting when the music is destroyed
+- Fixed "Above the maximum supported world version" showing up when it shouldnt've in the world notes
 - General QOL fixes to the requests system
     - Fixed crashes with double-slashed paths (ex: `resources/myrp//myfile.extension`)
     - Requested tracks can play properly

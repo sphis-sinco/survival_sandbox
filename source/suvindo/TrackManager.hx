@@ -21,7 +21,10 @@ class TrackManager
 	{
 		TRACKS_LIST = [];
 		if (MUSIC != null)
+		{
 			MUSIC.destroy();
+			MUSIC_TIMER = null;
+		}
 		trace('RELOADING');
 		#if sys
 		var tracksDir:Array<String> = ResourcePacks.readDirectory('music/');

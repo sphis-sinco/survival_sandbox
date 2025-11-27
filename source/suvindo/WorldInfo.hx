@@ -35,7 +35,7 @@ class WorldInfoClass
 		if (version_single_int < VersionConverts.convertToInt(MIN_WORLD_VERSION))
 			add_warning('Below the minimum supported world version');
 
-		if (version_single_int > VersionConverts.convertToInt(MIN_WORLD_VERSION))
+		if (version_single_int > VersionConverts.convertToInt(MAX_WORLD_VERSION))
 			add_warning('Above the maximum supported world version');
 
 		if (world_info.game_version.toLowerCase().contains('[prototype]'))
