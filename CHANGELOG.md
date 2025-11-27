@@ -3,6 +3,7 @@
 - General QOL fixes to the requests system
     - Fixed crashes with double-slashed paths (ex: `resources/myrp//myfile.extension`)
     - Requested tracks can play properly
+        - (They're also loaded properly!)
 
 # 0.2.1 - 11/27/2025
 ## General
