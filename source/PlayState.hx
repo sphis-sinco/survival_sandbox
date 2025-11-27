@@ -94,7 +94,7 @@ class PlayState extends FlxState
 		watermark.text = 'Suvindo ' + lime.app.Application.current.meta.get('version') + #if debug ' [PROTOTYPE]' #else '' #end;
 		watermark.text += '\n\nCurrent Block ID: ' + cursor_block.block_id;
 		watermark.text += '\nCurrent Block Variation: '
-			+ ((cursor_block.variations.length > 0) ? cursor_block.variations[cursor_block.variation_index]?.id : 'default');
+			+ ((cursor_block.variation_graphics.length > 0) ? cursor_block.variation_graphics[cursor_block.variation_index]?.id : 'default');
 
 		if (FlxG.keys.pressed.F3)
 		{
@@ -146,7 +146,7 @@ class PlayState extends FlxState
 					var new_block = new Block(cursor_block.block_id, cursor_block.x, cursor_block.y);
 					blocks.add(new_block);
 
-					if (new_block.block_json.type == 'variations')
+					if (new_block.block_json.type == "variations")
 					{
 						new_block.variation_index = cursor_block.variation_index;
 						new_block.changeVariationIndex(0);
@@ -182,7 +182,7 @@ class PlayState extends FlxState
 
 			if (FlxG.keys.justReleased.L)
 			{
-				if (cursor_block.block_json?.types.contains('variations'))
+				if (cursor_block.block_json?.type == "variations")
 					cursor_block.changeVariationIndex((FlxG.keys.pressed.SHIFT) ? -1 : 1);
 			}
 		}
