@@ -1,5 +1,6 @@
 # 0.2.0
 ## General
+- Changed company from "Sphis" to "SuvindoCrew"
 - [DEBUG] Added " [PROTOTYPE]" text to watermark
 - Added extra linebreak inbetween the "Current Block (id)" and "Resource packs" text in watermarks
 - Added Custom Application icon
