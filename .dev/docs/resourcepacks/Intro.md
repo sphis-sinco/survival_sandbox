@@ -13,6 +13,10 @@ As of writing this (0.2.0 indev) the system is still bare-bones.
 
 - [Removing Blocks](./blocks/actions/removing.md)
 
+### Tracks
+
+- [Adding Tracks](./tracks/actions/adding.md)
+
 ### Requests
 
 - [Overview](./requests/overview.md)
