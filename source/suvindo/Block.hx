@@ -56,6 +56,9 @@ class Block extends FlxSprite
 		#else
 		loadGraphic(ResourcePacks.getPath('images/' + variations[variation_index].texture + '.png'));
 		#end
+
+		if (this.graphic == null)
+			loadGraphic('assets/images/debug.png');
 	}
 
 	public function switchBlock(new_block:String)
@@ -102,7 +105,7 @@ class Block extends FlxSprite
 
 						animation.add('animation', block_json.animated?.frames ?? getFrames(), block_json.animated?.fps ?? 24);
 						animation.play('animation');
-					
+
 					case 'regular':
 						defaultLoadGraphic(block_json?.regular?.texture ?? new_block);
 
@@ -115,6 +118,9 @@ class Block extends FlxSprite
 		}
 		else
 			defaultLoadGraphic(new_block);
+
+		if (this.graphic == null)
+			loadGraphic('assets/images/debug.png');
 
 		this.scale.set(1, 1);
 		if (this.graphic != null)

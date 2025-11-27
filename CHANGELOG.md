@@ -15,6 +15,7 @@
 - Added Custom Application icon
 
 ## Blocks
+- Added Debug "Block" - A texture used when a block's texture can't be found. Embeded texture
 - Added Block JSON support with the following fields and availible values:
     - Types:
         - "variations" - Allows the block to change its texture without switching to (or having to create) a new block
