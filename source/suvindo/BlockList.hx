@@ -23,7 +23,8 @@ class BlockList
 		var blocksDir:Array<String> = ResourcePacks.readDirectory('images/blocks/');
 		for (block in RequestsManager.ADD.blocks)
 		{
-			var path:String = ResourcePacks.getPath('images/' + block);
+			var path:String = ResourcePacks.getPath('images/' + block + '.png');
+			trace(path);
 			if (#if !sys Assets.exists #else FileSystem.exists #end (path))
 				blocksDir.push(path);
 		}
