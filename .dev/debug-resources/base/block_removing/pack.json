@@ -1,0 +1,6 @@
+{
+    "name":"Block removing",
+    "description": "Removes the leaves block, ugly.",
+
+    "pack_version": 2
+}
