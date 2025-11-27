@@ -49,6 +49,8 @@ class Block extends FlxSprite
 			variation_index = 0;
 		if (variation_index > variation_graphics.length - 1)
 			variation_index = variation_graphics.length - 1;
+		
+		loadGraphic(variation_graphics[variation_index]);
 	}
 
 	public function switchBlock(new_block:String)
@@ -81,7 +83,7 @@ class Block extends FlxSprite
 							variation_graphics.push(variation_graphic);
 						}
 
-						loadGraphic(variation_graphics[variation_index]);
+						changeVariationIndex(0);
 					default:
 						defaultLoadGraphic(new_block);
 				}
