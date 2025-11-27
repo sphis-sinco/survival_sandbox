@@ -68,6 +68,9 @@ class DebugWorldSelection extends FlxState
 				trace(' * ' + ((world.length > 32 + 3) ? world.substring(0, 32) + '...' : world));
 		}
 
+		if (cur_selected > world_list.length)
+			cur_selected = 0;
+
 		world_texts = new FlxTypedGroup<FlxText>();
 		add(world_texts);
 
