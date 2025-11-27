@@ -1,5 +1,6 @@
 package;
 
+import lime.utils.Assets;
 import haxe.Json;
 import haxe.crypto.Sha256;
 import sys.io.File;
@@ -22,14 +23,29 @@ class PlayState extends FlxState
 	public var cursor_block:Block;
 	public var watermark:FlxText;
 
-	public static var world_info:
+	public #if !sys static #end var world_info:
 		{
 			?cursor_block:{x:Float, y:Float, block_id:String},
 			?blocks:Array<Block>,
 			?has_animated_blocks:Bool,
 			?animated_block_universal_frames:Dynamic,
-			random_id:String
+			random_id:String,
+			// world_name:String,
 		};
+
+	override public function new(?world:String = null)
+	{
+		super();
+
+		if (world != null)
+		{
+			#if sys
+			world_info = Json.parse(File.getContent('assets/saves/' + world + '.json'));
+			#else
+			world_info = Json.parse(Assets.getText('assets/saves/' + world + '.json'));
+			#end
+		}
+	}
 
 	override public function create()
 	{
@@ -66,8 +82,8 @@ class PlayState extends FlxState
 
 			if (world_info.cursor_block != null)
 			{
-				cursor_block.setPosition(world_info.cursor_block.x, world_info.cursor_block.y);
-				cursor_block.switchBlock(world_info.cursor_block.block_id);
+				cursor_block.setPosition(world_info.cursor_block.x ?? cursor_block.x, world_info.cursor_block.y ?? cursor_block.y);
+				cursor_block.switchBlock(world_info.cursor_block.block_id ?? cursor_block.block_id);
 			}
 
 			world_info = null;
@@ -83,7 +99,8 @@ class PlayState extends FlxState
 			blocks: [],
 			has_animated_blocks: false,
 			animated_block_universal_frames: {},
-			random_id: world_info.random_id ?? Sha256.encode('' + FlxG.random.int(0, 255))
+			random_id: world_info.random_id ?? Sha256.encode('' + FlxG.random.int(0, 255)),
+			// world_name: world_info.world_name ?? null
 		};
 		world_info.cursor_block = {
 			x: cursor_block.x,
@@ -108,8 +125,8 @@ class PlayState extends FlxState
 		#if sys
 		if (!FileSystem.exists('assets/saves'))
 			FileSystem.createDirectory('assets/saves');
-		
-		File.saveContent('assets/saves/world_' + world_info.random_id+'.json', Json.stringify(world_info, "\t"));
+
+		File.saveContent('assets/saves/world_' + world_info.random_id + '.json', Json.stringify(world_info, "\t"));
 		#end
 	}
 
@@ -180,13 +197,13 @@ class PlayState extends FlxState
 					var new_block = new Block(cursor_block.block_id, cursor_block.x, cursor_block.y);
 					blocks.add(new_block);
 
-					if (new_block.block_json.type == "variations")
+					if (new_block?.block_json?.type == "variations")
 					{
 						new_block.variation_index = cursor_block.variation_index;
 						new_block.changeVariationIndex(0);
 					}
 
-					if (new_block.block_json.type == "animated")
+					if (new_block?.block_json?.type == "animated")
 					{
 						onReload();
 					}
