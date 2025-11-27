@@ -151,6 +151,11 @@ class PlayState extends FlxState
 						new_block.variation_index = cursor_block.variation_index;
 						new_block.changeVariationIndex(0);
 					}
+
+					if (new_block.block_json.type == "animated")
+					{
+						onReload();
+					}
 				}
 				else
 				{
