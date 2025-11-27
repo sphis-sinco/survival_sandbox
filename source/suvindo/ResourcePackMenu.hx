@@ -54,7 +54,7 @@ class ResourcePackMenu extends FlxState
 		camFollow = new FlxObject(FlxG.width / 2);
 		add(camFollow);
 
-		packInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, "", 32);
+		packInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, '', 32);
 		add(packInfo);
 		packInfo.alignment = RIGHT;
 		packInfo.scrollFactor.set();
@@ -83,12 +83,12 @@ class ResourcePackMenu extends FlxState
 		{
 			var cur_pack = literal_pack_list[cur_selected];
 
-			packInfo.text = "Name: " + cur_pack.name + "\nDescription: " + cur_pack.description + "\n\nPack Version: " + cur_pack.pack_version
-				+ "\n\nPack Version Warning(s):\n" + ResourcePacks.getPackVersionWarning(cur_pack.pack_version);
+			packInfo.text = 'Name: ' + cur_pack.name + '\nDescription: ' + cur_pack.description + '\n\nPack Version: ' + cur_pack.pack_version
+				+ '\n\nPack Version Warning(s):\n' + ResourcePacks.getPackVersionWarning(cur_pack.pack_version);
 		}
 		else
 		{
-			packInfo.text = "N/A";
+			packInfo.text = 'N/A';
 		}
 
 		if (FlxG.keys.pressed.SHIFT)

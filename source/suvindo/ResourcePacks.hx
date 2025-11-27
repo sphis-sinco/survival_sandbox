@@ -155,18 +155,18 @@ class ResourcePacks
 
 	public static function getPackVersionWarning(pack_version:Null<Int>):String
 	{
-		var warning:String = "";
+		var warning:String = '';
 
 		var add_warning = function(warning:String)
 		{
-			warning += "- " + warning + "\n";
+			warning += '- ' + warning + '\n';
 		}
 
 		if (pack_version < MIN_PACK_VERSION)
-			add_warning("Below the minimum supported version number");
+			add_warning('Below the minimum supported version number');
 
-		if (warning == "")
-			warning = "None";
+		if (warning == '')
+			warning = 'None';
 
 		return warning;
 	}
