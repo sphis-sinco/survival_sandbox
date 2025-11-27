@@ -1,5 +1,6 @@
 package suvindo;
 
+import suvindo.Requests.RequestsManager;
 import sphis.any.VersionConverts;
 
 using StringTools;
@@ -13,14 +14,15 @@ typedef WorldInfo =
 	random_id:String,
 	?world_name:String,
 	game_version:String,
+	?resource_packs:Array<String>,
 }
 
 class WorldInfoClass
 {
-    public static var MIN_WORLD_VERSION:String = "0.2.0";
-    public static var MAX_WORLD_VERSION:String = "0.3.0";
+	public static var MIN_WORLD_VERSION:String = "0.2.0";
+	public static var MAX_WORLD_VERSION:String = "0.3.0";
 
-	public static function getGameVersionWarnings(game_version:String):String
+	public static function getWorldWarnings(world_info:WorldInfo):String
 	{
 		var warning:String = '';
 
@@ -29,7 +31,7 @@ class WorldInfoClass
 			warning += '- ' + warning + '\n';
 		}
 
-        var version_single_int = VersionConverts.convertToInt(game_version);
+		var version_single_int = VersionConverts.convertToInt(world_info.game_version);
 
 		if (version_single_int < VersionConverts.convertToInt(MIN_WORLD_VERSION))
 			add_warning('Below the minimum supported world version');
@@ -37,8 +39,33 @@ class WorldInfoClass
 		if (version_single_int > VersionConverts.convertToInt(MIN_WORLD_VERSION))
 			add_warning('Above the maximum supported world version');
 
-        if (game_version.toLowerCase().contains('[prototype]'))
+		if (world_info.game_version.toLowerCase().contains('[prototype]'))
 			add_warning('Prototype version!');
+
+		var missing_resource_packs:Array<String> = [];
+		for (pack in world_info.resource_packs)
+		{
+			if (!ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack))
+				missing_resource_packs.push(pack);
+		}
+
+		if (missing_resource_packs.length > 0)
+			add_warning('Missing resource packs: ' + missing_resource_packs);
+
+		var removed_blocks:Array<String> = [];
+		var unknown_blocks:Array<String> = [];
+		for (block in world_info.blocks)
+		{
+			if (RequestsManager.REMOVE.blocks.contains(block))
+				removed_blocks.push(block);
+			else if (!BlockList.BLOCK_LIST.contains(block))
+				unknown_blocks.push(block);
+		}
+
+		if (removed_blocks.length > 0)
+			add_warning('Removed blocks: ' + removed_blocks);
+		if (unknown_blocks.length > 0)
+			add_warning('Unknown blocks: ' + unknown_blocks);
 
 		if (warning == '')
 			warning = 'None';

@@ -138,8 +138,8 @@ class DebugWorldSelection extends FlxState
 							+ cur_world.random_id
 							+ '\n\nGame Version: '
 							+ cur_world.game_version
-							+ '\n\nGame Version Warning(s):\n'
-							+ WorldInfoClass.getGameVersionWarnings(cur_world.game_version);
+							+ '\n\nWorld warning(s):\n'
+							+ WorldInfoClass.getWorldWarnings(cur_world);
 					}
 					catch (e)
 					{
