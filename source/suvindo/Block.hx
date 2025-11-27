@@ -1,5 +1,6 @@
 package suvindo;
 
+import haxe.io.Path;
 import suvindo.Requests.RequestsManager;
 import suvindo.BlockJSON.BlockVariation;
 import flixel.system.FlxAssets.FlxGraphicAsset;
@@ -40,8 +41,9 @@ class Block extends FlxSprite
 	{
 		var path:String = ResourcePacks.getPath('images/' + (blocks_folder ? 'blocks/' : '') + block + '.png');
 
-		if (RequestsManager.ADD.blocks.contains(block))
-			path = ResourcePacks.getPath('images/' + block + '.png');
+		for (block_path in RequestsManager.ADD.blocks)
+			if (Path.withoutDirectory(block_path) == block)
+				path = ResourcePacks.getPath('images/' + block_path + '.png');
 
 		return path;
 	}
