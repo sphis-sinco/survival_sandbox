@@ -40,8 +40,10 @@
 	<assets path="assets/sys" rename="assets" if="sys || hl"/>
 	<assets path="assets/not_sys" rename="assets" unless="sys || hl"/>
 
-	<assets path="resources"/>
-	<assets path=".dev/debug-resources" rename="resources" if="debug"/>
+	<assets path="resources/base" rename="resources"/>
+	<assets path="resources/non_sys" rename="resources" unless="sys || hl"/>
+
+	<assets path=".dev/debug-resources/base" rename="resources" if="debug"/>
 
 	<assets path="README.md" rename="README.txt"/>
 
