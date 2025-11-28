@@ -220,6 +220,9 @@ class PlayState extends FlxState
 			watermark.text += '\n\nTime until next autosave (seconds): ' + Std.int(autosave_timer.timeLeft);
 		}
 
+		cursor_block.visible = !FlxG.keys.pressed.F1;
+		watermark.visible = !FlxG.keys.pressed.F1;
+
 		if (FlxG.keys.justReleased.P && ResourcePacks.RESOURCE_PACKS.length > 0)
 		{
 			saveWorldInfo();
