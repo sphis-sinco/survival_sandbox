@@ -26,9 +26,11 @@ class Init extends FlxState
 
 		FlxG.mouse.visible = false;
 		
+		#if !VOLUME_KEYS
 		FlxG.sound.volumeUpKeys = [];
 		FlxG.sound.volumeDownKeys = [];
 		FlxG.sound.muteKeys = [];
+		#end
 
 		ReloadPlugin.baseReloadInit = () -> reloadPluginReload();
 		ReloadPlugin.onReloadInit = () -> reloadPluginReload();
