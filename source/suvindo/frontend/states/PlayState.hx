@@ -167,6 +167,8 @@ class PlayState extends FlxState
 		});
 	}
 
+	var touching_kids:Bool = false; // thank god
+
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
@@ -218,11 +220,10 @@ class PlayState extends FlxState
 			if (cursor_block.y > FlxG.height - cursor_block.height / 2)
 				cursor_block.y = FlxG.height - cursor_block.height / 2;
 
-			var touching_kids:Bool = false; // thank god
-
-			for (minor in blocks.members)
-				if (cursor_block.overlaps(minor))
-					touching_kids = true; // NOOOOOOOOOOOOOOOOOOO
+			if (FlxG.keys.justPressed.ENTER)
+				for (minor in blocks.members)
+					if (cursor_block.overlaps(minor))
+						touching_kids = true; // NOOOOOOOOOOOOOOOOOOO
 
 			if (FlxG.keys.pressed.ENTER)
 			{
