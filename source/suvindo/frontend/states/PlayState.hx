@@ -1,6 +1,5 @@
 package suvindo.frontend.states;
 
-import flixel.math.FlxPoint;
 import flixel.input.keyboard.FlxKey;
 import suvindo.backend.blocks.BlockGrid;
 import suvindo.backend.TrackManager;
@@ -119,46 +118,29 @@ class PlayState extends FlxState
 			world_name: WORLD_NAME ?? ((world_info?.world_name ?? null) ?? null),
 			resource_packs: []
 		};
-
-		var x = 0;
-		var y = 0;
-		var i = 0;
-
-		while (y < (FlxG.height / 16))
-		{
-			while (x < (FlxG.width / 16))
-			{
-				i++;
-				x++;
-
-				if (blocks?.members != null)
-					for (block in blocks.members)
-					{
-						if (block.getPosition() == FlxPoint.get(x * 16, y * 16))
-						{
-							var block_data:Int = 0;
-
-							if (block.block_json?.type == "variations")
-								world_info.variation_indexes.push({i: i, variation_index: block.variation_index});
-
-							world_info.blocks.push(block_data);
-
-							if (block.graphic_path.contains("resources/"))
-								if (!world_info.resource_packs.contains(block.graphic_path.split("/")[1]))
-									world_info.resource_packs.push(block.graphic_path.split("/")[1]);
-						}
-					}
-			}
-
-			y++;
-			x = 0;
-		}
-
 		if (cursor_block != null)
 			world_info.cursor_block = {
 				x: cursor_block.x,
 				y: cursor_block.y,
 				block_id: cursor_block.block_id,
+			}
+		if (blocks?.members != null)
+			for (block in blocks.members)
+			{
+				var block_data:Dynamic = {
+					block_id: block.block_id,
+					x: block.x,
+					y: block.y,
+				};
+
+				if (block.block_json?.type == "variations")
+					block_data.variation_index = block.variation_index;
+
+				world_info.blocks.push(block_data);
+
+				if (block.graphic_path.contains("resources/"))
+					if (!world_info.resource_packs.contains(block.graphic_path.split("/")[1]))
+						world_info.resource_packs.push(block.graphic_path.split("/")[1]);
 			}
 
 		#if sys
