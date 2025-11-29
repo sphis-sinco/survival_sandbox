@@ -81,6 +81,10 @@ class BlockList
 		BLOCK_LIST = Assets.getText(ResourcePacks.getPath('data/blocks-list.txt')).split('\n');
 		#end
 
+		if (BLOCK_LIST.length < 1)
+		{
+			BLOCK_LIST.push('dirt');
+		}
 		trace('block list: ' + BLOCK_LIST);
 	}
 }
