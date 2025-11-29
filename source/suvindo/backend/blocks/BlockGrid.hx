@@ -71,6 +71,12 @@ class BlockGrid extends FlxTypedGroup<Block>
 
 		this.x = x;
 		this.y = y;
+
+		this.world_info.cursor_block = {
+			x: 0,
+			y: 0,
+			block_id: BlockList.BLOCK_LIST[0],
+		};
 	}
 
 	public function clearBlocks()
@@ -93,7 +99,6 @@ class BlockGrid extends FlxTypedGroup<Block>
 		if (world_info != null)
 		{
 			clearBlocks();
-			saveWorldInfo(world_file_path);
 
 			if (world_info.blocks != null)
 			{
@@ -230,6 +235,12 @@ class BlockGrid extends FlxTypedGroup<Block>
 
 	public function saveWorldInfo(path:String, ?save_file:Bool = true)
 	{
+		world_info.blocks = [];
+		world_info.resource_packs = [];
+		world_info.variation_indexes = [];
+		world_info.random_id = (world_info?.random_id ?? null) ?? Sha256.encode("" + FlxG.random.int(0, 255));
+		world_info.game_version = Application.current.meta.get("version") + #if debug " [PROTOTYPE]" #else "" #end;
+
 		var x = 0;
 		var y = 0;
 		var i = 0;

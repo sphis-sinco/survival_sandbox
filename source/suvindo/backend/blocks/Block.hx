@@ -74,13 +74,13 @@ class Block extends FlxSprite
 			variation_index = 0;
 
 		#if sys
-		loadGraphic(FlxGraphic.fromBitmapData(BitmapData.fromFile(getGraphicPath(variations[variation_index].texture, false))));
+		loadGraphic(FlxGraphic.fromBitmapData(BitmapData.fromFile(getGraphicPath(variations[variation_index]?.texture, false))));
 		#else
-		loadGraphic(getGraphicPath(variations[variation_index].texture, false));
+		loadGraphic(getGraphicPath(variations[variation_index]?.texture, false));
 		#end
 
 		if (this.graphic == null)
-			trace(getGraphicPath(variations[variation_index].texture, false));
+			trace(getGraphicPath(variations[variation_index]?.texture, false));
 
 		if (this.graphic == null)
 			loadGraphic("assets/images/debug.png");

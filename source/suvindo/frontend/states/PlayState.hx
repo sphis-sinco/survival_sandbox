@@ -88,6 +88,11 @@ class PlayState extends FlxState
 			{
 				cursor_block.setPosition(blocks.world_info.cursor_block.x ?? cursor_block.x, blocks.world_info.cursor_block.y ?? cursor_block.y);
 				cursor_block.switchBlock(blocks.world_info.cursor_block.block_id ?? cursor_block.block_id);
+
+				if (blocks.world_info.cursor_block?.variation_index != null)
+					cursor_block.variation_index = blocks.world_info.cursor_block.variation_index;
+
+				cursor_block.changeVariationIndex(0);
 			}
 
 			blocks.world_info = null;
@@ -104,14 +109,8 @@ class PlayState extends FlxState
 
 	public function saveWorldInfo(save_file:Bool = true)
 	{
-		blocks.world_info.cursor_block = {
-			block_id: cursor_block.block_id,
-			x: cursor_block.x,
-			y: cursor_block.y,
-		};
-
 		blocks.world_info.world_name = WORLD_NAME ?? ((blocks.world_info?.world_name ?? null) ?? null);
-		
+
 		#if sys
 		if (!FileSystem.exists("assets/saves"))
 			FileSystem.createDirectory("assets/saves");
@@ -285,6 +284,13 @@ class PlayState extends FlxState
 				if (cursor_block.block_json?.type == "variations")
 					cursor_block.changeVariationIndex((FlxG.keys.pressed.SHIFT) ? -1 : 1);
 			}
+
+			blocks.world_info.cursor_block = {
+				block_id: cursor_block.block_id,
+				x: cursor_block.x,
+				y: cursor_block.y,
+				variation_index: cursor_block.variation_index
+			};
 		}
 	}
 }
