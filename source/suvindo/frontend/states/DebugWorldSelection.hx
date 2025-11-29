@@ -119,7 +119,9 @@ class DebugWorldSelection extends FlxSubState
 			FlxG.resetState();
 		});
 
-		worldInfo = new FlxText(FlxG.width / 2, 2 + worldName.height + worldName.y, FlxG.width / 2, '', 16);
+		worldInfo = new FlxText(FlxG.width / 2, 2 + worldName.height + worldName.y, FlxG.width / 2, '', 24);
+		worldInfo.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+		worldInfo.antialiasing = true;
 		add(worldInfo);
 		worldInfo.alignment = RIGHT;
 		worldInfo.scrollFactor.set();

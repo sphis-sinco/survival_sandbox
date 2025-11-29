@@ -67,8 +67,10 @@ class ResourcePackMenu extends FlxSubState
 		camFollow = new FlxObject(FlxG.width / 2);
 		add(camFollow);
 
-		packInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, '', 16);
+		packInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, '', 24);
 		add(packInfo);
+		packInfo.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+		packInfo.antialiasing = true;
 		packInfo.alignment = RIGHT;
 		packInfo.scrollFactor.set();
 

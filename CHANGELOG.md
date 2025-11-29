@@ -1,4 +1,9 @@
 # 0.3.0 - 11/28/2025
+## Resource Packs
+Changes connected to the [new Request system changes](#requests-1)
+- The resource `pack_version` is now `4`
+    - Version `1`, `2`, and `3` are still supported
+
 ## Requests
 - Fixed receiving request paths missing a "/"
 - Added new "convert" request type
@@ -11,6 +16,10 @@
 
 ## General
 - **ADDED MAIN MENU**
+- Changed size of pack info in the resource pack menu
+- Changed size of world info text in the world select menu
+- The Resource Pack Menu now uses a font and has a background
+- The World Select Menu now uses a font and has a background
 - Moved Game version watermark text to Main Menu
 - PlayState watermark (now debug) text is now F3-only
 - Loaded worlds are now auto-updated once loaded
