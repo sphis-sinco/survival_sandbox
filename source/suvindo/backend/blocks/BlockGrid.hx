@@ -107,19 +107,13 @@ class BlockGrid extends FlxTypedGroup<Block>
 					{
 						block_world_data = cast block;
 					}
-					catch (e)
-					{
-						trace(e);
-					}
+					catch (_) {}
 					var block_int_data:Null<Int> = null;
 					try
 					{
 						block_int_data = cast block;
 					}
-					catch (e)
-					{
-						trace(e);
-					}
+					catch (_) {}
 					var new_block:Block = null;
 
 					if (block_world_data != null)
