@@ -195,13 +195,13 @@ class PlayState extends FlxState
 		if (FlxG.keys.justReleased.P && ResourcePacks.RESOURCE_PACKS.length > 0)
 		{
 			saveWorldInfo();
-			FlxG.switchState(() -> new ResourcePackMenu());
+			FlxG.switchState(() -> new ResourcePackMenu(camera));
 		}
 
 		if (FlxG.keys.justReleased.ESCAPE)
 		{
 			saveWorldInfo();
-			FlxTimer.wait(.1, () -> FlxG.switchState(() -> new DebugWorldSelection()));
+			FlxTimer.wait(.1, () -> FlxG.switchState(() -> new DebugWorldSelection(camera)));
 		}
 
 		if (FlxG.keys.anyJustReleased([W, A, S, D, UP, LEFT, DOWN, RIGHT, ENTER, TAB, L]))

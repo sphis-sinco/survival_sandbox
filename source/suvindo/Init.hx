@@ -1,5 +1,6 @@
 package suvindo;
 
+import suvindo.frontend.states.MainMenu;
 import suvindo.Requests.RequestsManager;
 import flixel.util.FlxTimer;
 import flixel.FlxG;
@@ -12,7 +13,16 @@ class Init extends FlxState
 		super.create();
 
 		FlxG.mouse.visible = false;
-		ReloadPlugin.onReloadInit = () ->
+        FlxG.sound.volumeUpKeys = [];
+        FlxG.sound.volumeDownKeys = [];
+		ReloadPlugin.baseReloadInit = () ->
+		{
+			ReloadPlugin.reload.add(ResourcePacks.reload);
+			ReloadPlugin.reload.add(RequestsManager.reload);
+			ReloadPlugin.reload.add(BlockList.reload);
+			ReloadPlugin.reload.add(TrackManager.reload);
+		}
+        ReloadPlugin.onReloadInit = () -> // make a duplicate to not reference the original lambda
 		{
 			ReloadPlugin.reload.add(ResourcePacks.reload);
 			ReloadPlugin.reload.add(RequestsManager.reload);
@@ -33,10 +43,6 @@ class Init extends FlxState
 		TrackManager.MUSIC_RATE = VARIABLE;
 		#end
 
-		#if RESOURCE_PACK_MENU
-		FlxG.switchState(() -> new ResourcePackMenu());
-		#else
-		FlxG.switchState(() -> new DebugWorldSelection());
-		#end
+        FlxG.switchState(MainMenu.new);
 	}
 }

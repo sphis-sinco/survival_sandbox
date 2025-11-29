@@ -1,5 +1,8 @@
 package suvindo;
 
+import flixel.FlxSprite;
+import flixel.FlxCamera;
+import flixel.FlxSubState;
 import suvindo.WorldInfo.WorldInfoClass;
 import flixel.text.FlxInputText;
 import haxe.io.Path;
@@ -15,28 +18,28 @@ import flixel.text.FlxText;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.FlxState;
 
-class DebugWorldSelection extends FlxState
+class DebugWorldSelection extends FlxSubState
 {
-	public var world_list:Array<String> = [];
-
-	public var cur_selected:Int = 0;
-
+	public var worldList:Array<String> = [];
+	public var curSelected:Int = 0;
 	public static var saved_selected:Int = 0;
-
-	public var world_texts:FlxTypedGroup<FlxText>;
-
+	public var worldTexts:FlxTypedGroup<FlxText>;
 	public var camFollow:FlxObject;
+	public var worldName:FlxInputText;
 
-	public var world_name:FlxInputText;
+    override public function new(cam:FlxCamera) {
+        super();
+        camera = cam;
+    }
 
 	override function create()
 	{
 		super.create();
-		world_list = [null];
+        var bg = new FlxSprite(0, -(FlxG.height / 2)).makeGraphic(FlxG.width, FlxG.height * 3, 0xAA000000);
+        add(bg);
+		worldList = [null];
 
-		TrackManager.playTrack();
-
-		cur_selected = saved_selected;
+		curSelected = saved_selected;
 
 		#if sys
 		if (FileSystem.exists('assets/saves'))
@@ -58,46 +61,48 @@ class DebugWorldSelection extends FlxState
 				}
 
 				if (world_json != null)
-					world_list.push(Path.withoutDirectory(Path.withoutExtension(save)));
+					worldList.push(Path.withoutDirectory(Path.withoutExtension(save)));
 			}
 		}
 		#end
 
-		trace("world_list: ");
-		for (world in world_list)
+		trace("worldList: ");
+		for (world in worldList)
 		{
 			if (world != null)
 				trace(' * ' + ((world.length > 32 + 3) ? world.substring(0, 32) + '...' : world));
 		}
 
-		if (cur_selected > world_list.length)
-			cur_selected = 0;
+		if (curSelected > worldList.length)
+			curSelected = 0;
 
-		world_texts = new FlxTypedGroup<FlxText>();
-		add(world_texts);
+		worldTexts = new FlxTypedGroup<FlxText>();
+		add(worldTexts);
 
 		camFollow = new FlxObject(FlxG.width / 2);
 		add(camFollow);
 
 		var i = 0;
-		for (world_id in world_list)
+		for (world_id in worldList)
 		{
 			var world_txt:FlxText = new FlxText(2, 2, FlxG.width / 2, world_id ?? "New world", 32);
-			world_texts.add(world_txt);
+            world_txt.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+			worldTexts.add(world_txt);
 			world_txt.ID = i;
-			if (world_txt.ID == cur_selected)
+			if (world_txt.ID == curSelected)
 				camFollow.y = world_txt.y;
 
 			i++;
 		}
 
-		FlxG.camera.y = camFollow.y;
+		camera.y = camFollow.y;
 
-		world_name = FlxInputTextUtil.createInputText(null, "World Name");
-		world_name.scrollFactor.set();
-		add(world_name);
+		worldName = FlxInputTextUtil.createInputText(null, "World Name");
+        worldName.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+		worldName.scrollFactor.set();
+		add(worldName);
 
-		FlxG.camera.follow(camFollow, LOCKON, .1);
+		camera.follow(camFollow, LOCKON, .1);
 		FlxG.mouse.visible = true;
 
 		ReloadPlugin.reload.add(() ->
@@ -105,34 +110,37 @@ class DebugWorldSelection extends FlxState
 			FlxG.resetState();
 		});
 
-		worldInfo = new FlxText(FlxG.width / 2, 2 + world_name.height + world_name.y, FlxG.width / 2, '', 16);
+		worldInfo = new FlxText(FlxG.width / 2, 2 + worldName.height + worldName.y, FlxG.width / 2, '', 16);
 		add(worldInfo);
 		worldInfo.alignment = RIGHT;
 		worldInfo.scrollFactor.set();
 	}
 
 	public var worldInfo:FlxText;
-
+    public var fCnt:Int = 0;
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-
-		ReloadPlugin.canReload = !world_name.hasFocus;
+        if (fCnt != 2){
+            fCnt++;
+            return;
+        }
+		ReloadPlugin.canReload = !worldName.hasFocus;
 
 		worldInfo.text = '';
-		for (world_text in world_texts)
+		for (world_text in worldTexts)
 		{
 			world_text.y = 2 + ((world_text.size * 4) * world_text.ID);
-			world_text.color = (world_text.ID == cur_selected) ? FlxColor.YELLOW : FlxColor.WHITE;
+			world_text.color = (world_text.ID == curSelected) ? FlxColor.YELLOW : FlxColor.WHITE;
 
-			if (world_text.ID == cur_selected)
+			if (world_text.ID == curSelected)
 			{
 				camFollow.y = world_text.y;
-				if (world_list[cur_selected] != null)
+				if (worldList[curSelected] != null)
 				{
 					try
 					{
-						var cur_world:WorldInfo = Json.parse(File.getContent('assets/saves/' + world_list[cur_selected] + '.json'));
+						var cur_world:WorldInfo = Json.parse(File.getContent('assets/saves/' + worldList[curSelected] + '.json'));
 
 						worldInfo.text = 'Name: ' + cur_world.world_name + '\nRID: ' + cur_world.random_id + '\n\nGame Version: ' + cur_world.game_version
 							+ '\n\nWorld warning(s):\n' + WorldInfoClass.getWorldWarnings(cur_world);
@@ -147,52 +155,51 @@ class DebugWorldSelection extends FlxState
 
 		if (ReloadPlugin.canReload)
 		{
-			if (FlxG.keys.justReleased.P && ResourcePacks.RESOURCE_PACKS.length > 0)
-			{
-				saved_selected = cur_selected;
-				FlxG.switchState(() -> new ResourcePackMenu(true));
-			}
-
 			if (FlxG.keys.anyJustReleased([W, UP]))
 			{
-				cur_selected--;
-				if (cur_selected < 0)
-					cur_selected = world_texts.length - 1;
+				curSelected--;
+				if (curSelected < 0)
+					curSelected = worldTexts.length - 1;
 			}
 			if (FlxG.keys.anyJustReleased([S, DOWN]))
 			{
-				cur_selected++;
-				if (cur_selected > world_texts.length - 1)
-					cur_selected = 0;
+				curSelected++;
+				if (curSelected > worldTexts.length - 1)
+					curSelected = 0;
 			}
 
 			if (FlxG.keys.justReleased.ENTER)
 			{
 				#if sys
 				var count = 0;
-				if (world_list[cur_selected] == null)
-					while (FileSystem.exists('assets/saves/' + world_name.text + '.json'))
+				if (worldList[curSelected] == null)
+					while (FileSystem.exists('assets/saves/' + worldName.text + '.json'))
 					{
-						world_name.text = world_name.text.split('๑-')[0] + "๑-" + (count + 1);
+						worldName.text = worldName.text.split('๑-')[0] + "๑-" + (count + 1);
 						count++;
 					}
 				#end
 				saved_selected = 0;
-				FlxG.switchState(() -> new PlayState((world_list[cur_selected] == null) ? world_name.text : world_list[cur_selected]));
+				FlxG.switchState(() -> new PlayState((worldList[curSelected] == null) ? worldName.text : worldList[curSelected]));
 			}
 
 			if (FlxG.keys.justReleased.DELETE)
 			{
-				if (world_list[cur_selected] != null)
+				if (worldList[curSelected] != null)
 				{
-					saved_selected = cur_selected;
+					saved_selected = curSelected;
 					#if sys
 					saved_selected -= 1;
-					FileSystem.deleteFile('assets/saves/' + world_list[cur_selected] + '.json');
+					FileSystem.deleteFile('assets/saves/' + worldList[curSelected] + '.json');
 					#end
 					FlxG.resetState();
 				}
 			}
 		}
+
+        if (FlxG.keys.justPressed.ESCAPE)
+        {
+            close();
+        }
 	}
 }

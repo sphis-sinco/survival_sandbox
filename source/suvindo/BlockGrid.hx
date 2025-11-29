@@ -56,7 +56,8 @@ class BlockGrid extends FlxTypedGroup<Block>
 	{
 		super();
 
-		loadWorld(world_file_path);
+        if (world_file_path != null)
+		    loadWorld(world_file_path);
 
 		this.x = x;
 		this.y = y;

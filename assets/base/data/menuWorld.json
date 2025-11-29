@@ -1,0 +1,5902 @@
+{
+	"blocks": [
+		{
+			"block_id": "stone",
+			"x": 0,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 0,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 0,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 0,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 0,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 0,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 0,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 0,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 664
+		},
+		{
+			"block_id": "dirt",
+			"x": 0,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 48,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 80,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 128,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 208,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 256,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 272,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 336,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 368,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 400,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 432,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 192,
+			"y": 584
+		},
+		{
+			"block_id": "dirt",
+			"x": 0,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 0,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 0,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 0,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 16,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 64,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 112,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 144,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 224,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 240,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 304,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 320,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 384,
+			"y": 568
+		},
+		{
+			"block_id": "dirt",
+			"x": 432,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 432,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 432,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 416,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 400,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 384,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 368,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 352,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 336,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 320,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 304,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 288,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 272,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 256,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 240,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 224,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 208,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 192,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 176,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 160,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 144,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 128,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 112,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 96,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 80,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 64,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 48,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 32,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 16,
+			"y": 520
+		},
+		{
+			"block_id": "dirt",
+			"x": 16,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 32,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 48,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 64,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 80,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 96,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 112,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 128,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 144,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 160,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 176,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 192,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 208,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 224,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 240,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 256,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 272,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 288,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 304,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 320,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 336,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 352,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 368,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 384,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 400,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 416,
+			"y": 536
+		},
+		{
+			"block_id": "dirt",
+			"x": 416,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 400,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 384,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 368,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 336,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 320,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 304,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 288,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 256,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 240,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 224,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 208,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 192,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 176,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 160,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 128,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 112,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 80,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 64,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 48,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 32,
+			"y": 552
+		},
+		{
+			"block_id": "dirt",
+			"x": 16,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 64,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 48,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 16,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 32,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 80,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 96,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 112,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 128,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 384,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 352,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 368,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 336,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 304,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 320,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 288,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 256,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 272,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 240,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 224,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 208,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 192,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 176,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 160,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 144,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 400,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 416,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 432,
+			"y": 568
+		},
+		{
+			"block_id": "grass_block",
+			"x": 432,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 416,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 400,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 384,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 368,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 352,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 336,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 320,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 304,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 288,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 272,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 256,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 240,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 224,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 208,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 192,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 176,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 160,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 144,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 128,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 112,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 96,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 80,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 64,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 48,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 32,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 16,
+			"y": 504
+		},
+		{
+			"block_id": "grass_block",
+			"x": 0,
+			"y": 504
+		},
+		{
+			"block_id": "tree_trunk",
+			"x": 80,
+			"y": 488
+		},
+		{
+			"block_id": "tree_trunk",
+			"x": 80,
+			"y": 472
+		},
+		{
+			"block_id": "tree_trunk",
+			"x": 80,
+			"y": 456
+		},
+		{
+			"block_id": "leaves",
+			"x": 64,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 80,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 96,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 96,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 80,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 64,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 48,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 48,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 112,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 112,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 96,
+			"y": 408
+		},
+		{
+			"block_id": "leaves",
+			"x": 80,
+			"y": 408
+		},
+		{
+			"block_id": "leaves",
+			"x": 64,
+			"y": 408
+		},
+		{
+			"block_id": "leaves",
+			"x": 192,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 208,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 224,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 240,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 256,
+			"y": 440
+		},
+		{
+			"block_id": "leaves",
+			"x": 256,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 240,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 224,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 208,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 192,
+			"y": 424
+		},
+		{
+			"block_id": "leaves",
+			"x": 208,
+			"y": 408
+		},
+		{
+			"block_id": "leaves",
+			"x": 224,
+			"y": 408
+		},
+		{
+			"block_id": "leaves",
+			"x": 240,
+			"y": 408
+		},
+		{
+			"block_id": "tree_trunk",
+			"x": 224,
+			"y": 456
+		},
+		{
+			"block_id": "tree_trunk",
+			"x": 224,
+			"y": 472
+		},
+		{
+			"block_id": "tree_trunk",
+			"x": 224,
+			"y": 488
+		},
+		{
+			"x": 448,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 736,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 736,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 736,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 736,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 736,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 736,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 736,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 720,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 704,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 688,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 448,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 672,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 656,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 640,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 624,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 608,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 592,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 576,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 560,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 544,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 528,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 512,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 496,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 480,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 464,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"block_id": "plank",
+			"x": 448,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 464,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 480,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 496,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 512,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 528,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 544,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 560,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 576,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 592,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 608,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 624,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 640,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 656,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 672,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 688,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 704,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 720,
+			"y": 504
+		},
+		{
+			"block_id": "plank",
+			"x": 736,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 752,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 768,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 784,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 800,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 816,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 832,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 848,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 864,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 880,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 896,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 912,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 928,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 944,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 960,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 976,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 992,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1008,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1024,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1040,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1056,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1072,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1088,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1104,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1120,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1136,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1152,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1168,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1184,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1200,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1216,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1232,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1248,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1248,
+			"y": 504
+		},
+		{
+			"block_id": "sand",
+			"x": 1232,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1216,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1200,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1184,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1168,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1120,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1104,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1088,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1072,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1056,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1008,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 992,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 976,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 960,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 944,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 928,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 912,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 896,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 880,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 864,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 848,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 832,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 816,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 800,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 784,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 768,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 752,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 752,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 752,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 768,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 752,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 768,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 784,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 800,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 832,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 848,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 896,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 912,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 928,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 960,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 976,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 1008,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 1040,
+			"y": 584
+		},
+		{
+			"block_id": "sand",
+			"x": 1056,
+			"y": 584
+		},
+		{
+			"block_id": "sand",
+			"x": 1088,
+			"y": 584
+		},
+		{
+			"block_id": "sand",
+			"x": 1136,
+			"y": 584
+		},
+		{
+			"block_id": "sand",
+			"x": 1152,
+			"y": 584
+		},
+		{
+			"block_id": "sand",
+			"x": 1168,
+			"y": 584
+		},
+		{
+			"block_id": "sand",
+			"x": 1200,
+			"y": 584
+		},
+		{
+			"block_id": "sand",
+			"x": 1232,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1248,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 1216,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 1200,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 1152,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1120,
+			"y": 600
+		},
+		{
+			"block_id": "sand",
+			"x": 1088,
+			"y": 600
+		},
+		{
+			"block_id": "sand",
+			"x": 1056,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 992,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 976,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 944,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 928,
+			"y": 584
+		},
+		{
+			"block_id": "sand",
+			"x": 896,
+			"y": 616
+		},
+		{
+			"block_id": "sand",
+			"x": 880,
+			"y": 616
+		},
+		{
+			"block_id": "sand",
+			"x": 864,
+			"y": 600
+		},
+		{
+			"block_id": "sand",
+			"x": 864,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 848,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 816,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 784,
+			"y": 600
+		},
+		{
+			"block_id": "sand",
+			"x": 752,
+			"y": 616
+		},
+		{
+			"x": 736,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 736,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"block_id": "sand",
+			"x": 768,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 784,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 784,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 800,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 800,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 816,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 832,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 848,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 864,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 880,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 896,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 912,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 928,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 944,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 960,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 944,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 928,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 912,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 896,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 880,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 992,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1008,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1008,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1024,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1040,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1024,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1040,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1072,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1088,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1104,
+			"y": 568
+		},
+		{
+			"block_id": "sand",
+			"x": 1120,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1136,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1168,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1184,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1152,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1136,
+			"y": 520
+		},
+		{
+			"block_id": "sand",
+			"x": 1104,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1168,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1152,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1136,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1104,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1200,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1216,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1232,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1248,
+			"y": 536
+		},
+		{
+			"block_id": "sand",
+			"x": 1248,
+			"y": 552
+		},
+		{
+			"block_id": "sand",
+			"x": 1136,
+			"y": 632
+		},
+		{
+			"block_id": "sand",
+			"x": 1120,
+			"y": 632
+		},
+		{
+			"block_id": "sand",
+			"x": 992,
+			"y": 600
+		},
+		{
+			"block_id": "sand",
+			"x": 976,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 520
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 536
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 536
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 536
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 536
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1136,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 552
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 568
+		},
+		{
+			"block_id": "stone",
+			"x": 752,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 752,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 784,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 896,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 896,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 784,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 928,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 928,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1136,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1136,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 616
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 584
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 600
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1248,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1136,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 928,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 896,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 784,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 712
+		},
+		{
+			"block_id": "stone",
+			"x": 752,
+			"y": 712
+		},
+		{
+			"x": 736,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"block_id": "stone",
+			"x": 752,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 752,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 752,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 752,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 752,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 768,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 784,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 784,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 784,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 784,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 784,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 800,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 816,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 832,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 848,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 864,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 880,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 896,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 896,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 896,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 896,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 896,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 912,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 928,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 928,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 928,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 928,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 928,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1136,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 696
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1136,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 680
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 944,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 632
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1232,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1216,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1200,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1136,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 648
+		},
+		{
+			"block_id": "stone",
+			"x": 960,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 976,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 992,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1008,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1024,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1040,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1056,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1072,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1088,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1104,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1120,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1136,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1152,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1168,
+			"y": 664
+		},
+		{
+			"block_id": "stone",
+			"x": 1184,
+			"y": 664
+		},
+		{
+			"block_id": "plank",
+			"x": 1264,
+			"y": 504
+		},
+		{
+			"x": 1264,
+			"y": 568,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 584,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 600,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 616,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 632,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 648,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 664,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 680,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 696,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"x": 1264,
+			"y": 712,
+			"block_id": "water",
+			"frameIndex": 2
+		},
+		{
+			"block_id": "plank",
+			"x": 816,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 832,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 848,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 864,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 880,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 864,
+			"y": 472
+		},
+		{
+			"block_id": "plank",
+			"x": 848,
+			"y": 472
+		},
+		{
+			"block_id": "plank",
+			"x": 832,
+			"y": 472
+		},
+		{
+			"block_id": "plank",
+			"x": 848,
+			"y": 456
+		},
+		{
+			"block_id": "plank",
+			"x": 880,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 896,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 912,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 928,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 944,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 960,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 976,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 992,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 1008,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 1040,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 1056,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 1056,
+			"y": 472
+		},
+		{
+			"block_id": "plank",
+			"x": 1072,
+			"y": 472
+		},
+		{
+			"block_id": "plank",
+			"x": 1072,
+			"y": 456
+		},
+		{
+			"block_id": "plank",
+			"x": 1088,
+			"y": 472
+		},
+		{
+			"block_id": "plank",
+			"x": 1072,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 1088,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 1104,
+			"y": 488
+		},
+		{
+			"block_id": "plank",
+			"x": 1024,
+			"y": 424
+		},
+		{
+			"block_id": "plank",
+			"x": 1040,
+			"y": 424
+		},
+		{
+			"x": 896,
+			"y": 408,
+			"block_id": "wool",
+			"variation_index": 0
+		},
+		{
+			"x": 912,
+			"y": 408,
+			"block_id": "wool",
+			"variation_index": 0
+		},
+		{
+			"x": 928,
+			"y": 408,
+			"block_id": "wool",
+			"variation_index": 9
+		},
+		{
+			"x": 1024,
+			"y": 408,
+			"block_id": "wool",
+			"variation_index": 0
+		},
+		{
+			"x": 1008,
+			"y": 408,
+			"block_id": "wool",
+			"variation_index": 0
+		},
+		{
+			"x": 992,
+			"y": 408,
+			"block_id": "wool",
+			"variation_index": 9
+		},
+		{
+			"block_id": "cactus",
+			"x": 768,
+			"y": 488
+		},
+		{
+			"block_id": "cactus",
+			"x": 768,
+			"y": 472
+		},
+		{
+			"block_id": "cactus",
+			"x": 912,
+			"y": 488
+		},
+		{
+			"block_id": "cactus",
+			"x": 976,
+			"y": 472
+		},
+		{
+			"block_id": "cactus",
+			"x": 976,
+			"y": 488
+		},
+		{
+			"block_id": "cactus",
+			"x": 1008,
+			"y": 488
+		},
+		{
+			"block_id": "cactus",
+			"x": 1152,
+			"y": 488
+		},
+		{
+			"block_id": "cactus",
+			"x": 1216,
+			"y": 472
+		},
+		{
+			"block_id": "cactus",
+			"x": 1216,
+			"y": 488
+		}
+	],
+	"cursor_block": {
+		"block_id": "cactus",
+		"x": 0,
+		"y": 488
+	},
+	"game_version": "0.3.0 [PROTOTYPE]",
+	"has_animated_blocks": true,
+	"random_id": "3038bfb575bee6a0e61945eff8784835bb2c720634e42734678c083994b7f018",
+	"resource_packs": [
+		"blue_stone"
+	],
+	"world_name": "Menu BG world"
+}
