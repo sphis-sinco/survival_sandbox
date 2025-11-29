@@ -44,6 +44,8 @@ class ResourcePackMenu extends FlxSubState
 		for (pack_id in packList)
 		{
 			var pack_txt:FlxText = new FlxText(2, 2, 0, pack_id, 32);
+			pack_txt.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+			pack_txt.antialiasing = true;
 			packTexts.add(pack_txt);
 
 			#if sys
