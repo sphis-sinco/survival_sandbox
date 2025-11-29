@@ -40,17 +40,17 @@ class PlayState extends FlxState
 		super();
 
 		if (world == null && world_info != null)
-			world = (world_info?.world_name ?? null) ?? ('world_' + world_info?.random_id ?? null) ?? null;
+			world = (world_info?.world_name ?? null) ?? ("world_" + world_info?.random_id ?? null) ?? null;
 
 		if (world != null)
 		{
 			#if sys
-			if (FileSystem.exists('assets/saves/' + world + '.json'))
+			if (FileSystem.exists("assets/saves/" + world + ".json"))
 			#else
-			if (Assets.exists('assets/saves/' + world + '.json'))
+			if (Assets.exists("assets/saves/" + world + ".json"))
 			#end
 			{
-				blocks = new BlockGrid('assets/saves/' + world + '.json');
+				blocks = new BlockGrid("assets/saves/" + world + ".json");
 				world_info = blocks.world_info;
 
 				WORLD_NAME = world_info.world_name;
@@ -85,7 +85,7 @@ class PlayState extends FlxState
 		cursor_block.y = 16 * ((FlxG.height / 16) / 2);
 		cursor_block.alpha = .5;
 
-		debug_text = new FlxText(2, 2, 0, 'version', 8);
+		debug_text = new FlxText(2, 2, 0, "version", 8);
 		add(debug_text);
 
 		if (world_info != null)
@@ -112,8 +112,8 @@ class PlayState extends FlxState
 			cursor_block: null,
 			blocks: [],
 			has_animated_blocks: false,
-			random_id: (world_info?.random_id ?? null) ?? Sha256.encode('' + FlxG.random.int(0, 255)),
-			game_version: Application.current.meta.get('version') + #if debug ' [PROTOTYPE]' #else '' #end,
+			random_id: (world_info?.random_id ?? null) ?? Sha256.encode("" + FlxG.random.int(0, 255)),
+			game_version: Application.current.meta.get("version") + #if debug " [PROTOTYPE]" #else "" #end,
 			world_name: WORLD_NAME ?? ((world_info?.world_name ?? null) ?? null),
 			resource_packs: []
 		};
@@ -132,28 +132,28 @@ class PlayState extends FlxState
 					y: block.y,
 				};
 
-				if (block.block_json?.type == 'animated')
+				if (block.block_json?.type == "animated")
 				{
 					world_info.has_animated_blocks = true;
 					block_data.frameIndex = block.animation.frameIndex;
 				}
-				if (block.block_json?.type == 'variations')
+				if (block.block_json?.type == "variations")
 					block_data.variation_index = block.variation_index;
 
 				world_info.blocks.push(block_data);
 
-				if (block.graphic_path.contains('resources/'))
-					if (!world_info.resource_packs.contains(block.graphic_path.split('/')[1]))
-						world_info.resource_packs.push(block.graphic_path.split('/')[1]);
+				if (block.graphic_path.contains("resources/"))
+					if (!world_info.resource_packs.contains(block.graphic_path.split("/")[1]))
+						world_info.resource_packs.push(block.graphic_path.split("/")[1]);
 			}
 
 		#if sys
-		if (!FileSystem.exists('assets/saves'))
-			FileSystem.createDirectory('assets/saves');
+		if (!FileSystem.exists("assets/saves"))
+			FileSystem.createDirectory("assets/saves");
 		#end
 
 		if (save_file)
-			BlockGrid.saveWorldInfo(world_info, 'assets/saves/' + ((world_info?.world_name ?? null) ?? 'world_' + world_info.random_id) + '.json');
+			BlockGrid.saveWorldInfo(world_info, "assets/saves/" + ((world_info?.world_name ?? null) ?? "world_" + world_info.random_id) + ".json");
 	}
 
 	public function onReload()
@@ -162,7 +162,7 @@ class PlayState extends FlxState
 
 		FlxTimer.wait(.5, () ->
 		{
-			trace('RELOAD!');
+			trace("RELOAD!");
 			FlxG.resetState();
 		});
 	}
@@ -171,20 +171,20 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 
-		debug_text.text = '';
+		debug_text.text = "";
 		if (FlxG.keys.pressed.F3)
 		{
-			debug_text.text += 'Current Block ID: ' + cursor_block.block_id;
-			debug_text.text += '\nCurrent Block Variation: '
-				+ ((cursor_block.variations.length > 0) ? cursor_block.variations[cursor_block.variation_index]?.id : 'default');
+			debug_text.text += "Current Block ID: " + cursor_block.block_id;
+			debug_text.text += "\nCurrent Block Variation: "
+				+ ((cursor_block.variations.length > 0) ? cursor_block.variations[cursor_block.variation_index]?.id : "default");
 
-			debug_text.text += '\n\nResource packs:';
+			debug_text.text += "\n\nResource packs:";
 			if (ResourcePacks.RESOURCE_PACKS.length > 0)
 				for (pack in ResourcePacks.RESOURCE_PACKS)
-					debug_text.text += '\n* ' + pack + ((ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack) ? ' (enabled)' : ' (disabled)'));
+					debug_text.text += "\n* " + pack + ((ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack) ? " (enabled)" : " (disabled)"));
 			else
-				debug_text.text += '\nNone';
-			debug_text.text += '\n\nTime until next autosave (seconds): ' + Std.int(autosave_timer.timeLeft);
+				debug_text.text += "\nNone";
+			debug_text.text += "\n\nTime until next autosave (seconds): " + Std.int(autosave_timer.timeLeft);
 		}
 
 		cursor_block.visible = !FlxG.keys.pressed.F1;
@@ -231,7 +231,7 @@ class PlayState extends FlxState
 					var new_block = new Block(cursor_block.block_id, cursor_block.x, cursor_block.y);
 					blocks.add(new_block);
 
-					if (new_block?.block_json?.type == 'variations')
+					if (new_block?.block_json?.type == "variations")
 					{
 						new_block.variation_index = cursor_block.variation_index;
 						new_block.changeVariationIndex(0);
@@ -267,7 +267,7 @@ class PlayState extends FlxState
 
 			if (FlxG.keys.justReleased.L)
 			{
-				if (cursor_block.block_json?.type == 'variations')
+				if (cursor_block.block_json?.type == "variations")
 					cursor_block.changeVariationIndex((FlxG.keys.pressed.SHIFT) ? -1 : 1);
 			}
 		}

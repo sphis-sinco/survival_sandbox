@@ -50,17 +50,17 @@ class DebugWorldSelection extends FlxSubState
 		curSelected = saved_selected;
 
 		#if sys
-		if (FileSystem.exists('assets/saves'))
+		if (FileSystem.exists("assets/saves"))
 		{
-			// trace(FileSystem.readDirectory('assets/saves'));
-			for (save in FileSystem.readDirectory('assets/saves'))
+			// trace(FileSystem.readDirectory("assets/saves"));
+			for (save in FileSystem.readDirectory("assets/saves"))
 			{
 				var world_json:Dynamic = null;
 
 				try
 				{
 					#if sys
-					world_json = Json.parse(File.getContent('assets/saves/' + save));
+					world_json = Json.parse(File.getContent("assets/saves/" + save));
 					#end
 				}
 				catch (e)
@@ -78,7 +78,7 @@ class DebugWorldSelection extends FlxSubState
 		for (world in worldList)
 		{
 			if (world != null)
-				trace(' * ' + ((world.length > 32 + 3) ? world.substring(0, 32) + '...' : world));
+				trace(" * " + ((world.length > 32 + 3) ? world.substring(0, 32) + "..." : world));
 		}
 
 		if (curSelected > worldList.length)
@@ -94,7 +94,7 @@ class DebugWorldSelection extends FlxSubState
 		for (world_id in worldList)
 		{
 			var world_txt:FlxText = new FlxText(2, 2, FlxG.width / 2, world_id ?? "New world", 32);
-			world_txt.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+			world_txt.font = ResourcePacks.getPath("fonts/ui_font.ttf");
 			world_txt.antialiasing = true;
 			worldTexts.add(world_txt);
 			world_txt.ID = i;
@@ -107,7 +107,7 @@ class DebugWorldSelection extends FlxSubState
 		camera.y = camFollow.y;
 
 		worldName = FlxInputTextUtil.createInputText(null, "World Name");
-		worldName.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+		worldName.font = ResourcePacks.getPath("fonts/ui_font.ttf");
 		worldName.scrollFactor.set();
 		add(worldName);
 
@@ -119,8 +119,8 @@ class DebugWorldSelection extends FlxSubState
 			FlxG.resetState();
 		});
 
-		worldInfo = new FlxText(FlxG.width / 2, 2 + worldName.height + worldName.y, FlxG.width / 2, '', 24);
-		worldInfo.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+		worldInfo = new FlxText(FlxG.width / 2, 2 + worldName.height + worldName.y, FlxG.width / 2, "", 24);
+		worldInfo.font = ResourcePacks.getPath("fonts/ui_font.ttf");
 		worldInfo.antialiasing = true;
 		add(worldInfo);
 		worldInfo.alignment = RIGHT;
@@ -140,7 +140,7 @@ class DebugWorldSelection extends FlxSubState
 		}
 		ReloadPlugin.canReload = !worldName.hasFocus;
 
-		worldInfo.text = '';
+		worldInfo.text = "";
 		for (world_text in worldTexts)
 		{
 			world_text.y = 2 + ((world_text.size * 4) * world_text.ID);
@@ -153,10 +153,10 @@ class DebugWorldSelection extends FlxSubState
 				{
 					try
 					{
-						var cur_world:WorldInfo = Json.parse(File.getContent('assets/saves/' + worldList[curSelected] + '.json'));
+						var cur_world:WorldInfo = Json.parse(File.getContent("assets/saves/" + worldList[curSelected] + ".json"));
 
-						worldInfo.text = 'Name: ' + cur_world.world_name + '\nRID: ' + cur_world.random_id + '\n\nGame Version: ' + cur_world.game_version
-							+ '\n\nWorld warning(s):\n' + WorldInfoClass.getWorldWarnings(cur_world);
+						worldInfo.text = "Name: " + cur_world.world_name + "\nRID: " + cur_world.random_id + "\n\nGame Version: " + cur_world.game_version
+							+ "\n\nWorld warning(s):\n" + WorldInfoClass.getWorldWarnings(cur_world);
 					}
 					catch (e)
 					{
@@ -186,9 +186,9 @@ class DebugWorldSelection extends FlxSubState
 				#if sys
 				var count = 0;
 				if (worldList[curSelected] == null)
-					while (FileSystem.exists('assets/saves/' + worldName.text + '.json'))
+					while (FileSystem.exists("assets/saves/" + worldName.text + ".json"))
 					{
-						worldName.text = worldName.text.split('๑-')[0] + "๑-" + (count + 1);
+						worldName.text = worldName.text.split("๑-")[0] + "๑-" + (count + 1);
 						count++;
 					}
 				#end
@@ -203,7 +203,7 @@ class DebugWorldSelection extends FlxSubState
 					saved_selected = curSelected;
 					#if sys
 					saved_selected -= 1;
-					FileSystem.deleteFile('assets/saves/' + worldList[curSelected] + '.json');
+					FileSystem.deleteFile("assets/saves/" + worldList[curSelected] + ".json");
 					#end
 					FlxG.resetState();
 				}

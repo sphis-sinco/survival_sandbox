@@ -40,13 +40,13 @@ class Block extends FlxSprite
 		this.shader = hsv_shader;
 	}
 
-	public function getGraphicPath(block:String, blocks_folder:Bool = true, ext:String = 'png'):String
+	public function getGraphicPath(block:String, blocks_folder:Bool = true, ext:String = "png"):String
 	{
-		var path:String = ResourcePacks.getPath('images/' + (blocks_folder ? 'blocks/' : '') + block + '.' + ext);
+		var path:String = ResourcePacks.getPath("images/" + (blocks_folder ? "blocks/" : "") + block + "." + ext);
 
 		for (block_path in RequestsManager.ADD?.blocks)
 			if (Path.withoutDirectory(block_path) == block)
-				path = ResourcePacks.getPath('images/' + block_path + '.' + ext);
+				path = ResourcePacks.getPath("images/" + block_path + "." + ext);
 
 		graphic_path = path;
 		return path;
@@ -61,7 +61,7 @@ class Block extends FlxSprite
 		#end
 
 		if (this.graphic == null)
-			loadGraphic('assets/images/debug.png');
+			loadGraphic("assets/images/debug.png");
 	}
 
 	public function changeVariationIndex(amount:Int)
@@ -83,7 +83,7 @@ class Block extends FlxSprite
 			trace(getGraphicPath(variations[variation_index].texture, false));
 
 		if (this.graphic == null)
-			loadGraphic('assets/images/debug.png');
+			loadGraphic("assets/images/debug.png");
 	}
 
 	public function switchBlock(new_block:String)
@@ -92,24 +92,24 @@ class Block extends FlxSprite
 		variations = [];
 
 		block_json = null;
-		if (#if !sys Assets.exists #else FileSystem.exists #end (getGraphicPath(new_block, true, 'json')))
+		if (#if !sys Assets.exists #else FileSystem.exists #end (getGraphicPath(new_block, true, "json")))
 		{
 			#if sys
-			block_json = cast Json.parse(File.getContent(getGraphicPath(new_block, true, 'json')));
+			block_json = cast Json.parse(File.getContent(getGraphicPath(new_block, true, "json")));
 			#else
-			block_json = cast Json.parse(Assets.getText(getGraphicPath(new_block, true, 'json', true, 'json')));
+			block_json = cast Json.parse(Assets.getText(getGraphicPath(new_block, true, "json", true, "json")));
 			#end
 			if (block_json != null && block_json.type != null)
 			{
 				block_json.type = block_json.type.toLowerCase();
 				switch (block_json.type)
 				{
-					case 'variations':
+					case "variations":
 						for (variation in block_json.variations)
 							variations.push(variation);
 
 						changeVariationIndex(0);
-					case 'animated':
+					case "animated":
 						loadGraphic(#if sys FlxGraphic.fromBitmapData(BitmapData.fromFile(getGraphicPath(new_block))) #else getGraphicPath(new_block) #end,
 							true, block_json.animated.block_width, block_json.animated.block_height);
 
@@ -126,10 +126,10 @@ class Block extends FlxSprite
 							return frames;
 						};
 
-						animation.add('animation', block_json.animated?.frames ?? getFrames(), block_json.animated?.fps ?? 24);
-						animation.play('animation');
+						animation.add("animation", block_json.animated?.frames ?? getFrames(), block_json.animated?.fps ?? 24);
+						animation.play("animation");
 
-					case 'regular':
+					case "regular":
 						defaultLoadGraphic(block_json?.regular?.texture ?? new_block);
 
 					default:
@@ -143,11 +143,11 @@ class Block extends FlxSprite
 			defaultLoadGraphic(new_block);
 
 		if (this.graphic.bitmap == null)
-			loadGraphic('assets/images/debug.png');
+			loadGraphic("assets/images/debug.png");
 
 		this.scale.set(1, 1);
 		if (this.graphic != null)
-			if (block_json?.type == 'animated')
+			if (block_json?.type == "animated")
 				this.scale.set(1 * (16 / this.block_json.animated.block_width), 1 * (16 / this.block_json.animated.block_height));
 			else
 				this.scale.set(1 * (16 / this.graphic.width), 1 * (16 / this.graphic.height));

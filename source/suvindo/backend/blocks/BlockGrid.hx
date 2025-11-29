@@ -130,7 +130,7 @@ class BlockGrid extends FlxTypedGroup<Block>
 	public static function saveWorldInfo(world_info:WorldInfo, path:String)
 	{
 		#if sys
-		File.saveContent(path, Json.stringify(world_info, '\t'));
+		File.saveContent(path, Json.stringify(world_info, "\t"));
 		#end
 	}
 }

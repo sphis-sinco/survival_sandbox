@@ -23,23 +23,23 @@ class WorldInfoClass
 
 	public static function getWorldWarnings(world_info:WorldInfo):String
 	{
-		var warning:String = '';
+		var warning:String = "";
 
 		var add_warning = function(msg:String)
 		{
-			warning += '- ' + msg + '\n';
+			warning += "- " + msg + "\n";
 		}
 
 		var version_single_int = VersionConverts.convertToInt(world_info.game_version);
 
 		if (version_single_int < VersionConverts.convertToInt(MIN_WORLD_VERSION))
-			add_warning('Below the minimum supported world version');
+			add_warning("Below the minimum supported world version");
 
 		if (version_single_int > VersionConverts.convertToInt(MAX_WORLD_VERSION))
-			add_warning('Above the maximum supported world version');
+			add_warning("Above the maximum supported world version");
 
-		if (world_info.game_version.toLowerCase().contains('[prototype]'))
-			add_warning('Prototype version!');
+		if (world_info.game_version.toLowerCase().contains("[prototype]"))
+			add_warning("Prototype version!");
 
 		var missing_resource_packs:Array<String> = [];
 		for (pack in (world_info?.resource_packs ?? []))
@@ -49,10 +49,10 @@ class WorldInfoClass
 		}
 
 		if (missing_resource_packs.length > 0)
-			add_warning('Missing resource packs: ' + missing_resource_packs);
+			add_warning("Missing resource packs: " + missing_resource_packs);
 
-		if (warning == '')
-			warning = 'None';
+		if (warning == "")
+			warning = "None";
 
 		return warning;
 	}

@@ -47,12 +47,12 @@ class ResourcePackMenu extends FlxSubState
 		for (pack_id in packList)
 		{
 			var pack_txt:FlxText = new FlxText(2, 2, 0, pack_id, 32);
-			pack_txt.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+			pack_txt.font = ResourcePacks.getPath("fonts/ui_font.ttf");
 			pack_txt.antialiasing = true;
 			packTexts.add(pack_txt);
 
 			#if sys
-			var pack_file:ResourcePack = Json.parse(File.getContent('resources/' + pack_id + '/pack.json'));
+			var pack_file:ResourcePack = Json.parse(File.getContent("resources/" + pack_id + "/pack.json"));
 			literalPackList.push(pack_file);
 			#end
 
@@ -67,9 +67,9 @@ class ResourcePackMenu extends FlxSubState
 		camFollow = new FlxObject(FlxG.width / 2);
 		add(camFollow);
 
-		packInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, '', 24);
+		packInfo = new FlxText(FlxG.width / 2, 2, FlxG.width / 2, "", 24);
 		add(packInfo);
-		packInfo.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+		packInfo.font = ResourcePacks.getPath("fonts/ui_font.ttf");
 		packInfo.antialiasing = true;
 		packInfo.alignment = RIGHT;
 		packInfo.scrollFactor.set();
@@ -99,12 +99,12 @@ class ResourcePackMenu extends FlxSubState
 		{
 			var cur_pack = literalPackList[curSelected];
 
-			packInfo.text = 'Name: ' + cur_pack.name + '\nDescription: ' + cur_pack.description + '\n\nPack Version: ' + cur_pack.pack_version
-				+ '\n\nPack Version Warning(s):\n' + ResourcePacks.getPackVersionWarning(cur_pack.pack_version);
+			packInfo.text = "Name: " + cur_pack.name + "\nDescription: " + cur_pack.description + "\n\nPack Version: " + cur_pack.pack_version
+				+ "\n\nPack Version Warning(s):\n" + ResourcePacks.getPackVersionWarning(cur_pack.pack_version);
 		}
 		else
 		{
-			packInfo.text = 'N/A';
+			packInfo.text = "N/A";
 		}
 
 		if (FlxG.keys.pressed.SHIFT)
@@ -186,18 +186,18 @@ class ResourcePackMenu extends FlxSubState
 			return (packList.indexOf(s1) < packList.indexOf(s2)) ? -1 : 1;
 		});
 
-		var enabled_resource_list = '';
+		var enabled_resource_list = "";
 		var i = 1;
 		for (pack in ResourcePacks.ENABLED_RESOURCE_PACKS)
 		{
 			enabled_resource_list += pack;
 
 			if (i < ResourcePacks.ENABLED_RESOURCE_PACKS.length)
-				enabled_resource_list += '\n';
+				enabled_resource_list += "\n";
 			i++;
 		}
 		#if sys
-		File.saveContent('resources/resource-list.txt', enabled_resource_list);
+		File.saveContent("resources/resource-list.txt", enabled_resource_list);
 		#end
 	}
 }

@@ -19,7 +19,7 @@ class ResourcePacks
 	{
 		RESOURCE_PACKS = [];
 		ENABLED_RESOURCE_PACKS = [];
-		var enabled_resource_list:String = '';
+		var enabled_resource_list:String = "";
 		trace("RELOADING");
 
 		#if sys
@@ -36,19 +36,19 @@ class ResourcePacks
 						continue;
 					if (pack_file.pack_version < MIN_PACK_VERSION)
 					{
-						trace('"' + pack_file.name + "\" is below the minimum supported version number (" + MIN_PACK_VERSION + " > "
-							+ pack_file.pack_version + ')');
+						trace("\"" + pack_file.name + "\" is below the minimum supported version number (" + MIN_PACK_VERSION + " > "
+							+ pack_file.pack_version + ")");
 						continue;
 					}
 					if (pack_file.pack_version > PACK_VERSION)
 					{
-						trace('"'
+						trace("\""
 							+ pack_file.name
 							+ "\" is above the max supported version number ("
 							+ PACK_VERSION
 							+ " < "
 							+ pack_file.pack_version
-							+ ')');
+							+ ")");
 						continue;
 					}
 
@@ -85,7 +85,7 @@ class ResourcePacks
 
 		for (enabled_pack in enabled_resource_list.split("\n"))
 		{
-			if (enabled_pack.length > 0 && enabled_pack != null && enabled_pack != '')
+			if (enabled_pack.length > 0 && enabled_pack != null && enabled_pack != "")
 			{
 				#if sys
 				var pack_file:ResourcePack = Json.parse(File.getContent("resources/" + enabled_pack + "/pack.json"));
@@ -104,14 +104,14 @@ class ResourcePacks
 			}
 		}
 
-		enabled_resource_list = '';
+		enabled_resource_list = "";
 		var i = 1;
 		for (pack in ENABLED_RESOURCE_PACKS)
 		{
 			enabled_resource_list += pack;
 
 			if (i < ENABLED_RESOURCE_PACKS.length)
-				enabled_resource_list += '\n';
+				enabled_resource_list += "\n";
 			i++;
 		}
 		#if sys
@@ -129,12 +129,12 @@ class ResourcePacks
 		for (pack in ENABLED_RESOURCE_PACKS)
 		{
 			#if sys
-			if (FileSystem.exists("resources/" + pack + '/' + path))
+			if (FileSystem.exists("resources/" + pack + "/" + path))
 			#else
-			if (Assets.exists("resources/" + pack + '/' + path))
+			if (Assets.exists("resources/" + pack + "/" + path))
 			#end
 			{
-				return "resources/" + pack + '/' + path;
+				return "resources/" + pack + "/" + path;
 				break;
 			}
 		}
@@ -159,11 +159,11 @@ class ResourcePacks
 			}
 		for (pack in ENABLED_RESOURCE_PACKS)
 		{
-			if (FileSystem.exists("resources/" + pack + '/' + directory))
+			if (FileSystem.exists("resources/" + pack + "/" + directory))
 				try
 				{
-					for (path in FileSystem.readDirectory("resources/" + pack + '/' + directory))
-						read_directory.push("resources/" + pack + '/' + directory + '/' + path);
+					for (path in FileSystem.readDirectory("resources/" + pack + "/" + directory))
+						read_directory.push("resources/" + pack + "/" + directory + "/" + path);
 				}
 				catch (e)
 				{
@@ -177,7 +177,7 @@ class ResourcePacks
 
 	public static function getPackVersionWarning(pack_version:Null<Int>):String
 	{
-		var warning:String = '';
+		var warning:String = "";
 
 		var add_warning = function(msg:String)
 		{
@@ -189,7 +189,7 @@ class ResourcePacks
 		if (pack_version > PACK_VERSION)
 			add_warning("Above the maximum supported pack number");
 
-		if (warning == '')
+		if (warning == "")
 			warning = "None";
 
 		return warning;

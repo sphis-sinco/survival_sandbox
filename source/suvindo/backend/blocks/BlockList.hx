@@ -19,13 +19,13 @@ class BlockList
 	public static function reload()
 	{
 		BLOCK_LIST = [];
-		trace('RELOADING');
+		trace("RELOADING");
 
 		#if sys
-		var blocksDir:Array<String> = ResourcePacks.readDirectory('images/blocks/');
+		var blocksDir:Array<String> = ResourcePacks.readDirectory("images/blocks/");
 		for (block in RequestsManager.ADD?.blocks)
 		{
-			var path:String = ResourcePacks.getPath('images/' + block + '.png');
+			var path:String = ResourcePacks.getPath("images/" + block + ".png");
 			if (#if !sys Assets.exists #else FileSystem.exists #end (path))
 				blocksDir.push(path);
 		}
@@ -41,10 +41,10 @@ class BlockList
 			if (RequestsManager.REMOVE?.blocks.contains(list_entry))
 				continue;
 
-			if (image.endsWith('.png') && !FileSystem.isDirectory(image) && !FileSystem.exists(image.replace('png', '.json')))
+			if (image.endsWith(".png") && !FileSystem.isDirectory(image) && !FileSystem.exists(image.replace("png", ".json")))
 				accept_entry();
 
-			if (image.endsWith('.json') && !FileSystem.isDirectory(image))
+			if (image.endsWith(".json") && !FileSystem.isDirectory(image))
 			{
 				var block_json:BlockJSON = cast Json.parse(File.getContent(image));
 				if (block_json != null)
@@ -52,7 +52,7 @@ class BlockList
 					{
 						switch (block_json.type.toLowerCase())
 						{
-							case 'variations':
+							case "variations":
 								var all_variations_valid = true;
 								if (block_json.variations != null)
 								{
@@ -65,7 +65,7 @@ class BlockList
 
 								if (all_variations_valid)
 									accept_entry();
-							case 'animated':
+							case "animated":
 								if (block_json.animated?.block_width != null)
 									if (block_json.animated?.block_height != null)
 										if (block_json.animated?.texture != null)
@@ -78,15 +78,15 @@ class BlockList
 			}
 		}
 		#else
-		BLOCK_LIST = Assets.getText(ResourcePacks.getPath('data/blocks-list.txt')).split('\n');
+		BLOCK_LIST = Assets.getText(ResourcePacks.getPath("data/blocks-list.txt")).split("\n");
 		#end
 
 		if (BLOCK_LIST.length < 2)
 		{
-			BLOCK_LIST.push('plank');
+			BLOCK_LIST.push("plank");
 			if (BLOCK_LIST.length < 2)
-				BLOCK_LIST.push('dirt');
+				BLOCK_LIST.push("dirt");
 		}
-		trace('block list: ' + BLOCK_LIST);
+		trace("block list: " + BLOCK_LIST);
 	}
 }

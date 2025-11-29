@@ -23,7 +23,7 @@ class VersionConverts
 	{
 		var int_version:Array<Int> = [];
 
-		for (entry in version.split('.'))
+		for (entry in version.split("."))
 		{
 			if (Std.parseInt(entry) != null)
 				int_version.push(Std.parseInt(entry));

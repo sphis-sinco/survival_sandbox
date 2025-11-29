@@ -60,14 +60,14 @@ class RequestsManager
 			blocks: [],
 			tracks: [],
 		}
-		trace('RELOADING');
+		trace("RELOADING");
 
 		var requests:Array<String> = [];
 		#if sys
 		try
 		{
-			trace('getting requests');
-			requests = ResourcePacks.readDirectory('data/requests/');
+			trace("getting requests");
+			requests = ResourcePacks.readDirectory("data/requests/");
 		}
 		catch (e)
 		{
@@ -75,7 +75,7 @@ class RequestsManager
 			return;
 		}
 		#end
-		trace('found requests: ' + requests);
+		trace("found requests: " + requests);
 		if (requests.length > 0)
 		{
 			#if sys
@@ -98,17 +98,17 @@ class RequestsManager
 
 				switch (parsed_request.request.toLowerCase())
 				{
-					case 'remove':
+					case "remove":
 						for (block_id in parsed_request?.blocks ?? [])
 							REMOVE.blocks.push(block_id);
 						for (track_id in parsed_request?.tracks ?? [])
 							REMOVE.tracks.push(track_id);
-					case 'add':
+					case "add":
 						for (block_path in parsed_request?.blocks ?? [])
 							ADD.blocks.push(block_path);
 						for (track_path in parsed_request?.tracks ?? [])
 							ADD.tracks.push(track_path);
-					case 'convert':
+					case "convert":
 						for (block_path in parsed_request?.converts?.blocks ?? [])
 							CONVERT.blocks.push(block_path);
 						for (track_path in parsed_request?.converts?.tracks ?? [])
@@ -118,8 +118,8 @@ class RequestsManager
 			#end
 		}
 
-		trace('REMOVE REQUESTS: ' + REMOVE);
-		trace('ADD REQUESTS: ' + ADD);
-		trace('CONVERT REQUESTS: ' + CONVERT);
+		trace("REMOVE REQUESTS: " + REMOVE);
+		trace("ADD REQUESTS: " + ADD);
+		trace("CONVERT REQUESTS: " + CONVERT);
 	}
 }
