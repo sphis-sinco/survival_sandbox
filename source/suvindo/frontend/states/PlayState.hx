@@ -173,7 +173,7 @@ class PlayState extends FlxState
 
 	public var directional_timer:FlxTimer;
 	public var can_hold_directionals:Bool = false;
-	
+
 	var controls:Array<FlxKey> = [W, A, S, D, UP, LEFT, DOWN, RIGHT, ENTER, TAB, L, SHIFT];
 
 	override public function update(elapsed:Float)
@@ -239,13 +239,13 @@ class PlayState extends FlxState
 						can_hold_directionals = false;
 					});
 				if (FlxG.keys.anyPressed([W, UP]))
-					cursor_block.y -= cursor_block.height / 4;
+					cursor_block.y -= cursor_block.height / 2;
 				if (FlxG.keys.anyPressed([A, LEFT]))
-					cursor_block.x -= cursor_block.width / 4;
+					cursor_block.x -= cursor_block.width / 2;
 				if (FlxG.keys.anyPressed([S, DOWN]))
-					cursor_block.y += cursor_block.height / 4;
+					cursor_block.y += cursor_block.height / 2;
 				if (FlxG.keys.anyPressed([D, RIGHT]))
-					cursor_block.x += cursor_block.width / 4;
+					cursor_block.x += cursor_block.width / 2;
 			}
 
 			if (cursor_block.x < 0)
@@ -262,13 +262,21 @@ class PlayState extends FlxState
 			{
 				if (place_mode)
 				{
-					var new_block = new Block(cursor_block.block_id, cursor_block.x, cursor_block.y);
-					blocks.add(new_block);
+					var can_place = true;
+					for (minor in blocks.members)
+						if (cursor_block.overlaps(minor))
+							can_place = false;
 
-					if (new_block?.block_json?.type == "variations")
+					if (can_place)
 					{
-						new_block.variation_index = cursor_block.variation_index;
-						new_block.changeVariationIndex(0);
+						var new_block = new Block(cursor_block.block_id, cursor_block.x, cursor_block.y);
+						blocks.add(new_block);
+
+						if (new_block?.block_json?.type == "variations")
+						{
+							new_block.variation_index = cursor_block.variation_index;
+							new_block.changeVariationIndex(0);
+						}
 					}
 				}
 				else
