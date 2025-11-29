@@ -1,5 +1,8 @@
 package suvindo.backend;
 
+import flixel.FlxG;
+import haxe.crypto.Sha256;
+import suvindo.backend.blocks.BlockList;
 import suvindo.backend.resourcepacks.ResourcePacks;
 import sphis.any.VersionConverts;
 
@@ -9,7 +12,6 @@ typedef WorldInfo =
 {
 	?cursor_block:{x:Float, y:Float, block_id:String},
 	?blocks:Array<Dynamic>,
-	?has_animated_blocks:Bool,
 	random_id:String,
 	?world_name:String,
 	game_version:String,
@@ -20,6 +22,22 @@ class WorldInfoClass
 {
 	public static var MIN_WORLD_VERSION:String = "0.2.0";
 	public static var MAX_WORLD_VERSION:String = "0.4.0";
+
+	public static function getDefaultWorldInfo():WorldInfo
+	{
+		return {
+			cursor_block: {
+				x: 0,
+				y: 0,
+				block_id: BlockList.BLOCK_LIST[0],
+			},
+			blocks: [],
+			random_id: '' + Sha256.encode('' + FlxG.random.int(0, 256)),
+			world_name: null,
+			game_version: UpdateUtil.VERSION + #if debug " [PROTOTYPE]" #else "" #end,
+			resource_packs: []
+		};
+	}
 
 	public static function getWorldWarnings(world_info:WorldInfo):String
 	{
