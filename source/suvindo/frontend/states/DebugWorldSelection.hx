@@ -94,6 +94,7 @@ class DebugWorldSelection extends FlxSubState
 		{
 			var world_txt:FlxText = new FlxText(2, 2, FlxG.width / 2, world_id ?? "New world", 32);
 			world_txt.font = ResourcePacks.getPath('fonts/ui_font.ttf');
+			world_txt.antialiasing = true;
 			worldTexts.add(world_txt);
 			world_txt.ID = i;
 			if (world_txt.ID == curSelected)
