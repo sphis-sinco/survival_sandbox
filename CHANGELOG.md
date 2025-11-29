@@ -19,6 +19,8 @@ Changes connected to the [new Request system changes](#requests-1)
     - Type: "regular"
 
 ## Gameplay
+- Changed world save block data
+- The game no longer waits half a second before restarting
 - Fixed cursor block getting out of sync with the grid
 - New F3 Debug text entry: `tick`
 - You can now hold directionals to move if you hold it for a bit and move every 4 ticks

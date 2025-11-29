@@ -1,5 +1,7 @@
 package suvindo.backend.blocks;
 
+import flixel.FlxG;
+import suvindo.backend.blocks.BlockJSON.BlockWorldData;
 import flixel.math.FlxPoint;
 import sys.FileSystem;
 import suvindo.backend.requests.Requests.RequestsManager;
@@ -93,53 +95,94 @@ class BlockGrid extends FlxTypedGroup<Block>
 			{
 				var overlap_count:Int = 0;
 
+				var x:Float = 0;
+				var y:Float = 0;
+				var i:Int = 0;
+
 				for (block in world_info.blocks)
 				{
-					if (block?.block_id == null)
-						continue;
-					if (block?.x == null)
-						continue;
-					if (block?.y == null)
-						continue;
-					for (convert_block in RequestsManager.CONVERT.blocks)
-						if (convert_block.from == block?.block_id)
-						{
-							block.block_id = convert_block.to;
-							break;
-						}
-					if (RequestsManager.REMOVE?.blocks.contains(block?.block_id))
-						continue;
-					if (!BlockList.BLOCK_LIST.contains(block?.block_id))
-						continue;
+					var block_world_data:BlockWorldData = cast block;
+					var block_int_data:Int = cast block;
+					var new_block:Block = null;
 
-					var new_block = new Block(block?.block_id, block?.x, block?.y);
-					if (world_info.has_animated_blocks)
+					if (block_world_data != null)
 					{
-						if (block?.frameIndex != null)
+						if (block_world_data?.block_id == null)
+							continue;
+						if (block_world_data?.x == null)
+							continue;
+						if (block_world_data?.y == null)
+							continue;
+						for (convert_block in RequestsManager.CONVERT.blocks)
+							if (convert_block.from == block_world_data?.block_id)
+							{
+								block_world_data.block_id = convert_block.to;
+								break;
+							}
+						if (RequestsManager.REMOVE?.blocks.contains(block_world_data?.block_id))
+							continue;
+						if (!BlockList.BLOCK_LIST.contains(block_world_data?.block_id))
+							continue;
+
+						new_block = new Block(block_world_data?.block_id, block_world_data?.x, block_world_data?.y);
+						if (block_world_data?.variation_index != null)
 						{
-							new_block.animation.play(new_block.animation.name, false, false, block.frameIndex);
-							new_block.animation.frameIndex = block.frameIndex;
+							new_block.variation_index = block_world_data.variation_index;
+							new_block.changeVariationIndex(0);
 						}
 					}
-					if (block?.variation_index != null)
+					else if (block_int_data != null)
 					{
-						new_block.variation_index = block.variation_index;
+						i++;
+						x++;
+
+						if (x > (FlxG.width / 16))
+						{
+							x = 0;
+							y++;
+						}
+
+						if (block_int_data == 0)
+							continue;
+
+						var converted_block_id:String = BlockList.BLOCK_LIST[block_int_data - 1];
+
+						for (convert_block in RequestsManager.CONVERT.blocks)
+							if (convert_block.from == converted_block_id)
+							{
+								converted_block_id = convert_block.to;
+								break;
+							}
+						if (RequestsManager.REMOVE?.blocks.contains(converted_block_id))
+							continue;
+						if (!BlockList.BLOCK_LIST.contains(converted_block_id))
+							continue;
+
+						new_block = new Block(converted_block_id, x * 16, y * 16);
+
+						if (world_info.variation_indexes != null)
+							for (variation in world_info.variation_indexes)
+								if (variation.i == i)
+									new_block.variation_index = variation.variation_index;
 						new_block.changeVariationIndex(0);
 					}
 
 					var can_be_added:Bool = true;
 
-					applyBlockChanges(block ->
+					if (new_block != null)
 					{
-						if (block.overlaps(new_block) && can_be_added)
+						applyBlockChanges(block ->
 						{
-							can_be_added = false;
-							overlap_count++;
-						}
-					});
+							if (block.overlaps(new_block) && can_be_added)
+							{
+								can_be_added = false;
+								overlap_count++;
+							}
+						});
 
-					if (can_be_added)
-						add(new_block);
+						if (can_be_added)
+							add(new_block);
+					}
 				}
 
 				trace('Removed ' + overlap_count + ' overlapping blocks');

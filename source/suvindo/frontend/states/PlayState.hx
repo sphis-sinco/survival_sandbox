@@ -113,7 +113,6 @@ class PlayState extends FlxState
 		world_info = {
 			cursor_block: null,
 			blocks: [],
-			has_animated_blocks: false,
 			random_id: (world_info?.random_id ?? null) ?? Sha256.encode("" + FlxG.random.int(0, 255)),
 			game_version: Application.current.meta.get("version") + #if debug " [PROTOTYPE]" #else "" #end,
 			world_name: WORLD_NAME ?? ((world_info?.world_name ?? null) ?? null),
@@ -134,11 +133,6 @@ class PlayState extends FlxState
 					y: block.y,
 				};
 
-				if (block.block_json?.type == "animated")
-				{
-					world_info.has_animated_blocks = true;
-					block_data.frameIndex = block.animation.frameIndex;
-				}
 				if (block.block_json?.type == "variations")
 					block_data.variation_index = block.variation_index;
 
@@ -162,11 +156,8 @@ class PlayState extends FlxState
 	{
 		saveWorldInfo();
 
-		FlxTimer.wait(.5, () ->
-		{
-			trace("RELOAD!");
-			FlxG.resetState();
-		});
+		trace("RELOAD!");
+		FlxG.resetState();
 	}
 
 	var place_mode:Bool = true;
