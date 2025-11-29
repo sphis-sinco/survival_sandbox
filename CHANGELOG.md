@@ -11,6 +11,7 @@ Changes connected to the [new Request system changes](#requests-1)
 - Added new "convert" request type
 
 ## Blocks
+- Retextured Stone block (added some blue to it for visability when it's the cursor block)
 - If no blocks or less then 2 blocks are found in the block list the dirt and plank block is added
 - Renamed "tree_trunk" to "log"
 - Added "Cactus" block
