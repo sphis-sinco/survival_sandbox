@@ -1,6 +1,5 @@
 package suvindo.frontend.states;
 
-import suvindo.backend.UpdateUtil;
 import suvindo.backend.TrackManager;
 import suvindo.frontend.states.ResourcePackMenu;
 import suvindo.backend.resourcepacks.ResourcePacks;
@@ -107,7 +106,7 @@ class MainMenu extends FlxState
 		add(texts);
 
 		var version_text = new FlxText(2, 2, 0, "version", 8);
-		version_text.text = UpdateUtil.VERSION + #if debug " [PROTOTYPE]" #else "" #end;
+		version_text.text = lime.app.Application.current.meta.get("version") + #if debug " [PROTOTYPE]" #else "" #end;
 		add(version_text);
 		version_text.camera = menuCam;
 		version_text.scrollFactor.set();

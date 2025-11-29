@@ -1,6 +1,5 @@
 package suvindo.frontend.states;
 
-import suvindo.backend.UpdateUtil;
 import flixel.input.keyboard.FlxKey;
 import suvindo.backend.blocks.BlockGrid;
 import suvindo.backend.TrackManager;
@@ -31,6 +30,8 @@ class PlayState extends FlxState
 	public var cursor_block:Block;
 	public var debug_text:FlxText;
 
+	public static var world_info:WorldInfo;
+
 	public var WORLD_NAME:String;
 
 	public var autosave_timer:FlxTimer;
@@ -38,6 +39,9 @@ class PlayState extends FlxState
 	override public function new(?world:String = null)
 	{
 		super();
+
+		if (world == null && world_info != null)
+			world = (world_info?.world_name ?? null) ?? ("world_" + world_info?.random_id ?? null) ?? null;
 
 		if (world != null)
 		{
@@ -48,7 +52,9 @@ class PlayState extends FlxState
 			#end
 			{
 				blocks = new BlockGrid("assets/saves/" + world + ".json");
-				WORLD_NAME = blocks.world_info.world_name;
+				world_info = blocks.world_info;
+
+				WORLD_NAME = world_info.world_name;
 			}
 		else
 		{
@@ -82,15 +88,15 @@ class PlayState extends FlxState
 		debug_text = new FlxText(2, 2, 0, "version", 8);
 		add(debug_text);
 
-		if (blocks.world_info != null)
+		if (world_info != null)
 		{
-			if (blocks.world_info.cursor_block != null)
+			if (world_info.cursor_block != null)
 			{
-				cursor_block.setPosition(blocks.world_info.cursor_block.x ?? cursor_block.x, blocks.world_info.cursor_block.y ?? cursor_block.y);
-				cursor_block.switchBlock(blocks.world_info.cursor_block.block_id ?? cursor_block.block_id);
+				cursor_block.setPosition(world_info.cursor_block.x ?? cursor_block.x, world_info.cursor_block.y ?? cursor_block.y);
+				cursor_block.switchBlock(world_info.cursor_block.block_id ?? cursor_block.block_id);
 			}
 
-			blocks.world_info = null;
+			world_info = null;
 		}
 
 		ReloadPlugin.reload.add(onReload);
@@ -104,13 +110,43 @@ class PlayState extends FlxState
 
 	public function saveWorldInfo(save_file:Bool = true)
 	{
-		blocks.world_info.world_name = WORLD_NAME ?? ((blocks.world_info?.world_name ?? null) ?? null);
-	
+		world_info = {
+			cursor_block: null,
+			blocks: [],
+			has_animated_blocks: false,
+			random_id: (world_info?.random_id ?? null) ?? Sha256.encode("" + FlxG.random.int(0, 255)),
+			game_version: Application.current.meta.get("version") + #if debug " [PROTOTYPE]" #else "" #end,
+			world_name: WORLD_NAME ?? ((world_info?.world_name ?? null) ?? null),
+			resource_packs: []
+		};
 		if (cursor_block != null)
-			blocks.world_info.cursor_block = {
+			world_info.cursor_block = {
 				x: cursor_block.x,
 				y: cursor_block.y,
 				block_id: cursor_block.block_id,
+			}
+		if (blocks?.members != null)
+			for (block in blocks.members)
+			{
+				var block_data:Dynamic = {
+					block_id: block.block_id,
+					x: block.x,
+					y: block.y,
+				};
+
+				if (block.block_json?.type == "animated")
+				{
+					world_info.has_animated_blocks = true;
+					block_data.frameIndex = block.animation.frameIndex;
+				}
+				if (block.block_json?.type == "variations")
+					block_data.variation_index = block.variation_index;
+
+				world_info.blocks.push(block_data);
+
+				if (block.graphic_path.contains("resources/"))
+					if (!world_info.resource_packs.contains(block.graphic_path.split("/")[1]))
+						world_info.resource_packs.push(block.graphic_path.split("/")[1]);
 			}
 
 		#if sys
@@ -119,7 +155,7 @@ class PlayState extends FlxState
 		#end
 
 		if (save_file)
-			blocks.saveWorldInfo("assets/saves/" + ((blocks.world_info?.world_name ?? null) ?? "world_" + blocks.world_info.random_id) + ".json", save_file);
+			BlockGrid.saveWorldInfo(world_info, "assets/saves/" + ((world_info?.world_name ?? null) ?? "world_" + world_info.random_id) + ".json");
 	}
 
 	public function onReload()

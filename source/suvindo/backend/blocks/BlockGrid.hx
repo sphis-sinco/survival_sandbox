@@ -1,7 +1,5 @@
 package suvindo.backend.blocks;
 
-import flixel.FlxG;
-import haxe.crypto.Sha256;
 import flixel.math.FlxPoint;
 import sys.FileSystem;
 import suvindo.backend.requests.Requests.RequestsManager;
@@ -9,8 +7,6 @@ import sys.io.File;
 import lime.utils.Assets;
 import haxe.Json;
 import flixel.group.FlxGroup.FlxTypedGroup;
-
-using StringTools;
 
 class BlockGrid extends FlxTypedGroup<Block>
 {
@@ -69,8 +65,6 @@ class BlockGrid extends FlxTypedGroup<Block>
 
 		this.x = x;
 		this.y = y;
-
-		world_info.random_id = (world_info?.random_id ?? null) ?? Sha256.encode("" + FlxG.random.int(0, 255));
 	}
 
 	public function clearBlocks()
@@ -93,6 +87,7 @@ class BlockGrid extends FlxTypedGroup<Block>
 		if (world_info != null)
 		{
 			clearBlocks();
+			saveWorldInfo(this.world_info, world_file_path);
 
 			if (world_info.blocks != null)
 			{
@@ -118,6 +113,14 @@ class BlockGrid extends FlxTypedGroup<Block>
 						continue;
 
 					var new_block = new Block(block?.block_id, block?.x, block?.y);
+					if (world_info.has_animated_blocks)
+					{
+						if (block?.frameIndex != null)
+						{
+							new_block.animation.play(new_block.animation.name, false, false, block.frameIndex);
+							new_block.animation.frameIndex = block.frameIndex;
+						}
+					}
 					if (block?.variation_index != null)
 					{
 						new_block.variation_index = block.variation_index;
@@ -143,34 +146,11 @@ class BlockGrid extends FlxTypedGroup<Block>
 			}
 		}
 
-		saveWorldInfo(world_file_path);
+		saveWorldInfo(world_info, world_file_path);
 	}
 
-	public function saveWorldInfo(path:String, save_file:Bool = true)
+	public static function saveWorldInfo(world_info:WorldInfo, path:String)
 	{
-		world_info.game_version = UpdateUtil.VERSION + #if debug " [PROTOTYPE]" #else "" #end;
-		world_info.blocks = [];
-		world_info.resource_packs = [];
-
-		if (this.members != null)
-			for (block in this.members)
-			{
-				var block_data:Dynamic = {
-					block_id: block.block_id,
-					x: block.x,
-					y: block.y,
-				};
-
-				if (block.block_json?.type == "variations")
-					block_data.variation_index = block.variation_index;
-
-				world_info.blocks.push(block_data);
-
-				if (block.graphic_path.contains("resources/"))
-					if (!world_info.resource_packs.contains(block.graphic_path.split("/")[1]))
-						world_info.resource_packs.push(block.graphic_path.split("/")[1]);
-			}
-
 		#if sys
 		File.saveContent(path, Json.stringify(world_info, "\t"));
 		#end
