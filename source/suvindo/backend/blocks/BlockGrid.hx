@@ -91,6 +91,7 @@ class BlockGrid extends FlxTypedGroup<Block>
 
 			if (world_info.blocks != null)
 			{
+				var remove_counts:Int = 0;
 				var unique_positions:Array<FlxPoint> = [];
 				for (block in world_info.blocks)
 				{
@@ -102,9 +103,15 @@ class BlockGrid extends FlxTypedGroup<Block>
 					var point:FlxPoint = new FlxPoint(block.x, block.y);
 					if (!unique_positions.contains(point))
 						unique_positions.push(point);
-					else 
+					else
+					{
+						remove_counts++;
 						world_info.blocks.remove(block);
+					}
 				}
+
+				trace('Removed ' + remove_counts + ' blocks at positions of other blocks');
+
 				for (block in world_info.blocks)
 				{
 					if (block?.block_id == null)
