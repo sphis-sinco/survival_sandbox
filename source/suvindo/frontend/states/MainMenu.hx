@@ -97,6 +97,13 @@ class MainMenu extends FlxState
 		});
 		add(blocks);
 		add(texts);
+
+		
+		var version_text = new FlxText(2, 2, 0, 'version', 8);
+		version_text.text = lime.app.Application.current.meta.get('version') + #if debug ' [PROTOTYPE]' #else '' #end;
+		add(version_text);
+		version_text.camera = menuCam;
+		version_text.scrollFactor.set();
 	}
 
 	override public function update(elapsed:Float)

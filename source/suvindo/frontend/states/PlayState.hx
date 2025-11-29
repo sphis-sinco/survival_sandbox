@@ -27,7 +27,7 @@ class PlayState extends FlxState
 {
 	public var blocks:BlockGrid;
 	public var cursor_block:Block;
-	public var watermark:FlxText;
+	public var debug_text:FlxText;
 
 	public static var world_info:WorldInfo;
 
@@ -85,8 +85,8 @@ class PlayState extends FlxState
 		cursor_block.y = 16 * ((FlxG.height / 16) / 2);
 		cursor_block.alpha = .5;
 
-		watermark = new FlxText(2, 2, 0, 'version', 8);
-		add(watermark);
+		debug_text = new FlxText(2, 2, 0, 'version', 8);
+		add(debug_text);
 
 		if (world_info != null)
 		{
@@ -171,25 +171,25 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
-
-		watermark.text = 'Suvindo ' + lime.app.Application.current.meta.get('version') + #if debug ' [PROTOTYPE]' #else '' #end;
-		watermark.text += '\n\nCurrent Block ID: ' + cursor_block.block_id;
-		watermark.text += '\nCurrent Block Variation: '
-			+ ((cursor_block.variations.length > 0) ? cursor_block.variations[cursor_block.variation_index]?.id : 'default');
-
+		
+			debug_text.text = '';
 		if (FlxG.keys.pressed.F3)
 		{
-			watermark.text += '\n\nResource packs:';
+			debug_text.text += 'Current Block ID: ' + cursor_block.block_id;
+		debug_text.text += '\nCurrent Block Variation: '
+			+ ((cursor_block.variations.length > 0) ? cursor_block.variations[cursor_block.variation_index]?.id : 'default');
+
+			debug_text.text += '\n\nResource packs:';
 			if (ResourcePacks.RESOURCE_PACKS.length > 0)
 				for (pack in ResourcePacks.RESOURCE_PACKS)
-					watermark.text += '\n* ' + pack + ((ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack) ? ' (enabled)' : ' (disabled)'));
+					debug_text.text += '\n* ' + pack + ((ResourcePacks.ENABLED_RESOURCE_PACKS.contains(pack) ? ' (enabled)' : ' (disabled)'));
 			else
-				watermark.text += '\nNone';
-			watermark.text += '\n\nTime until next autosave (seconds): ' + Std.int(autosave_timer.timeLeft);
+				debug_text.text += '\nNone';
+			debug_text.text += '\n\nTime until next autosave (seconds): ' + Std.int(autosave_timer.timeLeft);
 		}
 
 		cursor_block.visible = !FlxG.keys.pressed.F1;
-		watermark.visible = !FlxG.keys.pressed.F1;
+		debug_text.visible = !FlxG.keys.pressed.F1;
 
 		if (FlxG.keys.justReleased.P && ResourcePacks.RESOURCE_PACKS.length > 0)
 		{

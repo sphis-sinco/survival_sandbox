@@ -9,6 +9,9 @@
     - Type: "regular"
 
 ## General
+- **ADDED MAIN MENU**
+- Moved Game version watermark text to Main Menu
+- PlayState watermark (now debug) text is now F3-only
 - Loaded worlds are now auto-updated once loaded
 - Code organization has been implemented
 - Gameplay now calls for tracks to play
