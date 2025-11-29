@@ -2,9 +2,9 @@ cactus
 dirt
 grass_block
 leaves
+log
 plank
 sand
 stone
-tree_trunk
 water
 wool

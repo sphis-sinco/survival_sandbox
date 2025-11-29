@@ -1,0 +1,11 @@
+{
+    "request": "convert",
+    "converts": {
+        "blocks": [
+            {
+                "from" : "tree_trunk", 
+                "to": "log"
+            }
+        ]
+    }
+}
