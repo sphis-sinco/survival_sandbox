@@ -19,7 +19,7 @@ typedef WorldInfo =
 class WorldInfoClass
 {
 	public static var MIN_WORLD_VERSION:String = "0.2.0";
-	public static var MAX_WORLD_VERSION:String = "0.3.0";
+	public static var MAX_WORLD_VERSION:String = "0.4.0";
 
 	public static function getWorldWarnings(world_info:WorldInfo):String
 	{
