@@ -150,11 +150,11 @@ class PlayState extends FlxState
 		#if sys
 		if (!FileSystem.exists('assets/saves'))
 			FileSystem.createDirectory('assets/saves');
+		#end
 
 		if (save_file)
-			File.saveContent('assets/saves/' + ((world_info?.world_name ?? null) ?? 'world_' + world_info.random_id) + '.json',
-				Json.stringify(world_info, '\t'));
-		#end
+			BlockGrid.saveWorldInfo(world_info,
+				'assets/saves/' + ((world_info?.world_name ?? null) ?? 'world_' + world_info.random_id) + '.json');
 	}
 
 	public function onReload()

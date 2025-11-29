@@ -5895,8 +5895,6 @@
 	"game_version": "0.3.0 [PROTOTYPE]",
 	"has_animated_blocks": true,
 	"random_id": "3038bfb575bee6a0e61945eff8784835bb2c720634e42734678c083994b7f018",
-	"resource_packs": [
-		"blue_stone"
-	],
+	"resource_packs": [],
 	"world_name": "Menu BG world"
 }

@@ -1,5 +1,6 @@
 package suvindo.backend.blocks;
 
+import sys.FileSystem;
 import suvindo.backend.requests.Requests.RequestsManager;
 import sys.io.File;
 import lime.utils.Assets;
@@ -56,8 +57,8 @@ class BlockGrid extends FlxTypedGroup<Block>
 	{
 		super();
 
-        if (world_file_path != null)
-		    loadWorld(world_file_path);
+		if (world_file_path != null)
+			loadWorld(world_file_path);
 
 		this.x = x;
 		this.y = y;
@@ -83,6 +84,7 @@ class BlockGrid extends FlxTypedGroup<Block>
 		if (world_info != null)
 		{
 			clearBlocks();
+			saveWorldInfo(this.world_info, world_file_path);
 
 			if (world_info.blocks != null)
 			{
@@ -94,6 +96,12 @@ class BlockGrid extends FlxTypedGroup<Block>
 						continue;
 					if (block?.y == null)
 						continue;
+					for (convert_block in RequestsManager.CONVERT.blocks)
+						if (convert_block.from == block?.block_id)
+						{
+							block.block_id = convert_block.to;
+							break;
+						}
 					if (RequestsManager.REMOVE?.blocks.contains(block?.block_id))
 						continue;
 					if (!BlockList.BLOCK_LIST.contains(block?.block_id))
@@ -117,5 +125,12 @@ class BlockGrid extends FlxTypedGroup<Block>
 				}
 			}
 		}
+	}
+
+	public static function saveWorldInfo(world_info:WorldInfo, path:String)
+	{
+		#if sys
+		File.saveContent(path, Json.stringify(world_info, '\t'));
+		#end
 	}
 }

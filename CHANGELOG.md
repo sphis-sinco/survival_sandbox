@@ -8,6 +8,7 @@
     - Type: "regular"
 
 ## General
+- Loaded worlds are now auto-updated once loaded
 - Code organization has been implemented
 - Gameplay now calls for tracks to play
 - Removed ability for the Resource Pack menu to play music
