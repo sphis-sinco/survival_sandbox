@@ -1,5 +1,6 @@
 # 0.3.0 - 11/28/2025
 ## Requests
+- Fixed receiving request paths missing a "/"
 - Added new "convert" request type
 
 ## Blocks

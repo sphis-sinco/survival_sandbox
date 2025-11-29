@@ -67,7 +67,7 @@ class RequestsManager
 		try
 		{
 			trace('getting requests');
-			requests = ResourcePacks.readDirectory('data/requests');
+			requests = ResourcePacks.readDirectory('data/requests/');
 		}
 		catch (e)
 		{
