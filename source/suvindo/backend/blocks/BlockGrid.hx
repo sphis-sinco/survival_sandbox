@@ -1,6 +1,6 @@
 package suvindo.backend.blocks;
 
-import suvindo.backend.Requests.RequestsManager;
+import suvindo.backend.requests.Requests.RequestsManager;
 import sys.io.File;
 import lime.utils.Assets;
 import haxe.Json;

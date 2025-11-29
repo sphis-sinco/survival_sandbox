@@ -1,4 +1,4 @@
-package suvindo.backend;
+package suvindo.backend.requests;
 
 import suvindo.backend.resourcepacks.ResourcePacks;
 import sys.io.File;

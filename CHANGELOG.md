@@ -1,9 +1,14 @@
 # 0.3.0 - 11/28/2025
+## Requests
+- Added new "convert" request type
+
 ## Blocks
+- Renamed "tree_trunk" to "log"
 - Added "Cactus" block
     - Type: "regular"
 
 ## General
+- Code organization has been implemented
 - Gameplay now calls for tracks to play
 - Removed ability for the Resource Pack menu to play music
 - Added `F1` Keybind : Hides **ALL** UI

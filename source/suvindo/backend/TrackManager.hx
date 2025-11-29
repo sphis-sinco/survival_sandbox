@@ -11,7 +11,7 @@ import haxe.io.Path;
 #if sys
 import sys.FileSystem;
 #end
-import suvindo.backend.Requests.RequestsManager;
+import suvindo.backend.requests.Requests.RequestsManager;
 
 using StringTools;
 

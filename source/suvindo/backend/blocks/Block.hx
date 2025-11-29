@@ -2,7 +2,7 @@ package suvindo.backend.blocks;
 
 import suvindo.backend.resourcepacks.ResourcePacks;
 import haxe.io.Path;
-import suvindo.backend.Requests.RequestsManager;
+import suvindo.backend.requests.Requests.RequestsManager;
 import suvindo.backend.blocks.BlockJSON.BlockVariation;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import haxe.Json;

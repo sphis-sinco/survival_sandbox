@@ -10,6 +10,14 @@ Asset Path: `data/requests/`
 - `request` : The request type
     - `add` : will add the specified objects, most likely to be used when the block's in a different default directory
     - `remove` : will remove the specified objects
+    - `convert` : will convert the specified objects to new variations
+- `converts` :
+    - `blocks` (optional) : List of block ID's that are changed to a new ID
+        - `from` : Previous ID
+        - `to` : New ID
+    - `tracks` (optional) : List of track ID's that are changed to a new ID
+        - `from` : Previous ID
+        - `to` : New ID
 - `blocks` (optional)
     - `type: remove` : List of Block ID's
     - `type: add` : List of Block Paths relative to the images folder (I.e `myresourcepack/blocks/jujin` would redirect to `assets/images/myresourcepack/blocks/jujin.png` in-game along with the resource pack versions)
@@ -21,3 +29,4 @@ Asset Path: `data/requests/`
 
 - [Adding Blocks](/.dev/debug-resources/base/block_adding/data/requests/add-bluestone.json)
 - [Removing Blocks](/.dev/debug-resources/base/block_removing/data/requests/remove-leaves.json)
+- [Converting Blocks](/assets/base/data/requests/convert-trunk-to-log.json)
