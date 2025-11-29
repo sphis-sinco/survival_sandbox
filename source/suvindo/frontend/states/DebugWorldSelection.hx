@@ -44,6 +44,7 @@ class DebugWorldSelection extends FlxSubState
 		super.create();
 		var bg = new FlxSprite(0, -(FlxG.height / 2)).makeGraphic(FlxG.width, FlxG.height * 3, 0xAA000000);
 		add(bg);
+		bg.scrollFactor.set();
 		worldList = [null];
 
 		curSelected = saved_selected;

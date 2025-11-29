@@ -50,6 +50,7 @@ class MainMenu extends FlxState
 		add(bg);
 		bg.y -= FlxG.height / 2;
 		bg.camera = menuCam;
+		bg.scrollFactor.set();
 
 		logo.scale.set(0.15, 0.15);
 		logo.updateHitbox();
