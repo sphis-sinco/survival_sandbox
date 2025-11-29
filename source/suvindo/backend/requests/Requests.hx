@@ -6,26 +6,44 @@ import haxe.Json;
 
 typedef Request =
 {
-	> RequestsFields,
+	> RequestsDefaultFields,
+
+	?converts:RequestsConvertFields,
 
 	request:String,
 }
 
-typedef RequestsFields =
+typedef RequestsDefaultFields =
 {
 	?blocks:Array<String>,
 	?tracks:Array<String>
+}
+
+typedef RequestsConvertFields =
+{
+	?blocks:Array<ConvertID>,
+	?tracks:Array<ConvertID>
+}
+
+typedef ConvertID =
+{
+	?from:String,
+	?to:String,
 }
 
 class RequestsManager
 {
 	public static var REMOVE:
 		{
-			> RequestsFields,
+			> RequestsDefaultFields,
 		};
 	public static var ADD:
 		{
-			> RequestsFields,
+			> RequestsDefaultFields,
+		};
+	public static var CONVERT:
+		{
+			> RequestsConvertFields,
 		};
 
 	public static function reload()
@@ -38,6 +56,10 @@ class RequestsManager
 			blocks: [],
 			tracks: [],
 		};
+		CONVERT = {
+			blocks: [],
+			tracks: [],
+		}
 		trace('RELOADING');
 
 		var requests:Array<String> = [];
@@ -86,6 +108,11 @@ class RequestsManager
 							ADD.blocks.push(block_path);
 						for (track_path in parsed_request?.tracks ?? [])
 							ADD.tracks.push(track_path);
+					case 'convert':
+						for (block_path in parsed_request?.converts?.blocks ?? [])
+							CONVERT.blocks.push(block_path);
+						for (track_path in parsed_request?.converts?.tracks ?? [])
+							CONVERT.tracks.push(track_path);
 				}
 			}
 			#end
@@ -93,5 +120,6 @@ class RequestsManager
 
 		trace('REMOVE REQUESTS: ' + REMOVE);
 		trace('ADD REQUESTS: ' + ADD);
+		trace('CONVERT REQUESTS: ' + CONVERT);
 	}
 }
