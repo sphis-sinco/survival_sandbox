@@ -102,7 +102,7 @@ class BlockGrid extends FlxTypedGroup<Block>
 				for (block in world_info.blocks)
 				{
 					var block_world_data:BlockWorldData = cast block;
-					var block_int_data:Int = cast block;
+					var block_int_data:Null<Int> = cast block;
 					var new_block:Block = null;
 
 					if (block_world_data != null)

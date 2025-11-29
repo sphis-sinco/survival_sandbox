@@ -12,7 +12,7 @@ typedef WorldInfo =
 {
 	?cursor_block:BlockWorldData,
 	
-	?blocks:Array<OneOfTwo<BlockWorldData, Int>>,
+	?blocks:Array<OneOfTwo<BlockWorldData, Null<Int>>>,
 	?variation_indexes:Array<BlockWorldInfoV2VariationData>,
 
 	random_id:String,
